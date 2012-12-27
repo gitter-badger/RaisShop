@@ -15,7 +15,7 @@ gem 'bootstrap-will_paginate'
 gem 'tire'
 #gem "therubyracer", :require => 'v8'
 group :development, :test do 
-  gem 'spork'
+  #gem 'spork'
   gem 'sqlite3'
   gem 'meta_request', '0.2.0'
   gem "rails_best_practices"
