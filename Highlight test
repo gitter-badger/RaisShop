@@ -1,0 +1,643 @@
+
+
+SpecialKey
+NonText
+Directory CalToday
+ErrorMsg
+IncSearch
+Search CalNavi
+MoreMsg
+ModeMsg
+LineNr ShowMarksHLl ShowMarksHLu ShowMarksHLo ShowMarksHLm CtrlPMode2
+CursorLineNr
+Question
+StatusLine CalRuler
+
+StatusLineNC
+VertSplit
+Title
+Visual
+VisualNOS
+WarningMsg
+WildMenu
+Folded
+FoldColumn
+DiffAdd
+DiffChange
+DiffDelete
+
+DiffText
+SignColumn
+Conceal
+SpellBad SyntasticError
+SpellCap SyntasticWarning
+SpellRare
+SpellLocal
+Pmenu
+PmenuSel
+PmenuSbar
+PmenuThumb
+TabLine
+
+TabLineSel
+TabLineFill
+CursorColumn
+CursorLine
+ColorColumn
+Cursor
+lCursor
+MatchParen
+Normal CtrlPPrtText cssMediaComma vimSet vimSetEqual
+Error CtrlPNoEntries cssDeprecated cssError cssBraceError rubyInvalidVariable rubyError rubySpaceError htmlError htmlTagError htmlCommentError htmlPreError htmlPreProcAttrError javaScriptParensErrB javaScriptParensErrC javaScriptParensErrA javaScriptParensError javaScriptError
+Comment CalWeeknm CtrlPPrtBase cssComment cssVendor sassComment sassCssComment scssComment rubyRegexpComment rubyComment rubyDocumentation rubyData htmlCommentPart htmlComment javaScriptLineComment javaScriptComment javaScriptDocComment
+Constant Character Boolean CtrlPPrtCursor CtrlPMode1 cssFontDescriptorFunction cssUnicodeRange cssColor cssFunction cssPseudoClassLang sassAmpersand rubyASCIICode rubySymbol rubyBoolean rubyPseudoVariable javaScriptRegexpCharClass javaScriptBoolean javaScriptDomErrNo javaScriptDomNodeConsts javaScriptCharacter
+Special Tag SpecialChar SpecialComment Debug CalHeader cssSelectorOp cssSelectorOp2 cssUnicodeEscape cssMediaType cssMedia cssFontDescriptor cssImportant sassDefault sassEscape sassIdChar sassClassChar helpSpecial rubyStringEscape rubyQuoteEscape rubyRegexpSpecial rubyRegexpCharClass rubyRegexpEscape rubyRegexpQuantifier rubyRegexpAnchor rubyRegexpDot htmlSpecialChar htmlCssDefinition javaScriptDocTags javaScriptSpecial javaScriptSource javaScriptGlobalObjects javaScriptExceptions javaScriptHtmlEvents javaScriptSpecialCharacter
+Identifier CalMemo CtrlPMatch sassVariable sassId vimVar diffLine rubyIdentifier rubyPredefinedIdentifier rubyInstanceVariable rubyClassVariable rubyGlobalVariable rubyPredefinedVariable rubyBlockParameter rubyPredefinedConstant javaScriptIdentifier
+Statement Conditional Repeat Label Operator Exception CalSaturday cssTagName diffAdded htmlSpecialTagName rubyConditional rubyExceptional rubyOperator rubyControl rubyBeginEnd rubyConditionalModifier rubyRepeat rubyOptionalDo rubyRepeatModifier rubyAccess rubyAttribute rubyEval rubyException javaScriptDocParam javaScriptLabel javaScriptOperator javaScriptConditional javaScriptRepeat javaScriptBranch javaScriptStatement javaScriptCssStyles javaScriptDomElemAttrs javaScriptHtmlElemAttrs javaScriptTernaryIfOperator javaScriptException
+PreProc cssPseudoClassId sassMixin sassMixing sassExtend sassPlaceholder sassFunctionDecl sassReturn sassControl sassDebug sassWarn sassFor rubySharpBang htmlPreStmt htmlPreProc htmlPreProcAttrName javaScriptEnvComment javaScriptDomElemFuncs javaScriptHtmlElemFuncs
+Type StorageClass Structure Typedef CalSunday cssFontProp cssFontAttr cssCommonAttr cssFontDescriptorProp cssFontDescriptorAttr cssAnimationProp cssAnimationAttr cssBackgroundProp cssBackgroundAttr cssBorderOutlineProp cssBorderOutlineAttr cssBoxProp cssBoxAttr cssColorProp cssDimensionProp cssFlexibleBoxProp cssFlexibleBoxAttr cssGeneratedContentProp cssGeneratedContentAttr cssGridProp cssHyerlinkProp cssListProp cssListAttr cssMarginProp cssMultiColumnProp cssPaddingProp cssPositioningProp cssPositioningAttr cssPrintProp cssPrintAttr cssTableProp cssTableAttr cssTextProp cssTextAttr cssTransformProp cssTransitionProp cssUIProp cssUIAttr cssAuralProp cssAuralAttr cssRenderAttr cssRenderProp cssContentForPagedMediaProp cssLineboxProp cssMarqueeProp cssPagedMediaProp cssRubyProp cssSpeechProp cssColorAttr cssContentForPagedMediaAttr cssDimensionAttr cssGridAttr cssHyerlinkAttr cssLineboxAttr cssMarginAttr cssMarqueeAttr cssMultiColumnAttr cssPaddingAttr cssPagedMediaAttr cssRubyAttr cssSpeechAttr cssTransformAttr cssTransitionAttr sassClass htmlArg rubyConstant javaScriptDocType javaScriptDocTypeNoParam javaScriptPrototype javaScriptType javaScriptNull javaScriptThis
+Underlined UtlUrl
+
+Ignore
+Todo sassTodo rubyTodo javaScriptCommentTodo
+String cssStringQ cssStringQQ cssURL rubyString rubyRegexp rubyHeredoc rubyNoInterpolation htmlString htmlValue htmlPreAttr javaScriptStringD javaScriptStringS javaScriptRegexpString
+Number Float cssValueInteger cssValueNumber cssValueLength cssValueAngle cssValueTime cssValueFrequency rubyInteger rubyFloat javaScriptNumber javaScriptFloat
+Function CtrlPStats cssClassName cssIdentifier cssBraces cssFunctionName sassFunction vimFunc vimUserFunc rubyFunction javaScriptCvsTag javaScriptDocSeeTag javaScriptFunction
+Keyword rubyKeyword javaScriptMessage
+Include cssInclude sassInclude rubyInclude rubyRailsInclude
+Define rubyDefine rubyMethodExceptional rubyClass rubyModule
+Macro
+PreCondit
+Delimiter sassInterpolationDelimiter hsImportParams hsDelimTypeExport rubyInterpolationDelimiter rubyStringDelimiter rubySymbolDelimiter rubyRegexpDelimiter rubyDataDirective
+SpellErrors
+xmlTag htmlTag
+xmlTagName htmlTagName
+xmlEndTag htmlEndTag
+GReplaceText
+IndentGuidesOdd
+IndentGuidesEven
+UtlTag
+Ple7ffffffa0d70000b
+
+Pla0d70000f0585858N
+Plfabcbcbcf0585858N
+Plc4ff0000f0585858b
+
+Plfcd0d0d0f0585858N
+Ple7fffffff0585858b
+
+Plf0585858ec303030N
+Pld6ffaf00ec303030b
+
+Plec303030ec303030N
+Ple7ffffffec303030N
+Plf79e9e9eec303030N
+Plec303030fcd0d0d0b
+
+Plf4808080fcd0d0d0N
+Pla0d70000f1626262N
+Ple7fffffff1626262b
+
+Plf1626262f0585858N
+Plf0585858eb262626N
+Pleb262626e9121212N
+Pl58870000e9121212N
+Plf1626262e9121212N
+Plf58a8a8ae9121212b
+
+Ple9121212e9121212N
+Ple7ffffffe9121212N
+Plf58a8a8aeb262626b
+
+Plf1626262eb262626N
+Pla0d70000d0ff8700N
+Pl58870000d0ff8700b
+
+Pld0ff8700f0585858N
+Pla0d70000e7ffffffN
+Pl17005f5fe7ffffffb
+
+Ple7ffffff1f0087afN
+Pl7587d7ff1f0087afN
+Plc4ff00001f0087afb
+
+Ple7ffffff1f0087afb
+
+Pl1f0087af18005f87N
+Pld6ffaf0018005f87b
+
+Pl18005f8718005f87N
+Ple7ffffff18005f87N
+Pl7587d7ff18005f87N
+Pl17005f5f7587d7ffb
+
+Pl17005f5f7587d7ffN
+Pla0d7000094afd700N
+Pl16005f0094afd700b
+
+Pl94afd700f0585858N
+Ple7ffffff7caf0000b
+
+Pl7caf000058870000N
+Ple7ffffff58870000N
+Pl5887000058870000N
+Pla0d70000345f0000b
+
+Pl345f0000345f0000N
+Ple7ffffff345f0000N
+Pla0d70000345f0000N
+Ple7fffffff0585858N
+Plf58a8a8aeb262626N
+Ple7ffffff465faf00b
+
+Pl465faf001c008700N
+Pl94afd7001c008700N
+Pl1c0087001c008700N
+Ple7ffffff1c008700N
+Pl465faf0016005f00b
+
+Pl465faf0016005f00N
+Pl16005f0016005f00N
+Ple7ffffff16005f00N
+Ple7ffffff62875fd7N
+Pl62875fd7e7ffffffN
+Pl375f00afe7ffffffb
+
+Pl62875fd7375f00afN
+Plc4ff0000375f00afb
+
+Pl375f00af375f00afN
+Ple7ffffff375f00afN
+Plbdd7d7ff375f00afN
+Pl375f00afe7ffffffN
+CtrlPLinePre
+cssAttributeSelector
+cssDefinition
+cssMediaBlock
+cssFontDescriptorBlock
+cssPseudoClass
+cssSpecialCharQQ
+cssSpecialCharQ
+cssColor000000
+cssColor000080
+cssColor00008b
+cssColor0000cd
+cssColor0000ff
+cssColor006400
+cssColor008000
+cssColor008080
+cssColor008b8b
+cssColor00bfff
+cssColor00ced1
+cssColor00fa9a
+cssColor00ff00
+cssColor00ff7f
+cssColor00ffff
+cssColor191970
+cssColor1e90ff
+cssColor20b2aa
+cssColor228b22
+cssColor2e8b57
+cssColor2f4f4f
+cssColor32cd32
+cssColor3cb371
+cssColor40e0d0
+cssColor4169e1
+cssColor4682b4
+cssColor483d8b
+cssColor48d1cc
+cssColor4b0082
+cssColor556b2f
+cssColor5f9ea0
+cssColor6495ed
+cssColor66cdaa
+cssColor696969
+cssColor6a5acd
+cssColor6b8e23
+cssColor708090
+cssColor778899
+cssColor7b68ee
+cssColor7cfc00
+cssColor7fff00
+cssColor7fffd4
+cssColor800000
+cssColor800080
+cssColor808000
+cssColor808080
+cssColor87ceeb
+cssColor87cefa
+cssColor8a2be2
+cssColor8b0000
+cssColor8b008b
+cssColor8b4513
+cssColor8fbc8f
+cssColor90ee90
+cssColor9370d8
+cssColor9400d3
+cssColor98fb98
+cssColor9932cc
+cssColor9acd32
+cssColora0522d
+cssColora52a2a
+cssColora9a9a9
+cssColoradd8e6
+cssColoradff2f
+cssColorafeeee
+cssColorb0c4de
+cssColorb0e0e6
+cssColorb22222
+cssColorb8860b
+cssColorba55d3
+cssColorbc8f8f
+cssColorbdb76b
+cssColorc0c0c0
+cssColorc71585
+cssColorcd5c5c
+cssColorcd853f
+cssColord2691e
+cssColord2b48c
+cssColord3d3d3
+cssColord87093
+cssColord8bfd8
+cssColorda70d6
+cssColordaa520
+cssColordc143c
+cssColordcdcdc
+cssColordda0dd
+cssColordeb887
+cssColore0ffff
+cssColore6e6fa
+cssColore9967a
+cssColoree82ee
+cssColoreee8aa
+cssColorf08080
+cssColorf0e68c
+cssColorf0f8ff
+cssColorf0fff0
+cssColorf0ffff
+cssColorf4a460
+cssColorf5deb3
+cssColorf5f5dc
+cssColorf5f5f5
+cssColorf5fffa
+cssColorf8f8ff
+cssColorfa8072
+cssColorfaebd7
+cssColorfaf0e6
+cssColorfafad2
+cssColorfdf5e6
+cssColorff0000
+cssColorff00ff
+cssColorff1493
+cssColorff4500
+cssColorff6347
+cssColorff69b4
+cssColorff7f50
+cssColorff8c00
+cssColorffa07a
+cssColorffa500
+cssColorffb6c1
+cssColorffc0cb
+cssColorffd700
+cssColorffdab9
+cssColorffdead
+cssColorffe4b5
+cssColorffe4c4
+cssColorffe4e1
+cssColorffebcd
+cssColorffefd5
+cssColorfff0f5
+cssColorfff5ee
+cssColorfff8dc
+cssColorfffacd
+cssColorfffaf0
+cssColorfffafa
+cssColorffff00
+cssColorffffe0
+cssColorfffff0
+cssColorffffff
+cssPagingProp
+sassDefinition
+sassCssAttribute
+sassProperty
+sassInterpolation
+sassVariableAssignment
+sassMixinName
+sassFunctionName
+sassDebugLine
+sassWarnLine
+sassControlLine
+vimCommentString
+vimCommand
+vimCmdSep
+helpExample
+helpOption
+helpNote
+helpVim
+helpHyperTextJump
+helpHyperTextEntry
+vimIsCommand
+vimSynMtchOpt
+vimSynType
+vimHiLink
+vimHiGroup
+vimGroup
+gitcommitComment gitcommitUntracked gitcommitDiscarded gitcommitSelected
+gitcommitUnmerged
+gitcommitOnBranch
+gitcommitBranch gitcommitNoBranch
+gitcommitDiscardedType
+gitcommitSelectedType
+gitcommitHeader
+gitcommitUntrackedFile
+gitcommitDiscardedFile gitcommitDiscardedArrow
+gitcommitSelectedFile gitcommitSelectedArrow
+gitcommitUnmergedFile gitcommitUnmergedArrow
+gitcommitFile
+htmlTagN
+javaScript javaScriptExpression htmlEvent
+perlHereDoc
+perlVarPlain
+perlStatementFileDesc
+texStatement
+texMathZoneX
+texMathMatcher
+texRefLabel
+cPreCondit
+VarId
+ConId
+hsImport
+hsString
+hsStructure hsModuleStartLabel hsModuleWhereLabel
+hs_hlFunctionName
+hsStatement
+hsImportLabel
+hs_OpFunctionName
+hs_DeclareFunction
+hsVarSym
+hsType
+hsTypedef
+hsModuleName
+hsNiceOperator
+pandocTitleBlock
+pandocTitleBlockTitle
+pandocTitleComment
+pandocComment
+pandocVerbatimBlock pandocVerbatimBlockDeep pandocCodeBlock pandocCodeBlockDelim
+pandocBlockQuote
+pandocBlockQuoteLeader1
+pandocBlockQuoteLeader2
+pandocBlockQuoteLeader3
+pandocBlockQuoteLeader4
+pandocBlockQuoteLeader5
+pandocBlockQuoteLeader6
+pandocListMarker
+pandocListReference
+pandocDefinitionBlock
+pandocDefinitionTerm
+pandocDefinitionIndctr
+pandocEmphasisDefinition
+pandocEmphasisNestedDefinition
+pandocStrongEmphasisDefinition
+pandocStrongEmphasisNestedDefinition
+pandocStrongEmphasisEmphasisDefinition
+pandocStrikeoutDefinition
+pandocVerbatimInlineDefinition
+pandocSuperscriptDefinition
+pandocSubscriptDefinition
+pandocTable
+pandocTableStructure
+pandocTableStructre pandocTableStructureTop pandocTableStructureEnd
+pandocTableZebraLight
+pandocTableZebraDark
+pandocEmphasisTable
+pandocEmphasisNestedTable
+pandocStrongEmphasisTable
+pandocStrongEmphasisNestedTable
+pandocStrongEmphasisEmphasisTable
+pandocStrikeoutTable
+pandocVerbatimInlineTable
+pandocSuperscriptTable
+pandocSubscriptTable
+pandocHeading
+pandocHeadingMarker
+pandocEmphasisHeading
+pandocEmphasisNestedHeading
+pandocStrongEmphasisHeading
+pandocStrongEmphasisNestedHeading
+pandocStrongEmphasisEmphasisHeading
+pandocStrikeoutHeading
+pandocVerbatimInlineHeading
+pandocSuperscriptHeading
+pandocSubscriptHeading
+pandocLinkDelim
+pandocLinkLabel
+pandocLinkText
+pandocLinkURL
+pandocLinkTitle
+pandocLinkTitleDelim
+pandocLinkDefinition
+pandocLinkDefinitionID
+pandocImageCaption
+pandocFootnoteLink
+pandocFootnoteDefLink
+pandocFootnoteInline
+pandocFootnote
+pandocCitationDelim
+pandocCitation
+pandocCitationID
+pandocCitationRef
+pandocStyleDelim
+pandocEmphasis
+pandocEmphasisNested
+pandocStrongEmphasis
+pandocStrongEmphasisNested
+pandocStrongEmphasisEmphasis
+pandocStrikeout
+pandocVerbatimInline
+pandocSuperscript
+pandocSubscript
+pandocRule
+pandocRuleLine
+pandocEscapePair pandocEscapedCharacter pandocLineBreak
+pandocNonBreakingSpace
+pandocMetadataDelim
+pandocMetadata pandocMetadataTitle
+pandocMetadataKey
+rubyInterpolation
+NONE
+rubyDelimEscape
+rubyNestedParentheses
+rubyNestedCurlyBraces
+rubyNestedAngleBrackets
+rubyNestedSquareBrackets
+rubyRegexpParens
+rubyRegexpBrackets
+rubyLocalVariableOrMethod
+rubyBlockArgument
+rubyBlockParameterList
+rubyHeredocStart
+rubyAliasDeclaration2
+rubyAliasDeclaration
+rubyMethodDeclaration
+rubyClassDeclaration
+rubyModuleDeclaration
+rubyMethodBlock
+rubyBlock
+rubyDoBlock
+rubyCurlyBlockDelimiter
+rubyCurlyBlock
+rubyArrayDelimiter
+rubyArrayLiteral
+rubyBlockExpression
+rubyCaseExpression
+rubyConditionalExpression
+rubyOptionalDoLine
+rubyRepeatExpression
+rubyMultilineComment
+rubyKeywordAsMethod
+htmlBoldUnderline
+htmlBoldItalic
+htmlBoldUnderlineItalic
+htmlBoldItalicUnderline
+htmlUnderlineBold
+htmlUnderlineItalic
+htmlUnderlineBoldItalic
+htmlUnderlineItalicBold
+htmlItalicBold
+htmlItalicUnderline
+htmlItalicBoldUnderline
+htmlItalicUnderlineBold
+htmlLeadingSpace
+htmlLink
+htmlTitle
+cssStyle
+javaScriptFutureKeys
+javaScriptParen
+javaScriptDotNotation
+javaScriptBracket
+javaScriptBlock
+javaScriptParenError
+javaScriptTernaryIf
+javaScriptFuncName
+javaScriptFuncBlock
+javaScriptOpAssign
+javaScriptCommentSkip
+javaScriptParens
+javaScriptValue
+cssLength
+cssString
+htmlHighlight
+htmlHighlightSkip
+coffeeInterp
+coffeeEmbed
+coffeeCurlies
+coffeeBrackets
+coffeeParens
+htmlHead
+coffeeScript
+Keyword	links to
+Keyword	links to javaScriptMember
+Exception	links to javaScriptDeprecated
+Keyword	links to javaScriptReserved
+Function	links to javaScriptBraces
+javaScriptError	links to javaScrParenError
+Debug	links to javaScriptDebug
+Label	links to javaScriptConstant
+Comment	links to htmlCssStyleComment
+htmlTag	links to htmlScriptTag
+htmlEvent	links to htmlEventSQ
+htmlEvent	links to htmlEventDQ
+Conditional	links to vbConditional
+Operator	links to vbOperator
+Boolean	links to vbBoolean
+Constant	links to vbConst
+Repeat	links to vbRepeat
+Special	links to vbEvents
+Identifier	links to vbFunction
+PreProc	links to vbMethods
+Statement	links to vbStatement
+Statement	links to vbKeyword
+Todo	links to vbTodo
+Type	links to vbTypes
+Constant	links to vbDefine
+Number	links to vbNumber
+Float	links to vbFloat
+String	links to vbString
+Comment	links to vbComment
+Comment	links to vbLineNumber
+Type	links to vbTypeSpecifier
+Error	links to vbError
+Identifier	links to vbIdentifier
+htmlString	links to htmlStyleArg
+Statement	links to htmlStatement
+Special	links to htmlSpecial
+Statement	links to coffeeStatement
+Repeat	links to coffeeRepeat
+Conditional	links to coffeeConditional
+Exception	links to coffeeException
+Keyword	links to coffeeKeyword
+Operator	links to coffeeOperator
+coffeeOperator	links to coffeeExtendedOp
+SpecialChar	links to coffeeSpecialOp
+Boolean	links to coffeeBoolean
+Type	links to coffeeGlobal
+Special	links to coffeeSpecialVar
+Identifier	links to coffeeSpecialIdent
+Structure	links to coffeeObject
+Constant	links to coffeeConstant
+SpecialChar	links to coffeeEscape
+String	links to coffeeString
+Number	links to coffeeNumber
+Float	links to coffeeFloat
+Error	links to coffeeReservedError
+Identifier	links to coffeeObjAssign
+Todo	links to coffeeTodo
+Comment	links to coffeeComment
+coffeeComment	links to coffeeBlockComment
+coffeeComment	links to coffeeHeregexComment
+Delimiter	links to coffeeEmbedDelim
+PreProc	links to coffeeInterpDelim
+String	links to coffeeRegex
+coffeeRegex	links to coffeeHeregex
+String	links to coffeeHeredoc
+Error	links to coffeeSpaceError
+Error	links to coffeeSemicolonError
+coffeeExtendedOp	links to coffeeDotAccess
+coffeeExtendedOp	links to coffeeProtoAccess
+coffeeBlock	links to coffeeCurly
+coffeeBlock	links to coffeeBracket
+coffeeBlock	links to coffeeParen
+coffeeSpecialOp	links to coffeeBlock
+Comment	links to yamlRailsComment
+rubyRailsMethod	links to rubyRailsHelperMethod
+rubyRailsMethod	links to rubyRailsRakeMethod
+Function	links to railsMethod
+railsClass	links to railsUserClass
+railsUserMethod	links to rubyRailsUserMethod
+railsMethod	links to railsUserMethod
+erubyRailsMethod	links to erubyRailsHelperMethod
+railsMethod	links to erubyRailsMethod
+erubyRailsMethod	links to erubyRailsViewMethod
+erubyRailsMethod	links to erubyRailsRenderMethod
+railsUserMethod	links to erubyRailsUserMethod
+railsUserClass	links to erubyRailsUserClass
+hamlRailsMethod	links to hamlRailsHelperMethod
+railsMethod	links to hamlRailsMethod
+hamlRailsMethod	links to hamlRailsViewMethod
+hamlRailsMethod	links to hamlRailsRenderMethod
+railsUserMethod	links to hamlRailsUserMethod
+railsUserClass	links to hamlRailsUserClass
+Delimiter	links to yamlRailsDelimiter
+railsMethod	links to yamlRailsMethod
+railsUserClass	links to yamlRailsUserClass rubyRailsUserClass
+railsUserMethod	links to yamlRailsUserMethod
+railsMethod	links to javascriptRailsFunction rubyRailsMethod rubyRailsAPIMethod rubyRailsARMethod rubyRailsARAssociationMethod rubyRailsARCallbackMethod rubyRailsARClassMethod rubyRailsARValidationMethod rubyRailsRenderMethod rubyRailsControllerMethod rubyRailsViewMethod rubyRailsFilterMethod rubyRailsMigrationMethod rubyRailsTestMethod rubyRailsTestControllerMethod
+Type	links to railsClass
+Identifier	links to railsStringSpecial railsOrderSpecial railsConditionsSpecial
+Comment	links to MBENormal
+String	links to MBEChanged
+Special	links to MBEVisibleNormal
+Special	links to MBEVisibleChanged
+Boolean	links to MBEVisibleActive
+Error	links to MBEVisibleChangedActive

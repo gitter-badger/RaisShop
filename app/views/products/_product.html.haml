@@ -1,0 +1,8 @@
+%tr
+  %td.productImage= image_tag product.image_url
+  %td
+    %dl
+      %dt= link_to product.title, product
+      %dd= product.description
+  %td $#{product.price}
+  %td= button_to 'Add to cart', line_items_path(product_id: product), remote: true

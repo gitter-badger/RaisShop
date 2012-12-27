@@ -1,0 +1,35 @@
+%nav#navbar
+  = link_to image_tag( "http://placekitten.com/160/60"), "/"
+  .cart
+    = link_to "#{current_cart.count} items for #{current_cart.total_price} dollars.",current_cart
+  .user_nav
+    - flash.each do |name, msg|
+      - if msg.is_a?(String)
+        = content_tag :div, msg, :id => "flash_#{name}"
+    - if user_signed_in?
+      Hello,
+      = link_to edit_user_registration_path do
+        %strong
+          = current_user.first_name
+      |
+      = link_to 'Logout', destroy_user_session_path, method: :delete
+    - else
+      = link_to "Sign up", new_user_registration_path
+      |
+      = link_to "Login", new_user_session_path
+    %br
+    = link_to 'Administration', admin_path if current_user.try(:admin?)
+%nav.navbar
+  .navbar-inner
+    .container
+      = link_to "Awesome!", '/'
+      .nav
+        = form_tag "/search", method: :get ,class: "navbar-search pull-left" do
+          = text_field_tag :query, params[:query], class: "search-query"
+          %input#link_origin_id{:name => "link[origin_id]", :type => "hidden"}/          
+          -#%select#drop-categories
+            -#%option All
+            -#%option Stuff
+            -#%option Tools & Home Improvments
+          -#= submit_tag "Search", name: nil, class: "search-button"
+

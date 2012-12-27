@@ -1,0 +1,931 @@
+1355308030.14054: XSMP opening connectionVim: Warning: Output is not to a terminal
+1355308031.99451: 
+1355308031.99454: chdir(/etc)[?25l[J
+1355308031.9946: fchdir() to previous dir[J
+1355308031.99469: sourcing "/etc/vimrc"[J
+1355308031.9951: Searching for "archlinux.vim" in "/home/roberto/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/home/roberto/.vim/after"[J
+1355308031.99522: Searching for "/home/roberto/.vim/archlinux.vim"[J
+1355308031.99542: Searching for "/usr/share/vim/vimfiles/archlinux.vim"[J
+1355308031.9955: chdir(/usr/share/vim/vimfiles)[J
+1355308031.99563: fchdir() to previous dir[J
+1355308031.99604: line 11: sourcing "/usr/share/vim/vimfiles/archlinux.vim"[J
+1355308031.99621: finished sourcing /usr/share/vim/vimfiles/archlinux.vim[J
+1355308031.9963: continuing in /etc/vimrc[J
+1355308031.99644: Searching for "/usr/share/vim/vim73/archlinux.vim"[J
+1355308031.99659: Searching for "/usr/share/vim/vimfiles/after/archlinux.vim"[J
+1355308031.99676: Searching for "/home/roberto/.vim/after/archlinux.vim"[J
+1355308031.99683: finished sourcing /etc/vimrc[J
+1355308031.99687: chdir(/home/roberto)[J
+1355308031.997: fchdir() to previous dir[J
+1355308031.9971: sourcing "$HOME/.vimrc"[J
+1355308031.99718: chdir(/home/roberto/.vim)[J
+1355308031.99726: fchdir() to previous dir[J
+1355308031.9975: line 1: sourcing "/home/roberto/.vim/bundles.vim"[J
+1355308031.99786: Searching for "ftoff.vim" in "/home/roberto/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/home/roberto/.vim/after"[J
+1355308031.99798: Searching for "/home/roberto/.vim/ftoff.vim"[J
+1355308031.99811: Searching for "/usr/share/vim/vimfiles/ftoff.vim"[J
+1355308031.99822: Searching for "/usr/share/vim/vim73/ftoff.vim"[J
+1355308031.99827: chdir(/usr/share/vim/vim73)[J
+1355308031.99836: fchdir() to previous dir[J
+1355308031.99855: line 2: sourcing "/usr/share/vim/vim73/ftoff.vim"[J
+1355308031.99866: finished sourcing /usr/share/vim/vim73/ftoff.vim[J
+1355308031.99879: continuing in /home/roberto/dotvim/bundles.vim[J
+1355308031.99896: Searching for "/usr/share/vim/vimfiles/after/ftoff.vim"[J
+1355308031.99911: Searching for "/home/roberto/.vim/after/ftoff.vim"[J
+1355308031.99952: Searching for "autoload/vundle.vim" in "/home/roberto/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/home/roberto/.vim/after,/home/roberto/.vim/bundle/vundle/"[J
+1355308031.99963: Searching for "/home/roberto/.vim/autoload/vundle.vim"[J
+1355308031.99979: Searching for "/usr/share/vim/vimfiles/autoload/vundle.vim"[J
+1355308031.99988: chdir(/usr/share/vim/vimfiles/autoload)[J
+1355308031.99996: fchdir() to previous dir[J
+1355308032.00038: line 4: sourcing "/usr/share/vim/vimfiles/autoload/vundle.vim"[J
+1355308032.00052: finished sourcing /usr/share/vim/vimfiles/autoload/vundle.vim[J
+1355308032.00071: continuing in /home/roberto/dotvim/bundles.vim[J
+1355308032.0012: Searching for "autoload/vundle/config.vim" in "/home/roberto/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/home/roberto/.vim/after,/home/roberto/.vim/bundle/vundle/"[J
+1355308032.00134: Searching for "/home/roberto/.vim/autoload/vundle/config.vim"[J
+1355308032.00149: Searching for "/usr/share/vim/vimfiles/autoload/vundle/config.vim"[J
+1355308032.00158: chdir(/usr/share/vim/vimfiles/autoload/vundle)[J
+1355308032.00167: fchdir() to previous dir[J
+1355308032.00203: line 5: sourcing "/usr/share/vim/vimfiles/autoload/vundle/config.vim"[J
+1355308032.00218: finished sourcing /usr/share/vim/vimfiles/autoload/vundle/config.vim[J
+1355308032.05581: continuing in function vundle#rc[J
+1355308032.05582: finished sourcing /home/roberto/.vim/bundles.vim[J
+1355308032.05587: continuing in /home/roberto/.vimrc[J
+1355308032.05588: chdir(/home/roberto/.vim)[J
+1355308032.05589: fchdir() to previous dir[J
+1355308032.05603: line 2: sourcing "/home/roberto/.vim/global.vim"[J
+1355308032.05603: chdir(/usr/share/vim/vim73/syntax)[J
+1355308032.05604: fchdir() to previous dir[J
+1355308032.05616: line 3: sourcing "/usr/share/vim/vim73/syntax/syntax.vim"[J
+1355308032.05833: Searching for "syntax/synload.vim" in "/home/roberto/.vim/bundle/vundle,/home/roberto/.vim/bundle/nerdtree,/home/roberto/.vim/bundle/nerdcommenter,/home/roberto/.vim/bundle/ctrlp.vim,/home/roberto/.vim/bundle/AutoComplPop,/home/roberto/.vim/bundle/taglist.vim,/home/roberto/.vim/bundle/YankRing.vim,/home/roberto/.vim/bundle/vim-fugitive,/home/roberto/.vim/bundle/syntastic,/home/roberto/.vim/bundle/snipmate.vim,/home/roberto/.vim/bundle/vim-surround,/home/roberto/.vim/bundle/vim-align,/home/roberto/.vim/bundle/ack.vim,/home/roberto/.vim/bundle/vim-indentobject,/home/roberto/.vim/bundle/greplace.vim,/home/roberto/.vim/bundle/vim-powerline,/home/roberto/.vim/bundle/threesome.vim,/home/roberto/.vim/bundle/Indent-Guides,/home/roberto/.vim/bundle/vim-endwise,/home/roberto/.vim/bundle/delimitMate,/home/roberto/.vim/bundle/calendar.vim--Matsumoto,/home/roberto/.vim/bundle/NrrwRgn,/home/roberto/.vim/bundle/utl.vim,/home/roberto/.vim/bundle/VimOrganizer,/home/roberto/.vim/bundle/gundo.vim,/home/roberto/.vim/bundle/switc[J
+1355308032.05845: Searching for "/home/roberto/.vim/bundle/vundle/syntax/synload.vim"[J
+1355308032.05857: Searching for "/home/roberto/.vim/bundle/nerdtree/syntax/synload.vim"[J
+1355308032.0587: Searching for "/home/roberto/.vim/bundle/nerdcommenter/syntax/synload.vim"[J
+1355308032.05883: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/syntax/synload.vim"[J
+1355308032.05897: Searching for "/home/roberto/.vim/bundle/AutoComplPop/syntax/synload.vim"[J
+1355308032.05914: Searching for "/home/roberto/.vim/bundle/taglist.vim/syntax/synload.vim"[J
+1355308032.05926: Searching for "/home/roberto/.vim/bundle/YankRing.vim/syntax/synload.vim"[J
+1355308032.05941: Searching for "/home/roberto/.vim/bundle/vim-fugitive/syntax/synload.vim"[J
+1355308032.05953: Searching for "/home/roberto/.vim/bundle/syntastic/syntax/synload.vim"[J
+1355308032.05967: Searching for "/home/roberto/.vim/bundle/snipmate.vim/syntax/synload.vim"[J
+1355308032.05981: Searching for "/home/roberto/.vim/bundle/vim-surround/syntax/synload.vim"[J
+1355308032.05994: Searching for "/home/roberto/.vim/bundle/vim-align/syntax/synload.vim"[J
+1355308032.06007: Searching for "/home/roberto/.vim/bundle/ack.vim/syntax/synload.vim"[J
+1355308032.06019: Searching for "/home/roberto/.vim/bundle/vim-indentobject/syntax/synload.vim"[J
+1355308032.06034: Searching for "/home/roberto/.vim/bundle/greplace.vim/syntax/synload.vim"[J
+1355308032.06048: Searching for "/home/roberto/.vim/bundle/vim-powerline/syntax/synload.vim"[J
+1355308032.0606: Searching for "/home/roberto/.vim/bundle/threesome.vim/syntax/synload.vim"[J
+1355308032.06073: Searching for "/home/roberto/.vim/bundle/Indent-Guides/syntax/synload.vim"[J
+1355308032.06087: Searching for "/home/roberto/.vim/bundle/vim-endwise/syntax/synload.vim"[J
+1355308032.06099: Searching for "/home/roberto/.vim/bundle/delimitMate/syntax/synload.vim"[J
+1355308032.06113: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/syntax/synload.vim"[J
+1355308032.06126: Searching for "/home/roberto/.vim/bundle/NrrwRgn/syntax/synload.vim"[J
+1355308032.0614: Searching for "/home/roberto/.vim/bundle/utl.vim/syntax/synload.vim"[J
+1355308032.06152: Searching for "/home/roberto/.vim/bundle/VimOrganizer/syntax/synload.vim"[J
+1355308032.06164: Searching for "/home/roberto/.vim/bundle/gundo.vim/syntax/synload.vim"[J
+1355308032.06177: Searching for "/home/roberto/.vim/bundle/switch.vim/syntax/synload.vim"[J
+1355308032.06188: Searching for "/home/roberto/.vim/bundle/vim-rails/syntax/synload.vim"[J
+1355308032.06202: Searching for "/home/roberto/.vim/bundle/vim-bundler/syntax/synload.vim"[J
+1355308032.06215: Searching for "/home/roberto/.vim/bundle/vim-rake/syntax/synload.vim"[J
+1355308032.06229: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/syntax/synload.vim"[J
+1355308032.06241: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/syntax/synload.vim"[J
+1355308032.06251: Searching for "/home/roberto/.vim/bundle/apidock.vim/syntax/synload.vim"[J
+1355308032.0626: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/syntax/synload.vim"[J
+1355308032.06271: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/syntax/synload.vim"[J
+1355308032.06285: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim/syntax/synload.vim"[J
+1355308032.06293: Searching for "/home/roberto/.vim/bundle/vim-ruby/syntax/synload.vim"[J
+1355308032.06294: Searching for "/home/roberto/.vim/bundle/vim-tmux/syntax/synload.vim"[J
+1355308032.06304: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/syntax/synload.vim"[J
+1355308032.06311: Searching for "/home/roberto/.vim/bundle/JSON.vim/syntax/synload.vim"[J
+1355308032.06321: Searching for "/home/roberto/.vim/bundle/vim-cucumber/syntax/synload.vim"[J
+1355308032.06329: Searching for "/home/roberto/.vim/bundle/vim-haml/syntax/synload.vim"[J
+1355308032.06337: Searching for "/home/roberto/.vim/bundle/vim-markdown/syntax/synload.vim"[J
+1355308032.06347: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/syntax/synload.vim"[J
+1355308032.06354: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/syntax/synload.vim"[J
+1355308032.06364: Searching for "/home/roberto/.vim/bundle/jade.vim/syntax/synload.vim"[J
+1355308032.06371: Searching for "/home/roberto/.vim/bundle/vim-stylus/syntax/synload.vim"[J
+1355308032.06379: Searching for "/home/roberto/.vim/bundle/VimClojure/syntax/synload.vim"[J
+1355308032.06387: Searching for "/home/roberto/.vim/bundle/vim-slim/syntax/synload.vim"[J
+1355308032.06396: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/syntax/synload.vim"[J
+1355308032.06405: Searching for "/home/roberto/.vim/bundle/vim-repeat/syntax/synload.vim"[J
+1355308032.06415: Searching for "/home/roberto/.vim/bundle/vim-gitignore/syntax/synload.vim"[J
+1355308032.06423: Searching for "/home/roberto/.vim/bundle/vim-space/syntax/synload.vim"[J
+1355308032.06434: Searching for "/home/roberto/.vim/bundle/gist-vim/syntax/synload.vim"[J
+1355308032.06444: Searching for "/home/roberto/.vim/bundle/webapi-vim/syntax/synload.vim"[J
+1355308032.06454: Searching for "/home/roberto/.vim/bundle/zencoding-vim/syntax/synload.vim"[J
+1355308032.06463: Searching for "/home/roberto/.vim/bundle/vim-css-color/syntax/synload.vim"[J
+1355308032.06472: Searching for "/home/roberto/.vim/bundle/vim-matchit/syntax/synload.vim"[J
+1355308032.06482: Searching for "/home/roberto/.vim/bundle/csapprox/syntax/synload.vim"[J
+1355308032.0649: Searching for "/home/roberto/.vim/syntax/synload.vim"[J
+1355308032.06497: Searching for "/usr/share/vim/vimfiles/syntax/synload.vim"[J
+1355308032.06505: Searching for "/usr/share/vim/vim73/syntax/synload.vim"[J
+1355308032.06511: chdir(/usr/share/vim/vim73/syntax)[J
+1355308032.06515: fchdir() to previous dir[J
+1355308032.06526: line 19: sourcing "/usr/share/vim/vim73/syntax/synload.vim"[J
+1355308032.06675: Searching for "syntax/syncolor.vim" in "/home/roberto/.vim/bundle/vundle,/home/roberto/.vim/bundle/nerdtree,/home/roberto/.vim/bundle/nerdcommenter,/home/roberto/.vim/bundle/ctrlp.vim,/home/roberto/.vim/bundle/AutoComplPop,/home/roberto/.vim/bundle/taglist.vim,/home/roberto/.vim/bundle/YankRing.vim,/home/roberto/.vim/bundle/vim-fugitive,/home/roberto/.vim/bundle/syntastic,/home/roberto/.vim/bundle/snipmate.vim,/home/roberto/.vim/bundle/vim-surround,/home/roberto/.vim/bundle/vim-align,/home/roberto/.vim/bundle/ack.vim,/home/roberto/.vim/bundle/vim-indentobject,/home/roberto/.vim/bundle/greplace.vim,/home/roberto/.vim/bundle/vim-powerline,/home/roberto/.vim/bundle/threesome.vim,/home/roberto/.vim/bundle/Indent-Guides,/home/roberto/.vim/bundle/vim-endwise,/home/roberto/.vim/bundle/delimitMate,/home/roberto/.vim/bundle/calendar.vim--Matsumoto,/home/roberto/.vim/bundle/NrrwRgn,/home/roberto/.vim/bundle/utl.vim,/home/roberto/.vim/bundle/VimOrganizer,/home/roberto/.vim/bundle/gundo.vim,/home/roberto/.vim/bundle/swit[J
+1355308032.06681: Searching for "/home/roberto/.vim/bundle/vundle/syntax/syncolor.vim"[J
+1355308032.06692: Searching for "/home/roberto/.vim/bundle/nerdtree/syntax/syncolor.vim"[J
+1355308032.06703: Searching for "/home/roberto/.vim/bundle/nerdcommenter/syntax/syncolor.vim"[J
+1355308032.06716: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/syntax/syncolor.vim"[J
+1355308032.06726: Searching for "/home/roberto/.vim/bundle/AutoComplPop/syntax/syncolor.vim"[J
+1355308032.06736: Searching for "/home/roberto/.vim/bundle/taglist.vim/syntax/syncolor.vim"[J
+1355308032.06742: Searching for "/home/roberto/.vim/bundle/YankRing.vim/syntax/syncolor.vim"[J
+1355308032.06751: Searching for "/home/roberto/.vim/bundle/vim-fugitive/syntax/syncolor.vim"[J
+1355308032.06759: Searching for "/home/roberto/.vim/bundle/syntastic/syntax/syncolor.vim"[J
+1355308032.06765: Searching for "/home/roberto/.vim/bundle/snipmate.vim/syntax/syncolor.vim"[J
+1355308032.06776: Searching for "/home/roberto/.vim/bundle/vim-surround/syntax/syncolor.vim"[J
+1355308032.06787: Searching for "/home/roberto/.vim/bundle/vim-align/syntax/syncolor.vim"[J
+1355308032.06797: Searching for "/home/roberto/.vim/bundle/ack.vim/syntax/syncolor.vim"[J
+1355308032.06807: Searching for "/home/roberto/.vim/bundle/vim-indentobject/syntax/syncolor.vim"[J
+1355308032.06817: Searching for "/home/roberto/.vim/bundle/greplace.vim/syntax/syncolor.vim"[J
+1355308032.06827: Searching for "/home/roberto/.vim/bundle/vim-powerline/syntax/syncolor.vim"[J
+1355308032.06838: Searching for "/home/roberto/.vim/bundle/threesome.vim/syntax/syncolor.vim"[J
+1355308032.06849: Searching for "/home/roberto/.vim/bundle/Indent-Guides/syntax/syncolor.vim"[J
+1355308032.06864: Searching for "/home/roberto/.vim/bundle/vim-endwise/syntax/syncolor.vim"[J
+1355308032.06878: Searching for "/home/roberto/.vim/bundle/delimitMate/syntax/syncolor.vim"[J
+1355308032.0689: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/syntax/syncolor.vim"[J
+1355308032.069: Searching for "/home/roberto/.vim/bundle/NrrwRgn/syntax/syncolor.vim"[J
+1355308032.06909: Searching for "/home/roberto/.vim/bundle/utl.vim/syntax/syncolor.vim"[J
+1355308032.06919: Searching for "/home/roberto/.vim/bundle/VimOrganizer/syntax/syncolor.vim"[J
+1355308032.0693: Searching for "/home/roberto/.vim/bundle/gundo.vim/syntax/syncolor.vim"[J
+1355308032.06941: Searching for "/home/roberto/.vim/bundle/switch.vim/syntax/syncolor.vim"[J
+1355308032.06951: Searching for "/home/roberto/.vim/bundle/vim-rails/syntax/syncolor.vim"[J
+1355308032.06958: Searching for "/home/roberto/.vim/bundle/vim-bundler/syntax/syncolor.vim"[J
+1355308032.06966: Searching for "/home/roberto/.vim/bundle/vim-rake/syntax/syncolor.vim"[J
+1355308032.06978: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/syntax/syncolor.vim"[J
+1355308032.06987: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/syntax/syncolor.vim"[J
+1355308032.06996: Searching for "/home/roberto/.vim/bundle/apidock.vim/syntax/syncolor.vim"[J
+1355308032.07008: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/syntax/syncolor.vim"[J
+1355308032.07016: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/syntax/syncolor.vim"[J
+1355308032.07027: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim/syntax/syncolor.vim"[J
+1355308032.07038: Searching for "/home/roberto/.vim/bundle/vim-ruby/syntax/syncolor.vim"[J
+1355308032.07044: Searching for "/home/roberto/.vim/bundle/vim-tmux/syntax/syncolor.vim"[J
+1355308032.07058: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/syntax/syncolor.vim"[J
+1355308032.07067: Searching for "/home/roberto/.vim/bundle/JSON.vim/syntax/syncolor.vim"[J
+1355308032.07076: Searching for "/home/roberto/.vim/bundle/vim-cucumber/syntax/syncolor.vim"[J
+1355308032.07087: Searching for "/home/roberto/.vim/bundle/vim-haml/syntax/syncolor.vim"[J
+1355308032.07097: Searching for "/home/roberto/.vim/bundle/vim-markdown/syntax/syncolor.vim"[J
+1355308032.07107: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/syntax/syncolor.vim"[J
+1355308032.07117: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/syntax/syncolor.vim"[J
+1355308032.07127: Searching for "/home/roberto/.vim/bundle/jade.vim/syntax/syncolor.vim"[J
+1355308032.07138: Searching for "/home/roberto/.vim/bundle/vim-stylus/syntax/syncolor.vim"[J
+1355308032.07147: Searching for "/home/roberto/.vim/bundle/VimClojure/syntax/syncolor.vim"[J
+1355308032.07156: Searching for "/home/roberto/.vim/bundle/vim-slim/syntax/syncolor.vim"[J
+1355308032.07165: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/syntax/syncolor.vim"[J
+1355308032.07173: Searching for "/home/roberto/.vim/bundle/vim-repeat/syntax/syncolor.vim"[J
+1355308032.07184: Searching for "/home/roberto/.vim/bundle/vim-gitignore/syntax/syncolor.vim"[J
+1355308032.07194: Searching for "/home/roberto/.vim/bundle/vim-space/syntax/syncolor.vim"[J
+1355308032.07204: Searching for "/home/roberto/.vim/bundle/gist-vim/syntax/syncolor.vim"[J
+1355308032.07214: Searching for "/home/roberto/.vim/bundle/webapi-vim/syntax/syncolor.vim"[J
+1355308032.07224: Searching for "/home/roberto/.vim/bundle/zencoding-vim/syntax/syncolor.vim"[J
+1355308032.07236: Searching for "/home/roberto/.vim/bundle/vim-css-color/syntax/syncolor.vim"[J
+1355308032.07244: Searching for "/home/roberto/.vim/bundle/vim-matchit/syntax/syncolor.vim"[J
+1355308032.07252: Searching for "/home/roberto/.vim/bundle/csapprox/syntax/syncolor.vim"[J
+1355308032.07257: Searching for "/home/roberto/.vim/syntax/syncolor.vim"[J
+1355308032.07265: Searching for "/usr/share/vim/vimfiles/syntax/syncolor.vim"[J
+1355308032.07274: Searching for "/usr/share/vim/vim73/syntax/syncolor.vim"[J
+1355308032.0728: chdir(/usr/share/vim/vim73/syntax)[J
+1355308032.07283: fchdir() to previous dir[J
+1355308032.07312: line 21: sourcing "/usr/share/vim/vim73/syntax/syncolor.vim"[J
+1355308032.07321: finished sourcing /usr/share/vim/vim73/syntax/syncolor.vim[J
+1355308032.07793: continuing in /usr/share/vim/vim73/syntax/synload.vim[J
+1355308032.07795: Searching for "/usr/share/vim/vimfiles/after/syntax/syncolor.vim"[J
+1355308032.07795: Searching for "/home/roberto/.vim/after/syntax/syncolor.vim"[J
+1355308032.07795: Searching for "/home/roberto/.vim/bundle/vundle/syntax/syncolor.vim"[J
+1355308032.07796: Searching for "/home/roberto/.vim/bundle/vundle/after/syntax/syncolor.vim"[J
+1355308032.07796: Searching for "/home/roberto/.vim/bundle/nerdtree/after/syntax/syncolor.vim"[J
+1355308032.07796: Searching for "/home/roberto/.vim/bundle/nerdcommenter/after/syntax/syncolor.vim"[J
+1355308032.07796: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/after/syntax/syncolor.vim"[J
+1355308032.07796: Searching for "/home/roberto/.vim/bundle/AutoComplPop/after/syntax/syncolor.vim"[J
+1355308032.07796: Searching for "/home/roberto/.vim/bundle/taglist.vim/after/syntax/syncolor.vim"[J
+1355308032.07796: Searching for "/home/roberto/.vim/bundle/YankRing.vim/after/syntax/syncolor.vim"[J
+1355308032.07796: Searching for "/home/roberto/.vim/bundle/vim-fugitive/after/syntax/syncolor.vim"[J
+1355308032.07797: Searching for "/home/roberto/.vim/bundle/syntastic/after/syntax/syncolor.vim"[J
+1355308032.07797: Searching for "/home/roberto/.vim/bundle/snipmate.vim/after/syntax/syncolor.vim"[J
+1355308032.07797: Searching for "/home/roberto/.vim/bundle/vim-surround/after/syntax/syncolor.vim"[J
+1355308032.07797: Searching for "/home/roberto/.vim/bundle/vim-align/after/syntax/syncolor.vim"[J
+1355308032.07797: Searching for "/home/roberto/.vim/bundle/ack.vim/after/syntax/syncolor.vim"[J
+1355308032.07797: Searching for "/home/roberto/.vim/bundle/vim-indentobject/after/syntax/syncolor.vim"[J
+1355308032.07797: Searching for "/home/roberto/.vim/bundle/greplace.vim/after/syntax/syncolor.vim"[J
+1355308032.07797: Searching for "/home/roberto/.vim/bundle/vim-powerline/after/syntax/syncolor.vim"[J
+1355308032.07797: Searching for "/home/roberto/.vim/bundle/threesome.vim/after/syntax/syncolor.vim"[J
+1355308032.07798: Searching for "/home/roberto/.vim/bundle/Indent-Guides/after/syntax/syncolor.vim"[J
+1355308032.07798: Searching for "/home/roberto/.vim/bundle/vim-endwise/after/syntax/syncolor.vim"[J
+1355308032.07798: Searching for "/home/roberto/.vim/bundle/delimitMate/after/syntax/syncolor.vim"[J
+1355308032.07798: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/after/syntax/syncolor.vim"[J
+1355308032.07798: Searching for "/home/roberto/.vim/bundle/NrrwRgn/after/syntax/syncolor.vim"[J
+1355308032.07798: Searching for "/home/roberto/.vim/bundle/utl.vim/after/syntax/syncolor.vim"[J
+1355308032.07798: Searching for "/home/roberto/.vim/bundle/VimOrganizer/after/syntax/syncolor.vim"[J
+1355308032.07798: Searching for "/home/roberto/.vim/bundle/gundo.vim/after/syntax/syncolor.vim"[J
+1355308032.07799: Searching for "/home/roberto/.vim/bundle/switch.vim/after/syntax/syncolor.vim"[J
+1355308032.07799: Searching for "/home/roberto/.vim/bundle/vim-rails/after/syntax/syncolor.vim"[J
+1355308032.07799: Searching for "/home/roberto/.vim/bundle/vim-bundler/after/syntax/syncolor.vim"[J
+1355308032.07799: Searching for "/home/roberto/.vim/bundle/vim-rake/after/syntax/syncolor.vim"[J
+1355308032.07799: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/after/syntax/syncolor.vim"[J
+1355308032.07799: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/after/syntax/syncolor.vim"[J
+1355308032.07799: Searching for "/home/roberto/.vim/bundle/apidock.vim/after/syntax/syncolor.vim"[J
+1355308032.07799: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/after/syntax/syncolor.vim"[J
+1355308032.07799: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/after/syntax/syncolor.vim"[J
+1355308032.078: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim//after/syntax/syncolor.vim"[J
+1355308032.078: Searching for "/home/roberto/.vim/bundle/vim-ruby/after/syntax/syncolor.vim"[J
+1355308032.078: Searching for "/home/roberto/.vim/bundle/vim-tmux/after/syntax/syncolor.vim"[J
+1355308032.078: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/after/syntax/syncolor.vim"[J
+1355308032.078: Searching for "/home/roberto/.vim/bundle/JSON.vim/after/syntax/syncolor.vim"[J
+1355308032.078: Searching for "/home/roberto/.vim/bundle/vim-cucumber/after/syntax/syncolor.vim"[J
+1355308032.078: Searching for "/home/roberto/.vim/bundle/vim-haml/after/syntax/syncolor.vim"[J
+1355308032.078: Searching for "/home/roberto/.vim/bundle/vim-markdown/after/syntax/syncolor.vim"[J
+1355308032.07801: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/after/syntax/syncolor.vim"[J
+1355308032.07801: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/after/syntax/syncolor.vim"[J
+1355308032.07801: Searching for "/home/roberto/.vim/bundle/jade.vim/after/syntax/syncolor.vim"[J
+1355308032.07801: Searching for "/home/roberto/.vim/bundle/vim-stylus/after/syntax/syncolor.vim"[J
+1355308032.07801: Searching for "/home/roberto/.vim/bundle/VimClojure/after/syntax/syncolor.vim"[J
+1355308032.07801: Searching for "/home/roberto/.vim/bundle/vim-slim/after/syntax/syncolor.vim"[J
+1355308032.07801: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/after/syntax/syncolor.vim"[J
+1355308032.07801: Searching for "/home/roberto/.vim/bundle/vim-repeat/after/syntax/syncolor.vim"[J
+1355308032.07801: Searching for "/home/roberto/.vim/bundle/vim-gitignore/after/syntax/syncolor.vim"[J
+1355308032.07802: Searching for "/home/roberto/.vim/bundle/vim-space/after/syntax/syncolor.vim"[J
+1355308032.07802: Searching for "/home/roberto/.vim/bundle/gist-vim/after/syntax/syncolor.vim"[J
+1355308032.07802: Searching for "/home/roberto/.vim/bundle/webapi-vim/after/syntax/syncolor.vim"[J
+1355308032.07802: Searching for "/home/roberto/.vim/bundle/zencoding-vim/after/syntax/syncolor.vim"[J
+1355308032.07802: Searching for "/home/roberto/.vim/bundle/vim-css-color/after/syntax/syncolor.vim"[J
+1355308032.07802: Searching for "/home/roberto/.vim/bundle/vim-matchit/after/syntax/syncolor.vim"[J
+1355308032.07803: Searching for "/home/roberto/.vim/bundle/csapprox/after/syntax/syncolor.vim"[J
+1355308032.07803: finished sourcing /usr/share/vim/vim73/syntax/synload.vim[J
+1355308032.07804: continuing in /usr/share/vim/vim73/syntax/syntax.vim[J
+1355308032.07804: Searching for "filetype.vim" in "/home/roberto/.vim/bundle/vundle,/home/roberto/.vim/bundle/nerdtree,/home/roberto/.vim/bundle/nerdcommenter,/home/roberto/.vim/bundle/ctrlp.vim,/home/roberto/.vim/bundle/AutoComplPop,/home/roberto/.vim/bundle/taglist.vim,/home/roberto/.vim/bundle/YankRing.vim,/home/roberto/.vim/bundle/vim-fugitive,/home/roberto/.vim/bundle/syntastic,/home/roberto/.vim/bundle/snipmate.vim,/home/roberto/.vim/bundle/vim-surround,/home/roberto/.vim/bundle/vim-align,/home/roberto/.vim/bundle/ack.vim,/home/roberto/.vim/bundle/vim-indentobject,/home/roberto/.vim/bundle/greplace.vim,/home/roberto/.vim/bundle/vim-powerline,/home/roberto/.vim/bundle/threesome.vim,/home/roberto/.vim/bundle/Indent-Guides,/home/roberto/.vim/bundle/vim-endwise,/home/roberto/.vim/bundle/delimitMate,/home/roberto/.vim/bundle/calendar.vim--Matsumoto,/home/roberto/.vim/bundle/NrrwRgn,/home/roberto/.vim/bundle/utl.vim,/home/roberto/.vim/bundle/VimOrganizer,/home/roberto/.vim/bundle/gundo.vim,/home/roberto/.vim/bundle/switch.vim,[J
+1355308032.07804: Searching for "/home/roberto/.vim/bundle/vundle/filetype.vim"[J
+1355308032.07804: Searching for "/home/roberto/.vim/bundle/nerdtree/filetype.vim"[J
+1355308032.07804: Searching for "/home/roberto/.vim/bundle/nerdcommenter/filetype.vim"[J
+1355308032.07804: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/filetype.vim"[J
+1355308032.07804: Searching for "/home/roberto/.vim/bundle/AutoComplPop/filetype.vim"[J
+1355308032.07805: Searching for "/home/roberto/.vim/bundle/taglist.vim/filetype.vim"[J
+1355308032.07805: Searching for "/home/roberto/.vim/bundle/YankRing.vim/filetype.vim"[J
+1355308032.07805: Searching for "/home/roberto/.vim/bundle/vim-fugitive/filetype.vim"[J
+1355308032.07805: Searching for "/home/roberto/.vim/bundle/syntastic/filetype.vim"[J
+1355308032.07805: Searching for "/home/roberto/.vim/bundle/snipmate.vim/filetype.vim"[J
+1355308032.07805: Searching for "/home/roberto/.vim/bundle/vim-surround/filetype.vim"[J
+1355308032.07805: Searching for "/home/roberto/.vim/bundle/vim-align/filetype.vim"[J
+1355308032.07805: Searching for "/home/roberto/.vim/bundle/ack.vim/filetype.vim"[J
+1355308032.07806: Searching for "/home/roberto/.vim/bundle/vim-indentobject/filetype.vim"[J
+1355308032.07806: Searching for "/home/roberto/.vim/bundle/greplace.vim/filetype.vim"[J
+1355308032.07806: Searching for "/home/roberto/.vim/bundle/vim-powerline/filetype.vim"[J
+1355308032.07806: Searching for "/home/roberto/.vim/bundle/threesome.vim/filetype.vim"[J
+1355308032.07806: Searching for "/home/roberto/.vim/bundle/Indent-Guides/filetype.vim"[J
+1355308032.07806: Searching for "/home/roberto/.vim/bundle/vim-endwise/filetype.vim"[J
+1355308032.07806: Searching for "/home/roberto/.vim/bundle/delimitMate/filetype.vim"[J
+1355308032.07806: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/filetype.vim"[J
+1355308032.07806: Searching for "/home/roberto/.vim/bundle/NrrwRgn/filetype.vim"[J
+1355308032.07807: Searching for "/home/roberto/.vim/bundle/utl.vim/filetype.vim"[J
+1355308032.07807: Searching for "/home/roberto/.vim/bundle/VimOrganizer/filetype.vim"[J
+1355308032.07807: Searching for "/home/roberto/.vim/bundle/gundo.vim/filetype.vim"[J
+1355308032.07807: Searching for "/home/roberto/.vim/bundle/switch.vim/filetype.vim"[J
+1355308032.07807: Searching for "/home/roberto/.vim/bundle/vim-rails/filetype.vim"[J
+1355308032.07807: Searching for "/home/roberto/.vim/bundle/vim-bundler/filetype.vim"[J
+1355308032.07808: Searching for "/home/roberto/.vim/bundle/vim-rake/filetype.vim"[J
+1355308032.07808: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/filetype.vim"[J
+1355308032.07808: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/filetype.vim"[J
+1355308032.07808: Searching for "/home/roberto/.vim/bundle/apidock.vim/filetype.vim"[J
+1355308032.07808: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/filetype.vim"[J
+1355308032.07808: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/filetype.vim"[J
+1355308032.07808: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim/filetype.vim"[J
+1355308032.07809: Searching for "/home/roberto/.vim/bundle/vim-ruby/filetype.vim"[J
+1355308032.07809: Searching for "/home/roberto/.vim/bundle/vim-tmux/filetype.vim"[J
+1355308032.07809: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/filetype.vim"[J
+1355308032.0781: Searching for "/home/roberto/.vim/bundle/JSON.vim/filetype.vim"[J
+1355308032.0781: Searching for "/home/roberto/.vim/bundle/vim-cucumber/filetype.vim"[J
+1355308032.0781: Searching for "/home/roberto/.vim/bundle/vim-haml/filetype.vim"[J
+1355308032.0781: Searching for "/home/roberto/.vim/bundle/vim-markdown/filetype.vim"[J
+1355308032.0781: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/filetype.vim"[J
+1355308032.0781: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/filetype.vim"[J
+1355308032.0781: Searching for "/home/roberto/.vim/bundle/jade.vim/filetype.vim"[J
+1355308032.0781: Searching for "/home/roberto/.vim/bundle/vim-stylus/filetype.vim"[J
+1355308032.07811: Searching for "/home/roberto/.vim/bundle/VimClojure/filetype.vim"[J
+1355308032.07811: Searching for "/home/roberto/.vim/bundle/vim-slim/filetype.vim"[J
+1355308032.07811: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/filetype.vim"[J
+1355308032.07811: Searching for "/home/roberto/.vim/bundle/vim-repeat/filetype.vim"[J
+1355308032.07811: Searching for "/home/roberto/.vim/bundle/vim-gitignore/filetype.vim"[J
+1355308032.07811: Searching for "/home/roberto/.vim/bundle/vim-space/filetype.vim"[J
+1355308032.07811: Searching for "/home/roberto/.vim/bundle/gist-vim/filetype.vim"[J
+1355308032.07811: Searching for "/home/roberto/.vim/bundle/webapi-vim/filetype.vim"[J
+1355308032.07811: Searching for "/home/roberto/.vim/bundle/zencoding-vim/filetype.vim"[J
+1355308032.07812: Searching for "/home/roberto/.vim/bundle/vim-css-color/filetype.vim"[J
+1355308032.07812: Searching for "/home/roberto/.vim/bundle/vim-matchit/filetype.vim"[J
+1355308032.07812: Searching for "/home/roberto/.vim/bundle/csapprox/filetype.vim"[J
+1355308032.07812: Searching for "/home/roberto/.vim/filetype.vim"[J
+1355308032.07812: Searching for "/usr/share/vim/vimfiles/filetype.vim"[J
+1355308032.07812: Searching for "/usr/share/vim/vim73/filetype.vim"[J
+1355308032.07812: chdir(/usr/share/vim/vim73)[J
+1355308032.07812: fchdir() to previous dir[J
+1355308032.09025: line 25: sourcing "/usr/share/vim/vim73/filetype.vim"[J
+1355308032.09249: Searching for "ftdetect/*.vim" in "/home/roberto/.vim/bundle/vundle,/home/roberto/.vim/bundle/nerdtree,/home/roberto/.vim/bundle/nerdcommenter,/home/roberto/.vim/bundle/ctrlp.vim,/home/roberto/.vim/bundle/AutoComplPop,/home/roberto/.vim/bundle/taglist.vim,/home/roberto/.vim/bundle/YankRing.vim,/home/roberto/.vim/bundle/vim-fugitive,/home/roberto/.vim/bundle/syntastic,/home/roberto/.vim/bundle/snipmate.vim,/home/roberto/.vim/bundle/vim-surround,/home/roberto/.vim/bundle/vim-align,/home/roberto/.vim/bundle/ack.vim,/home/roberto/.vim/bundle/vim-indentobject,/home/roberto/.vim/bundle/greplace.vim,/home/roberto/.vim/bundle/vim-powerline,/home/roberto/.vim/bundle/threesome.vim,/home/roberto/.vim/bundle/Indent-Guides,/home/roberto/.vim/bundle/vim-endwise,/home/roberto/.vim/bundle/delimitMate,/home/roberto/.vim/bundle/calendar.vim--Matsumoto,/home/roberto/.vim/bundle/NrrwRgn,/home/roberto/.vim/bundle/utl.vim,/home/roberto/.vim/bundle/VimOrganizer,/home/roberto/.vim/bundle/gundo.vim,/home/roberto/.vim/bundle/switch.vi[J
+1355308032.0925: Searching for "/home/roberto/.vim/bundle/vundle/ftdetect/*.vim"[J
+1355308032.09251: Searching for "/home/roberto/.vim/bundle/nerdtree/ftdetect/*.vim"[J
+1355308032.09251: Searching for "/home/roberto/.vim/bundle/nerdcommenter/ftdetect/*.vim"[J
+1355308032.09251: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/ftdetect/*.vim"[J
+1355308032.09252: Searching for "/home/roberto/.vim/bundle/AutoComplPop/ftdetect/*.vim"[J
+1355308032.09252: Searching for "/home/roberto/.vim/bundle/taglist.vim/ftdetect/*.vim"[J
+1355308032.09252: Searching for "/home/roberto/.vim/bundle/YankRing.vim/ftdetect/*.vim"[J
+1355308032.09252: Searching for "/home/roberto/.vim/bundle/vim-fugitive/ftdetect/*.vim"[J
+1355308032.09252: Searching for "/home/roberto/.vim/bundle/syntastic/ftdetect/*.vim"[J
+1355308032.09252: Searching for "/home/roberto/.vim/bundle/snipmate.vim/ftdetect/*.vim"[J
+1355308032.09253: Searching for "/home/roberto/.vim/bundle/vim-surround/ftdetect/*.vim"[J
+1355308032.09253: Searching for "/home/roberto/.vim/bundle/vim-align/ftdetect/*.vim"[J
+1355308032.09253: Searching for "/home/roberto/.vim/bundle/ack.vim/ftdetect/*.vim"[J
+1355308032.09253: Searching for "/home/roberto/.vim/bundle/vim-indentobject/ftdetect/*.vim"[J
+1355308032.09253: Searching for "/home/roberto/.vim/bundle/greplace.vim/ftdetect/*.vim"[J
+1355308032.09253: Searching for "/home/roberto/.vim/bundle/vim-powerline/ftdetect/*.vim"[J
+1355308032.09253: Searching for "/home/roberto/.vim/bundle/threesome.vim/ftdetect/*.vim"[J
+1355308032.09253: Searching for "/home/roberto/.vim/bundle/Indent-Guides/ftdetect/*.vim"[J
+1355308032.09254: Searching for "/home/roberto/.vim/bundle/vim-endwise/ftdetect/*.vim"[J
+1355308032.09254: Searching for "/home/roberto/.vim/bundle/delimitMate/ftdetect/*.vim"[J
+1355308032.09254: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/ftdetect/*.vim"[J
+1355308032.09254: Searching for "/home/roberto/.vim/bundle/NrrwRgn/ftdetect/*.vim"[J
+1355308032.09254: Searching for "/home/roberto/.vim/bundle/utl.vim/ftdetect/*.vim"[J
+1355308032.09254: Searching for "/home/roberto/.vim/bundle/VimOrganizer/ftdetect/*.vim"[J
+1355308032.09254: Searching for "/home/roberto/.vim/bundle/gundo.vim/ftdetect/*.vim"[J
+1355308032.09254: Searching for "/home/roberto/.vim/bundle/switch.vim/ftdetect/*.vim"[J
+1355308032.09255: Searching for "/home/roberto/.vim/bundle/vim-rails/ftdetect/*.vim"[J
+1355308032.09255: Searching for "/home/roberto/.vim/bundle/vim-bundler/ftdetect/*.vim"[J
+1355308032.09255: Searching for "/home/roberto/.vim/bundle/vim-rake/ftdetect/*.vim"[J
+1355308032.09255: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/ftdetect/*.vim"[J
+1355308032.09255: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/ftdetect/*.vim"[J
+1355308032.09255: Searching for "/home/roberto/.vim/bundle/apidock.vim/ftdetect/*.vim"[J
+1355308032.09255: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/ftdetect/*.vim"[J
+1355308032.09255: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/ftdetect/*.vim"[J
+1355308032.09256: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim/ftdetect/*.vim"[J
+1355308032.09256: Searching for "/home/roberto/.vim/bundle/vim-ruby/ftdetect/*.vim"[J
+1355308032.09256: chdir(/home/roberto/.vim/bundle/vim-ruby/ftdetect)[J
+1355308032.09256: fchdir() to previous dir[J
+1355308032.09297: line 2587: sourcing "/home/roberto/.vim/bundle/vim-ruby/ftdetect/ruby.vim"[J
+1355308032.09301: finished sourcing /home/roberto/.vim/bundle/vim-ruby/ftdetect/ruby.vim[J
+1355308032.0931: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.09316: Searching for "/home/roberto/.vim/bundle/vim-tmux/ftdetect/*.vim"[J
+1355308032.09325: chdir(/home/roberto/.vim/bundle/vim-tmux/ftdetect)[J
+1355308032.09332: fchdir() to previous dir[J
+1355308032.09349: line 2587: sourcing "/home/roberto/.vim/bundle/vim-tmux/ftdetect/tmux.vim"[J
+1355308032.09357: finished sourcing /home/roberto/.vim/bundle/vim-tmux/ftdetect/tmux.vim[J
+1355308032.09363: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.09372: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/ftdetect/*.vim"[J
+1355308032.09379: chdir(/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/ftdetect)[J
+1355308032.09384: fchdir() to previous dir[J
+1355308032.09402: line 2587: sourcing "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/ftdetect/puppet.vim"[J
+1355308032.09413: finished sourcing /home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/ftdetect/puppet.vim[J
+1355308032.09418: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.09428: Searching for "/home/roberto/.vim/bundle/JSON.vim/ftdetect/*.vim"[J
+1355308032.09441: Searching for "/home/roberto/.vim/bundle/vim-cucumber/ftdetect/*.vim"[J
+1355308032.09445: chdir(/home/roberto/.vim/bundle/vim-cucumber/ftdetect)[J
+1355308032.09451: fchdir() to previous dir[J
+1355308032.09472: line 2587: sourcing "/home/roberto/.vim/bundle/vim-cucumber/ftdetect/cucumber.vim"[J
+1355308032.09482: finished sourcing /home/roberto/.vim/bundle/vim-cucumber/ftdetect/cucumber.vim[J
+1355308032.09487: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.09492: Searching for "/home/roberto/.vim/bundle/vim-haml/ftdetect/*.vim"[J
+1355308032.09499: chdir(/home/roberto/.vim/bundle/vim-haml/ftdetect)[J
+1355308032.09502: fchdir() to previous dir[J
+1355308032.0952: line 2587: sourcing "/home/roberto/.vim/bundle/vim-haml/ftdetect/haml.vim"[J
+1355308032.09532: finished sourcing /home/roberto/.vim/bundle/vim-haml/ftdetect/haml.vim[J
+1355308032.09537: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.09547: Searching for "/home/roberto/.vim/bundle/vim-markdown/ftdetect/*.vim"[J
+1355308032.09558: chdir(/home/roberto/.vim/bundle/vim-markdown/ftdetect)[J
+1355308032.09561: fchdir() to previous dir[J
+1355308032.09592: line 2587: sourcing "/home/roberto/.vim/bundle/vim-markdown/ftdetect/markdown.vim"[J
+1355308032.09596: finished sourcing /home/roberto/.vim/bundle/vim-markdown/ftdetect/markdown.vim[J
+1355308032.09604: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.09611: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/ftdetect/*.vim"[J
+1355308032.09619: chdir(/home/roberto/.vim/bundle/vim-coffee-script/ftdetect)[J
+1355308032.09624: fchdir() to previous dir[J
+1355308032.09654: line 2587: sourcing "/home/roberto/.vim/bundle/vim-coffee-script/ftdetect/coffee.vim"[J
+1355308032.09673: finished sourcing /home/roberto/.vim/bundle/vim-coffee-script/ftdetect/coffee.vim[J
+1355308032.09682: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.09693: chdir(/home/roberto/.vim/bundle/vim-coffee-script/ftdetect)[J
+1355308032.09697: fchdir() to previous dir[J
+1355308032.09715: line 2587: sourcing "/home/roberto/.vim/bundle/vim-coffee-script/ftdetect/eco.vim"[J
+1355308032.09729: finished sourcing /home/roberto/.vim/bundle/vim-coffee-script/ftdetect/eco.vim[J
+1355308032.09739: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.09754: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/ftdetect/*.vim"[J
+1355308032.09769: Searching for "/home/roberto/.vim/bundle/jade.vim/ftdetect/*.vim"[J
+1355308032.09778: chdir(/home/roberto/.vim/bundle/jade.vim/ftdetect)[J
+1355308032.09782: fchdir() to previous dir[J
+1355308032.09793: line 2587: sourcing "/home/roberto/.vim/bundle/jade.vim/ftdetect/jade.vim"[J
+1355308032.09807: finished sourcing /home/roberto/.vim/bundle/jade.vim/ftdetect/jade.vim[J
+1355308032.09816: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.0983: Searching for "/home/roberto/.vim/bundle/vim-stylus/ftdetect/*.vim"[J
+1355308032.09839: chdir(/home/roberto/.vim/bundle/vim-stylus/ftdetect)[J
+1355308032.09843: fchdir() to previous dir[J
+1355308032.09867: line 2587: sourcing "/home/roberto/.vim/bundle/vim-stylus/ftdetect/stylus.vim"[J
+1355308032.09881: finished sourcing /home/roberto/.vim/bundle/vim-stylus/ftdetect/stylus.vim[J
+1355308032.0989: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.09905: Searching for "/home/roberto/.vim/bundle/VimClojure/ftdetect/*.vim"[J
+1355308032.09915: chdir(/home/roberto/.vim/bundle/VimClojure/ftdetect)[J
+1355308032.09917: fchdir() to previous dir[J
+1355308032.09935: line 2587: sourcing "/home/roberto/.vim/bundle/VimClojure/ftdetect/clojure.vim"[J
+1355308032.09947: finished sourcing /home/roberto/.vim/bundle/VimClojure/ftdetect/clojure.vim[J
+1355308032.09956: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.0997: Searching for "/home/roberto/.vim/bundle/vim-slim/ftdetect/*.vim"[J
+1355308032.09982: chdir(/home/roberto/.vim/bundle/vim-slim/ftdetect)[J
+1355308032.09987: fchdir() to previous dir[J
+1355308032.10008: line 2587: sourcing "/home/roberto/.vim/bundle/vim-slim/ftdetect/slim.vim"[J
+1355308032.10019: finished sourcing /home/roberto/.vim/bundle/vim-slim/ftdetect/slim.vim[J
+1355308032.10024: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.10039: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/ftdetect/*.vim"[J
+1355308032.10052: Searching for "/home/roberto/.vim/bundle/vim-repeat/ftdetect/*.vim"[J
+1355308032.10067: Searching for "/home/roberto/.vim/bundle/vim-gitignore/ftdetect/*.vim"[J
+1355308032.10077: Searching for "/home/roberto/.vim/bundle/vim-space/ftdetect/*.vim"[J
+1355308032.1009: Searching for "/home/roberto/.vim/bundle/gist-vim/ftdetect/*.vim"[J
+1355308032.10101: Searching for "/home/roberto/.vim/bundle/webapi-vim/ftdetect/*.vim"[J
+1355308032.10114: Searching for "/home/roberto/.vim/bundle/zencoding-vim/ftdetect/*.vim"[J
+1355308032.10124: Searching for "/home/roberto/.vim/bundle/vim-css-color/ftdetect/*.vim"[J
+1355308032.10139: Searching for "/home/roberto/.vim/bundle/vim-matchit/ftdetect/*.vim"[J
+1355308032.1015: Searching for "/home/roberto/.vim/bundle/csapprox/ftdetect/*.vim"[J
+1355308032.1016: Searching for "/home/roberto/.vim/ftdetect/*.vim"[J
+1355308032.10173: Searching for "/usr/share/vim/vimfiles/ftdetect/*.vim"[J
+1355308032.1018: chdir(/usr/share/vim/vimfiles/ftdetect)[J
+1355308032.10184: fchdir() to previous dir[J
+1355308032.102: line 2587: sourcing "/usr/share/vim/vimfiles/ftdetect/PKGBUILD.vim"[J
+1355308032.10212: finished sourcing /usr/share/vim/vimfiles/ftdetect/PKGBUILD.vim[J
+1355308032.10221: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.10229: chdir(/usr/share/vim/vimfiles/ftdetect)[J
+1355308032.10234: fchdir() to previous dir[J
+1355308032.10254: line 2587: sourcing "/usr/share/vim/vimfiles/ftdetect/conkyrc.vim"[J
+1355308032.10265: finished sourcing /usr/share/vim/vimfiles/ftdetect/conkyrc.vim[J
+1355308032.10275: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.10282: chdir(/usr/share/vim/vimfiles/ftdetect)[J
+1355308032.10286: fchdir() to previous dir[J
+1355308032.10304: line 2587: sourcing "/usr/share/vim/vimfiles/ftdetect/snippets.vim"[J
+1355308032.10316: finished sourcing /usr/share/vim/vimfiles/ftdetect/snippets.vim[J
+1355308032.10326: continuing in /usr/share/vim/vim73/filetype.vim[J
+1355308032.10364: Searching for "/usr/share/vim/vim73/ftdetect/*.vim"[J
+1355308032.10365: Searching for "/usr/share/vim/vimfiles/after/ftdetect/*.vim"[J
+1355308032.10365: Searching for "/home/roberto/.vim/after/ftdetect/*.vim"[J
+1355308032.10366: Searching for "/home/roberto/.vim/bundle/vundle/ftdetect/*.vim"[J
+1355308032.10366: Searching for "/home/roberto/.vim/bundle/vundle/after/ftdetect/*.vim"[J
+1355308032.10366: Searching for "/home/roberto/.vim/bundle/nerdtree/after/ftdetect/*.vim"[J
+1355308032.10366: Searching for "/home/roberto/.vim/bundle/nerdcommenter/after/ftdetect/*.vim"[J
+1355308032.10366: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/after/ftdetect/*.vim"[J
+1355308032.10366: Searching for "/home/roberto/.vim/bundle/AutoComplPop/after/ftdetect/*.vim"[J
+1355308032.10366: Searching for "/home/roberto/.vim/bundle/taglist.vim/after/ftdetect/*.vim"[J
+1355308032.10368: Searching for "/home/roberto/.vim/bundle/YankRing.vim/after/ftdetect/*.vim"[J
+1355308032.10378: Searching for "/home/roberto/.vim/bundle/vim-fugitive/after/ftdetect/*.vim"[J
+1355308032.10388: Searching for "/home/roberto/.vim/bundle/syntastic/after/ftdetect/*.vim"[J
+1355308032.10402: Searching for "/home/roberto/.vim/bundle/snipmate.vim/after/ftdetect/*.vim"[J
+1355308032.10416: Searching for "/home/roberto/.vim/bundle/vim-surround/after/ftdetect/*.vim"[J
+1355308032.1043: Searching for "/home/roberto/.vim/bundle/vim-align/after/ftdetect/*.vim"[J
+1355308032.10444: Searching for "/home/roberto/.vim/bundle/ack.vim/after/ftdetect/*.vim"[J
+1355308032.10459: Searching for "/home/roberto/.vim/bundle/vim-indentobject/after/ftdetect/*.vim"[J
+1355308032.10474: Searching for "/home/roberto/.vim/bundle/greplace.vim/after/ftdetect/*.vim"[J
+1355308032.10489: Searching for "/home/roberto/.vim/bundle/vim-powerline/after/ftdetect/*.vim"[J
+1355308032.10505: Searching for "/home/roberto/.vim/bundle/threesome.vim/after/ftdetect/*.vim"[J
+1355308032.10518: Searching for "/home/roberto/.vim/bundle/Indent-Guides/after/ftdetect/*.vim"[J
+1355308032.10532: Searching for "/home/roberto/.vim/bundle/vim-endwise/after/ftdetect/*.vim"[J
+1355308032.10545: Searching for "/home/roberto/.vim/bundle/delimitMate/after/ftdetect/*.vim"[J
+1355308032.1056: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/after/ftdetect/*.vim"[J
+1355308032.10572: Searching for "/home/roberto/.vim/bundle/NrrwRgn/after/ftdetect/*.vim"[J
+1355308032.10584: Searching for "/home/roberto/.vim/bundle/utl.vim/after/ftdetect/*.vim"[J
+1355308032.10596: Searching for "/home/roberto/.vim/bundle/VimOrganizer/after/ftdetect/*.vim"[J
+1355308032.10609: Searching for "/home/roberto/.vim/bundle/gundo.vim/after/ftdetect/*.vim"[J
+1355308032.10621: Searching for "/home/roberto/.vim/bundle/switch.vim/after/ftdetect/*.vim"[J
+1355308032.10635: Searching for "/home/roberto/.vim/bundle/vim-rails/after/ftdetect/*.vim"[J
+1355308032.10645: Searching for "/home/roberto/.vim/bundle/vim-bundler/after/ftdetect/*.vim"[J
+1355308032.10659: Searching for "/home/roberto/.vim/bundle/vim-rake/after/ftdetect/*.vim"[J
+1355308032.10677: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/after/ftdetect/*.vim"[J
+1355308032.10693: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/after/ftdetect/*.vim"[J
+1355308032.10707: Searching for "/home/roberto/.vim/bundle/apidock.vim/after/ftdetect/*.vim"[J
+1355308032.10723: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/after/ftdetect/*.vim"[J
+1355308032.10739: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/after/ftdetect/*.vim"[J
+1355308032.10754: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim//after/ftdetect/*.vim"[J
+1355308032.10767: Searching for "/home/roberto/.vim/bundle/vim-ruby/after/ftdetect/*.vim"[J
+1355308032.1078: Searching for "/home/roberto/.vim/bundle/vim-tmux/after/ftdetect/*.vim"[J
+1355308032.10798: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/after/ftdetect/*.vim"[J
+1355308032.10812: Searching for "/home/roberto/.vim/bundle/JSON.vim/after/ftdetect/*.vim"[J
+1355308032.10827: Searching for "/home/roberto/.vim/bundle/vim-cucumber/after/ftdetect/*.vim"[J
+1355308032.10841: Searching for "/home/roberto/.vim/bundle/vim-haml/after/ftdetect/*.vim"[J
+1355308032.10855: Searching for "/home/roberto/.vim/bundle/vim-markdown/after/ftdetect/*.vim"[J
+1355308032.10871: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/after/ftdetect/*.vim"[J
+1355308032.10887: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/after/ftdetect/*.vim"[J
+1355308032.10898: Searching for "/home/roberto/.vim/bundle/jade.vim/after/ftdetect/*.vim"[J
+1355308032.10913: Searching for "/home/roberto/.vim/bundle/vim-stylus/after/ftdetect/*.vim"[J
+1355308032.10925: Searching for "/home/roberto/.vim/bundle/VimClojure/after/ftdetect/*.vim"[J
+1355308032.1094: Searching for "/home/roberto/.vim/bundle/vim-slim/after/ftdetect/*.vim"[J
+1355308032.10954: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/after/ftdetect/*.vim"[J
+1355308032.10969: Searching for "/home/roberto/.vim/bundle/vim-repeat/after/ftdetect/*.vim"[J
+1355308032.10983: Searching for "/home/roberto/.vim/bundle/vim-gitignore/after/ftdetect/*.vim"[J
+1355308032.10997: Searching for "/home/roberto/.vim/bundle/vim-space/after/ftdetect/*.vim"[J
+1355308032.11009: Searching for "/home/roberto/.vim/bundle/gist-vim/after/ftdetect/*.vim"[J
+1355308032.1102: Searching for "/home/roberto/.vim/bundle/webapi-vim/after/ftdetect/*.vim"[J
+1355308032.11034: Searching for "/home/roberto/.vim/bundle/zencoding-vim/after/ftdetect/*.vim"[J
+1355308032.11049: Searching for "/home/roberto/.vim/bundle/vim-css-color/after/ftdetect/*.vim"[J
+1355308032.11064: Searching for "/home/roberto/.vim/bundle/vim-matchit/after/ftdetect/*.vim"[J
+1355308032.11085: Searching for "/home/roberto/.vim/bundle/csapprox/after/ftdetect/*.vim"[J
+1355308032.11094: finished sourcing /usr/share/vim/vim73/filetype.vim[J
+1355308032.11104: continuing in /usr/share/vim/vim73/syntax/syntax.vim[J
+1355308032.11121: Searching for "/usr/share/vim/vimfiles/after/filetype.vim"[J
+1355308032.11135: Searching for "/home/roberto/.vim/after/filetype.vim"[J
+1355308032.11146: Searching for "/home/roberto/.vim/bundle/vundle/filetype.vim"[J
+1355308032.11157: Searching for "/home/roberto/.vim/bundle/vundle/after/filetype.vim"[J
+1355308032.11167: Searching for "/home/roberto/.vim/bundle/nerdtree/after/filetype.vim"[J
+1355308032.11181: Searching for "/home/roberto/.vim/bundle/nerdcommenter/after/filetype.vim"[J
+1355308032.11194: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/after/filetype.vim"[J
+1355308032.11207: Searching for "/home/roberto/.vim/bundle/AutoComplPop/after/filetype.vim"[J
+1355308032.1122: Searching for "/home/roberto/.vim/bundle/taglist.vim/after/filetype.vim"[J
+1355308032.11232: Searching for "/home/roberto/.vim/bundle/YankRing.vim/after/filetype.vim"[J
+1355308032.11246: Searching for "/home/roberto/.vim/bundle/vim-fugitive/after/filetype.vim"[J
+1355308032.11256: Searching for "/home/roberto/.vim/bundle/syntastic/after/filetype.vim"[J
+1355308032.1127: Searching for "/home/roberto/.vim/bundle/snipmate.vim/after/filetype.vim"[J
+1355308032.11283: Searching for "/home/roberto/.vim/bundle/vim-surround/after/filetype.vim"[J
+1355308032.11294: Searching for "/home/roberto/.vim/bundle/vim-align/after/filetype.vim"[J
+1355308032.11307: Searching for "/home/roberto/.vim/bundle/ack.vim/after/filetype.vim"[J
+1355308032.11322: Searching for "/home/roberto/.vim/bundle/vim-indentobject/after/filetype.vim"[J
+1355308032.11336: Searching for "/home/roberto/.vim/bundle/greplace.vim/after/filetype.vim"[J
+1355308032.11349: Searching for "/home/roberto/.vim/bundle/vim-powerline/after/filetype.vim"[J
+1355308032.11364: Searching for "/home/roberto/.vim/bundle/threesome.vim/after/filetype.vim"[J
+1355308032.11376: Searching for "/home/roberto/.vim/bundle/Indent-Guides/after/filetype.vim"[J
+1355308032.11389: Searching for "/home/roberto/.vim/bundle/vim-endwise/after/filetype.vim"[J
+1355308032.11403: Searching for "/home/roberto/.vim/bundle/delimitMate/after/filetype.vim"[J
+1355308032.11412: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/after/filetype.vim"[J
+1355308032.11425: Searching for "/home/roberto/.vim/bundle/NrrwRgn/after/filetype.vim"[J
+1355308032.11438: Searching for "/home/roberto/.vim/bundle/utl.vim/after/filetype.vim"[J
+1355308032.11452: Searching for "/home/roberto/.vim/bundle/VimOrganizer/after/filetype.vim"[J
+1355308032.11465: Searching for "/home/roberto/.vim/bundle/gundo.vim/after/filetype.vim"[J
+1355308032.11479: Searching for "/home/roberto/.vim/bundle/switch.vim/after/filetype.vim"[J
+1355308032.11491: Searching for "/home/roberto/.vim/bundle/vim-rails/after/filetype.vim"[J
+1355308032.11505: Searching for "/home/roberto/.vim/bundle/vim-bundler/after/filetype.vim"[J
+1355308032.11517: Searching for "/home/roberto/.vim/bundle/vim-rake/after/filetype.vim"[J
+1355308032.1153: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/after/filetype.vim"[J
+1355308032.1154: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/after/filetype.vim"[J
+1355308032.11553: Searching for "/home/roberto/.vim/bundle/apidock.vim/after/filetype.vim"[J
+1355308032.11568: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/after/filetype.vim"[J
+1355308032.11576: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/after/filetype.vim"[J
+1355308032.11587: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim//after/filetype.vim"[J
+1355308032.11594: Searching for "/home/roberto/.vim/bundle/vim-ruby/after/filetype.vim"[J
+1355308032.11602: Searching for "/home/roberto/.vim/bundle/vim-tmux/after/filetype.vim"[J
+1355308032.11612: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/after/filetype.vim"[J
+1355308032.11623: Searching for "/home/roberto/.vim/bundle/JSON.vim/after/filetype.vim"[J
+1355308032.11635: Searching for "/home/roberto/.vim/bundle/vim-cucumber/after/filetype.vim"[J
+1355308032.11644: Searching for "/home/roberto/.vim/bundle/vim-haml/after/filetype.vim"[J
+1355308032.11653: Searching for "/home/roberto/.vim/bundle/vim-markdown/after/filetype.vim"[J
+1355308032.11667: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/after/filetype.vim"[J
+1355308032.11673: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/after/filetype.vim"[J
+1355308032.11681: Searching for "/home/roberto/.vim/bundle/jade.vim/after/filetype.vim"[J
+1355308032.11688: Searching for "/home/roberto/.vim/bundle/vim-stylus/after/filetype.vim"[J
+1355308032.11695: Searching for "/home/roberto/.vim/bundle/VimClojure/after/filetype.vim"[J
+1355308032.11701: Searching for "/home/roberto/.vim/bundle/vim-slim/after/filetype.vim"[J
+1355308032.11711: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/after/filetype.vim"[J
+1355308032.11719: Searching for "/home/roberto/.vim/bundle/vim-repeat/after/filetype.vim"[J
+1355308032.11726: Searching for "/home/roberto/.vim/bundle/vim-gitignore/after/filetype.vim"[J
+1355308032.11733: Searching for "/home/roberto/.vim/bundle/vim-space/after/filetype.vim"[J
+1355308032.11739: Searching for "/home/roberto/.vim/bundle/gist-vim/after/filetype.vim"[J
+1355308032.11745: Searching for "/home/roberto/.vim/bundle/webapi-vim/after/filetype.vim"[J
+1355308032.11751: Searching for "/home/roberto/.vim/bundle/zencoding-vim/after/filetype.vim"[J
+1355308032.11757: Searching for "/home/roberto/.vim/bundle/vim-css-color/after/filetype.vim"[J
+1355308032.11763: Searching for "/home/roberto/.vim/bundle/vim-matchit/after/filetype.vim"[J
+1355308032.11772: Searching for "/home/roberto/.vim/bundle/csapprox/after/filetype.vim"[J
+1355308032.11777: finished sourcing /usr/share/vim/vim73/syntax/syntax.vim[J
+1355308032.11782: continuing in /home/roberto/dotvim/global.vim[J
+1355308032.11861: Searching for "filetype.vim" in "/home/roberto/.vim/bundle/vundle,/home/roberto/.vim/bundle/nerdtree,/home/roberto/.vim/bundle/nerdcommenter,/home/roberto/.vim/bundle/ctrlp.vim,/home/roberto/.vim/bundle/AutoComplPop,/home/roberto/.vim/bundle/taglist.vim,/home/roberto/.vim/bundle/YankRing.vim,/home/roberto/.vim/bundle/vim-fugitive,/home/roberto/.vim/bundle/syntastic,/home/roberto/.vim/bundle/snipmate.vim,/home/roberto/.vim/bundle/vim-surround,/home/roberto/.vim/bundle/vim-align,/home/roberto/.vim/bundle/ack.vim,/home/roberto/.vim/bundle/vim-indentobject,/home/roberto/.vim/bundle/greplace.vim,/home/roberto/.vim/bundle/vim-powerline,/home/roberto/.vim/bundle/threesome.vim,/home/roberto/.vim/bundle/Indent-Guides,/home/roberto/.vim/bundle/vim-endwise,/home/roberto/.vim/bundle/delimitMate,/home/roberto/.vim/bundle/calendar.vim--Matsumoto,/home/roberto/.vim/bundle/NrrwRgn,/home/roberto/.vim/bundle/utl.vim,/home/roberto/.vim/bundle/VimOrganizer,/home/roberto/.vim/bundle/gundo.vim,/home/roberto/.vim/bundle/switch.vim,[J
+1355308032.11866: Searching for "/home/roberto/.vim/bundle/vundle/filetype.vim"[J
+1355308032.11873: Searching for "/home/roberto/.vim/bundle/nerdtree/filetype.vim"[J
+1355308032.11878: Searching for "/home/roberto/.vim/bundle/nerdcommenter/filetype.vim"[J
+1355308032.11884: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/filetype.vim"[J
+1355308032.11889: Searching for "/home/roberto/.vim/bundle/AutoComplPop/filetype.vim"[J
+1355308032.11895: Searching for "/home/roberto/.vim/bundle/taglist.vim/filetype.vim"[J
+1355308032.11901: Searching for "/home/roberto/.vim/bundle/YankRing.vim/filetype.vim"[J
+1355308032.11908: Searching for "/home/roberto/.vim/bundle/vim-fugitive/filetype.vim"[J
+1355308032.11914: Searching for "/home/roberto/.vim/bundle/syntastic/filetype.vim"[J
+1355308032.11923: Searching for "/home/roberto/.vim/bundle/snipmate.vim/filetype.vim"[J
+1355308032.11934: Searching for "/home/roberto/.vim/bundle/vim-surround/filetype.vim"[J
+1355308032.11943: Searching for "/home/roberto/.vim/bundle/vim-align/filetype.vim"[J
+1355308032.11952: Searching for "/home/roberto/.vim/bundle/ack.vim/filetype.vim"[J
+1355308032.11963: Searching for "/home/roberto/.vim/bundle/vim-indentobject/filetype.vim"[J
+1355308032.11973: Searching for "/home/roberto/.vim/bundle/greplace.vim/filetype.vim"[J
+1355308032.11982: Searching for "/home/roberto/.vim/bundle/vim-powerline/filetype.vim"[J
+1355308032.11993: Searching for "/home/roberto/.vim/bundle/threesome.vim/filetype.vim"[J
+1355308032.12003: Searching for "/home/roberto/.vim/bundle/Indent-Guides/filetype.vim"[J
+1355308032.12012: Searching for "/home/roberto/.vim/bundle/vim-endwise/filetype.vim"[J
+1355308032.12021: Searching for "/home/roberto/.vim/bundle/delimitMate/filetype.vim"[J
+1355308032.12033: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/filetype.vim"[J
+1355308032.12042: Searching for "/home/roberto/.vim/bundle/NrrwRgn/filetype.vim"[J
+1355308032.12052: Searching for "/home/roberto/.vim/bundle/utl.vim/filetype.vim"[J
+1355308032.12061: Searching for "/home/roberto/.vim/bundle/VimOrganizer/filetype.vim"[J
+1355308032.1207: Searching for "/home/roberto/.vim/bundle/gundo.vim/filetype.vim"[J
+1355308032.12079: Searching for "/home/roberto/.vim/bundle/switch.vim/filetype.vim"[J
+1355308032.12085: Searching for "/home/roberto/.vim/bundle/vim-rails/filetype.vim"[J
+1355308032.1209: Searching for "/home/roberto/.vim/bundle/vim-bundler/filetype.vim"[J
+1355308032.12099: Searching for "/home/roberto/.vim/bundle/vim-rake/filetype.vim"[J
+1355308032.12107: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/filetype.vim"[J
+1355308032.12115: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/filetype.vim"[J
+1355308032.12124: Searching for "/home/roberto/.vim/bundle/apidock.vim/filetype.vim"[J
+1355308032.12135: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/filetype.vim"[J
+1355308032.12144: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/filetype.vim"[J
+1355308032.12153: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim/filetype.vim"[J
+1355308032.1216: Searching for "/home/roberto/.vim/bundle/vim-ruby/filetype.vim"[J
+1355308032.12168: Searching for "/home/roberto/.vim/bundle/vim-tmux/filetype.vim"[J
+1355308032.1218: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/filetype.vim"[J
+1355308032.1219: Searching for "/home/roberto/.vim/bundle/JSON.vim/filetype.vim"[J
+1355308032.12199: Searching for "/home/roberto/.vim/bundle/vim-cucumber/filetype.vim"[J
+1355308032.12208: Searching for "/home/roberto/.vim/bundle/vim-haml/filetype.vim"[J
+1355308032.12217: Searching for "/home/roberto/.vim/bundle/vim-markdown/filetype.vim"[J
+1355308032.12229: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/filetype.vim"[J
+1355308032.12247: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/filetype.vim"[J
+1355308032.12248: Searching for "/home/roberto/.vim/bundle/jade.vim/filetype.vim"[J
+1355308032.12248: Searching for "/home/roberto/.vim/bundle/vim-stylus/filetype.vim"[J
+1355308032.12251: Searching for "/home/roberto/.vim/bundle/VimClojure/filetype.vim"[J
+1355308032.12259: Searching for "/home/roberto/.vim/bundle/vim-slim/filetype.vim"[J
+1355308032.12269: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/filetype.vim"[J
+1355308032.12278: Searching for "/home/roberto/.vim/bundle/vim-repeat/filetype.vim"[J
+1355308032.12285: Searching for "/home/roberto/.vim/bundle/vim-gitignore/filetype.vim"[J
+1355308032.12293: Searching for "/home/roberto/.vim/bundle/vim-space/filetype.vim"[J
+1355308032.12299: Searching for "/home/roberto/.vim/bundle/gist-vim/filetype.vim"[J
+1355308032.12306: Searching for "/home/roberto/.vim/bundle/webapi-vim/filetype.vim"[J
+1355308032.12313: Searching for "/home/roberto/.vim/bundle/zencoding-vim/filetype.vim"[J
+1355308032.1232: Searching for "/home/roberto/.vim/bundle/vim-css-color/filetype.vim"[J
+1355308032.12327: Searching for "/home/roberto/.vim/bundle/vim-matchit/filetype.vim"[J
+1355308032.12333: Searching for "/home/roberto/.vim/bundle/csapprox/filetype.vim"[J
+1355308032.12339: Searching for "/home/roberto/.vim/filetype.vim"[J
+1355308032.12346: Searching for "/usr/share/vim/vimfiles/filetype.vim"[J
+1355308032.12351: Searching for "/usr/share/vim/vim73/filetype.vim"[J
+1355308032.12354: chdir(/usr/share/vim/vim73)[J
+1355308032.12359: fchdir() to previous dir[J
+1355308032.12369: line 4: sourcing "/usr/share/vim/vim73/filetype.vim"[J
+1355308032.12379: finished sourcing /usr/share/vim/vim73/filetype.vim[J
+1355308032.12386: continuing in /home/roberto/dotvim/global.vim[J
+1355308032.12396: Searching for "/usr/share/vim/vimfiles/after/filetype.vim"[J
+1355308032.12406: Searching for "/home/roberto/.vim/after/filetype.vim"[J
+1355308032.12414: Searching for "/home/roberto/.vim/bundle/vundle/filetype.vim"[J
+1355308032.12675: Searching for "/home/roberto/.vim/bundle/vundle/after/filetype.vim"[J
+1355308032.12677: Searching for "/home/roberto/.vim/bundle/nerdtree/after/filetype.vim"[J
+1355308032.12677: Searching for "/home/roberto/.vim/bundle/nerdcommenter/after/filetype.vim"[J
+1355308032.12677: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/after/filetype.vim"[J
+1355308032.12677: Searching for "/home/roberto/.vim/bundle/AutoComplPop/after/filetype.vim"[J
+1355308032.12677: Searching for "/home/roberto/.vim/bundle/taglist.vim/after/filetype.vim"[J
+1355308032.12677: Searching for "/home/roberto/.vim/bundle/YankRing.vim/after/filetype.vim"[J
+1355308032.12677: Searching for "/home/roberto/.vim/bundle/vim-fugitive/after/filetype.vim"[J
+1355308032.12678: Searching for "/home/roberto/.vim/bundle/syntastic/after/filetype.vim"[J
+1355308032.12678: Searching for "/home/roberto/.vim/bundle/snipmate.vim/after/filetype.vim"[J
+1355308032.12678: Searching for "/home/roberto/.vim/bundle/vim-surround/after/filetype.vim"[J
+1355308032.12678: Searching for "/home/roberto/.vim/bundle/vim-align/after/filetype.vim"[J
+1355308032.12678: Searching for "/home/roberto/.vim/bundle/ack.vim/after/filetype.vim"[J
+1355308032.12678: Searching for "/home/roberto/.vim/bundle/vim-indentobject/after/filetype.vim"[J
+1355308032.12678: Searching for "/home/roberto/.vim/bundle/greplace.vim/after/filetype.vim"[J
+1355308032.12678: Searching for "/home/roberto/.vim/bundle/vim-powerline/after/filetype.vim"[J
+1355308032.12679: Searching for "/home/roberto/.vim/bundle/threesome.vim/after/filetype.vim"[J
+1355308032.12679: Searching for "/home/roberto/.vim/bundle/Indent-Guides/after/filetype.vim"[J
+1355308032.12679: Searching for "/home/roberto/.vim/bundle/vim-endwise/after/filetype.vim"[J
+1355308032.12679: Searching for "/home/roberto/.vim/bundle/delimitMate/after/filetype.vim"[J
+1355308032.12679: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/after/filetype.vim"[J
+1355308032.12679: Searching for "/home/roberto/.vim/bundle/NrrwRgn/after/filetype.vim"[J
+1355308032.12679: Searching for "/home/roberto/.vim/bundle/utl.vim/after/filetype.vim"[J
+1355308032.12679: Searching for "/home/roberto/.vim/bundle/VimOrganizer/after/filetype.vim"[J
+1355308032.1268: Searching for "/home/roberto/.vim/bundle/gundo.vim/after/filetype.vim"[J
+1355308032.1268: Searching for "/home/roberto/.vim/bundle/switch.vim/after/filetype.vim"[J
+1355308032.1268: Searching for "/home/roberto/.vim/bundle/vim-rails/after/filetype.vim"[J
+1355308032.1268: Searching for "/home/roberto/.vim/bundle/vim-bundler/after/filetype.vim"[J
+1355308032.12681: Searching for "/home/roberto/.vim/bundle/vim-rake/after/filetype.vim"[J
+1355308032.12681: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/after/filetype.vim"[J
+1355308032.12681: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/after/filetype.vim"[J
+1355308032.12681: Searching for "/home/roberto/.vim/bundle/apidock.vim/after/filetype.vim"[J
+1355308032.12681: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/after/filetype.vim"[J
+1355308032.12681: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/after/filetype.vim"[J
+1355308032.12681: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim//after/filetype.vim"[J
+1355308032.12682: Searching for "/home/roberto/.vim/bundle/vim-ruby/after/filetype.vim"[J
+1355308032.12682: Searching for "/home/roberto/.vim/bundle/vim-tmux/after/filetype.vim"[J
+1355308032.12682: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/after/filetype.vim"[J
+1355308032.12682: Searching for "/home/roberto/.vim/bundle/JSON.vim/after/filetype.vim"[J
+1355308032.12682: Searching for "/home/roberto/.vim/bundle/vim-cucumber/after/filetype.vim"[J
+1355308032.12682: Searching for "/home/roberto/.vim/bundle/vim-haml/after/filetype.vim"[J
+1355308032.12682: Searching for "/home/roberto/.vim/bundle/vim-markdown/after/filetype.vim"[J
+1355308032.12682: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/after/filetype.vim"[J
+1355308032.12683: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/after/filetype.vim"[J
+1355308032.12683: Searching for "/home/roberto/.vim/bundle/jade.vim/after/filetype.vim"[J
+1355308032.12683: Searching for "/home/roberto/.vim/bundle/vim-stylus/after/filetype.vim"[J
+1355308032.12683: Searching for "/home/roberto/.vim/bundle/VimClojure/after/filetype.vim"[J
+1355308032.12683: Searching for "/home/roberto/.vim/bundle/vim-slim/after/filetype.vim"[J
+1355308032.12683: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/after/filetype.vim"[J
+1355308032.12683: Searching for "/home/roberto/.vim/bundle/vim-repeat/after/filetype.vim"[J
+1355308032.12683: Searching for "/home/roberto/.vim/bundle/vim-gitignore/after/filetype.vim"[J
+1355308032.12684: Searching for "/home/roberto/.vim/bundle/vim-space/after/filetype.vim"[J
+1355308032.12684: Searching for "/home/roberto/.vim/bundle/gist-vim/after/filetype.vim"[J
+1355308032.12684: Searching for "/home/roberto/.vim/bundle/webapi-vim/after/filetype.vim"[J
+1355308032.12684: Searching for "/home/roberto/.vim/bundle/zencoding-vim/after/filetype.vim"[J
+1355308032.12684: Searching for "/home/roberto/.vim/bundle/vim-css-color/after/filetype.vim"[J
+1355308032.12684: Searching for "/home/roberto/.vim/bundle/vim-matchit/after/filetype.vim"[J
+1355308032.12684: Searching for "/home/roberto/.vim/bundle/csapprox/after/filetype.vim"[J
+1355308032.12684: Searching for "ftplugin.vim" in "/home/roberto/.vim/bundle/vundle,/home/roberto/.vim/bundle/nerdtree,/home/roberto/.vim/bundle/nerdcommenter,/home/roberto/.vim/bundle/ctrlp.vim,/home/roberto/.vim/bundle/AutoComplPop,/home/roberto/.vim/bundle/taglist.vim,/home/roberto/.vim/bundle/YankRing.vim,/home/roberto/.vim/bundle/vim-fugitive,/home/roberto/.vim/bundle/syntastic,/home/roberto/.vim/bundle/snipmate.vim,/home/roberto/.vim/bundle/vim-surround,/home/roberto/.vim/bundle/vim-align,/home/roberto/.vim/bundle/ack.vim,/home/roberto/.vim/bundle/vim-indentobject,/home/roberto/.vim/bundle/greplace.vim,/home/roberto/.vim/bundle/vim-powerline,/home/roberto/.vim/bundle/threesome.vim,/home/roberto/.vim/bundle/Indent-Guides,/home/roberto/.vim/bundle/vim-endwise,/home/roberto/.vim/bundle/delimitMate,/home/roberto/.vim/bundle/calendar.vim--Matsumoto,/home/roberto/.vim/bundle/NrrwRgn,/home/roberto/.vim/bundle/utl.vim,/home/roberto/.vim/bundle/VimOrganizer,/home/roberto/.vim/bundle/gundo.vim,/home/roberto/.vim/bundle/switch.vim,[J
+1355308032.12684: Searching for "/home/roberto/.vim/bundle/vundle/ftplugin.vim"[J
+1355308032.12685: Searching for "/home/roberto/.vim/bundle/nerdtree/ftplugin.vim"[J
+1355308032.12685: Searching for "/home/roberto/.vim/bundle/nerdcommenter/ftplugin.vim"[J
+1355308032.12685: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/ftplugin.vim"[J
+1355308032.12685: Searching for "/home/roberto/.vim/bundle/AutoComplPop/ftplugin.vim"[J
+1355308032.12685: Searching for "/home/roberto/.vim/bundle/taglist.vim/ftplugin.vim"[J
+1355308032.12685: Searching for "/home/roberto/.vim/bundle/YankRing.vim/ftplugin.vim"[J
+1355308032.12685: Searching for "/home/roberto/.vim/bundle/vim-fugitive/ftplugin.vim"[J
+1355308032.12685: Searching for "/home/roberto/.vim/bundle/syntastic/ftplugin.vim"[J
+1355308032.12686: Searching for "/home/roberto/.vim/bundle/snipmate.vim/ftplugin.vim"[J
+1355308032.12686: Searching for "/home/roberto/.vim/bundle/vim-surround/ftplugin.vim"[J
+1355308032.12686: Searching for "/home/roberto/.vim/bundle/vim-align/ftplugin.vim"[J
+1355308032.12687: Searching for "/home/roberto/.vim/bundle/ack.vim/ftplugin.vim"[J
+1355308032.12687: Searching for "/home/roberto/.vim/bundle/vim-indentobject/ftplugin.vim"[J
+1355308032.12688: Searching for "/home/roberto/.vim/bundle/greplace.vim/ftplugin.vim"[J
+1355308032.12691: Searching for "/home/roberto/.vim/bundle/vim-powerline/ftplugin.vim"[J
+1355308032.12701: Searching for "/home/roberto/.vim/bundle/threesome.vim/ftplugin.vim"[J
+1355308032.12714: Searching for "/home/roberto/.vim/bundle/Indent-Guides/ftplugin.vim"[J
+1355308032.12722: Searching for "/home/roberto/.vim/bundle/vim-endwise/ftplugin.vim"[J
+1355308032.12732: Searching for "/home/roberto/.vim/bundle/delimitMate/ftplugin.vim"[J
+1355308032.12742: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/ftplugin.vim"[J
+1355308032.12751: Searching for "/home/roberto/.vim/bundle/NrrwRgn/ftplugin.vim"[J
+1355308032.12759: Searching for "/home/roberto/.vim/bundle/utl.vim/ftplugin.vim"[J
+1355308032.12768: Searching for "/home/roberto/.vim/bundle/VimOrganizer/ftplugin.vim"[J
+1355308032.12778: Searching for "/home/roberto/.vim/bundle/gundo.vim/ftplugin.vim"[J
+1355308032.1279: Searching for "/home/roberto/.vim/bundle/switch.vim/ftplugin.vim"[J
+1355308032.12801: Searching for "/home/roberto/.vim/bundle/vim-rails/ftplugin.vim"[J
+1355308032.12814: Searching for "/home/roberto/.vim/bundle/vim-bundler/ftplugin.vim"[J
+1355308032.1283: Searching for "/home/roberto/.vim/bundle/vim-rake/ftplugin.vim"[J
+1355308032.12862: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/ftplugin.vim"[J
+1355308032.12876: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/ftplugin.vim"[J
+1355308032.12889: Searching for "/home/roberto/.vim/bundle/apidock.vim/ftplugin.vim"[J
+1355308032.129: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/ftplugin.vim"[J
+1355308032.12912: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/ftplugin.vim"[J
+1355308032.12925: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim/ftplugin.vim"[J
+1355308032.12933: Searching for "/home/roberto/.vim/bundle/vim-ruby/ftplugin.vim"[J
+1355308032.12942: Searching for "/home/roberto/.vim/bundle/vim-tmux/ftplugin.vim"[J
+1355308032.12952: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/ftplugin.vim"[J
+1355308032.12961: Searching for "/home/roberto/.vim/bundle/JSON.vim/ftplugin.vim"[J
+1355308032.12968: Searching for "/home/roberto/.vim/bundle/vim-cucumber/ftplugin.vim"[J
+1355308032.12977: Searching for "/home/roberto/.vim/bundle/vim-haml/ftplugin.vim"[J
+1355308032.12986: Searching for "/home/roberto/.vim/bundle/vim-markdown/ftplugin.vim"[J
+1355308032.12995: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/ftplugin.vim"[J
+1355308032.13006: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/ftplugin.vim"[J
+1355308032.13016: Searching for "/home/roberto/.vim/bundle/jade.vim/ftplugin.vim"[J
+1355308032.13024: Searching for "/home/roberto/.vim/bundle/vim-stylus/ftplugin.vim"[J
+1355308032.13032: Searching for "/home/roberto/.vim/bundle/VimClojure/ftplugin.vim"[J
+1355308032.1304: Searching for "/home/roberto/.vim/bundle/vim-slim/ftplugin.vim"[J
+1355308032.1305: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/ftplugin.vim"[J
+1355308032.13058: Searching for "/home/roberto/.vim/bundle/vim-repeat/ftplugin.vim"[J
+1355308032.13067: Searching for "/home/roberto/.vim/bundle/vim-gitignore/ftplugin.vim"[J
+1355308032.13075: Searching for "/home/roberto/.vim/bundle/vim-space/ftplugin.vim"[J
+1355308032.13082: Searching for "/home/roberto/.vim/bundle/gist-vim/ftplugin.vim"[J
+1355308032.13088: Searching for "/home/roberto/.vim/bundle/webapi-vim/ftplugin.vim"[J
+1355308032.13096: Searching for "/home/roberto/.vim/bundle/zencoding-vim/ftplugin.vim"[J
+1355308032.13105: Searching for "/home/roberto/.vim/bundle/vim-css-color/ftplugin.vim"[J
+1355308032.13114: Searching for "/home/roberto/.vim/bundle/vim-matchit/ftplugin.vim"[J
+1355308032.13123: Searching for "/home/roberto/.vim/bundle/csapprox/ftplugin.vim"[J
+1355308032.13131: Searching for "/home/roberto/.vim/ftplugin.vim"[J
+1355308032.13138: Searching for "/usr/share/vim/vimfiles/ftplugin.vim"[J
+1355308032.13146: Searching for "/usr/share/vim/vim73/ftplugin.vim"[J
+1355308032.1315: chdir(/usr/share/vim/vim73)[J
+1355308032.13154: fchdir() to previous dir[J
+1355308032.13167: line 4: sourcing "/usr/share/vim/vim73/ftplugin.vim"[J
+1355308032.13175: finished sourcing /usr/share/vim/vim73/ftplugin.vim[J
+1355308032.13179: continuing in /home/roberto/dotvim/global.vim[J
+1355308032.13187: Searching for "/usr/share/vim/vimfiles/after/ftplugin.vim"[J
+1355308032.13194: Searching for "/home/roberto/.vim/after/ftplugin.vim"[J
+1355308032.13201: Searching for "/home/roberto/.vim/bundle/vundle/ftplugin.vim"[J
+1355308032.13209: Searching for "/home/roberto/.vim/bundle/vundle/after/ftplugin.vim"[J
+1355308032.13218: Searching for "/home/roberto/.vim/bundle/nerdtree/after/ftplugin.vim"[J
+1355308032.13227: Searching for "/home/roberto/.vim/bundle/nerdcommenter/after/ftplugin.vim"[J
+1355308032.13233: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/after/ftplugin.vim"[J
+1355308032.13243: Searching for "/home/roberto/.vim/bundle/AutoComplPop/after/ftplugin.vim"[J
+1355308032.13254: Searching for "/home/roberto/.vim/bundle/taglist.vim/after/ftplugin.vim"[J
+1355308032.13263: Searching for "/home/roberto/.vim/bundle/YankRing.vim/after/ftplugin.vim"[J
+1355308032.13275: Searching for "/home/roberto/.vim/bundle/vim-fugitive/after/ftplugin.vim"[J
+1355308032.13285: Searching for "/home/roberto/.vim/bundle/syntastic/after/ftplugin.vim"[J
+1355308032.13295: Searching for "/home/roberto/.vim/bundle/snipmate.vim/after/ftplugin.vim"[J
+1355308032.13302: Searching for "/home/roberto/.vim/bundle/vim-surround/after/ftplugin.vim"[J
+1355308032.13313: Searching for "/home/roberto/.vim/bundle/vim-align/after/ftplugin.vim"[J
+1355308032.1332: Searching for "/home/roberto/.vim/bundle/ack.vim/after/ftplugin.vim"[J
+1355308032.13328: Searching for "/home/roberto/.vim/bundle/vim-indentobject/after/ftplugin.vim"[J
+1355308032.13339: Searching for "/home/roberto/.vim/bundle/greplace.vim/after/ftplugin.vim"[J
+1355308032.13346: Searching for "/home/roberto/.vim/bundle/vim-powerline/after/ftplugin.vim"[J
+1355308032.13358: Searching for "/home/roberto/.vim/bundle/threesome.vim/after/ftplugin.vim"[J
+1355308032.1337: Searching for "/home/roberto/.vim/bundle/Indent-Guides/after/ftplugin.vim"[J
+1355308032.1338: Searching for "/home/roberto/.vim/bundle/vim-endwise/after/ftplugin.vim"[J
+1355308032.1339: Searching for "/home/roberto/.vim/bundle/delimitMate/after/ftplugin.vim"[J
+1355308032.13399: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/after/ftplugin.vim"[J
+1355308032.13408: Searching for "/home/roberto/.vim/bundle/NrrwRgn/after/ftplugin.vim"[J
+1355308032.13415: Searching for "/home/roberto/.vim/bundle/utl.vim/after/ftplugin.vim"[J
+1355308032.13427: Searching for "/home/roberto/.vim/bundle/VimOrganizer/after/ftplugin.vim"[J
+1355308032.13438: Searching for "/home/roberto/.vim/bundle/gundo.vim/after/ftplugin.vim"[J
+1355308032.13447: Searching for "/home/roberto/.vim/bundle/switch.vim/after/ftplugin.vim"[J
+1355308032.13454: Searching for "/home/roberto/.vim/bundle/vim-rails/after/ftplugin.vim"[J
+1355308032.13464: Searching for "/home/roberto/.vim/bundle/vim-bundler/after/ftplugin.vim"[J
+1355308032.13471: Searching for "/home/roberto/.vim/bundle/vim-rake/after/ftplugin.vim"[J
+1355308032.1348: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/after/ftplugin.vim"[J
+1355308032.13492: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/after/ftplugin.vim"[J
+1355308032.135: Searching for "/home/roberto/.vim/bundle/apidock.vim/after/ftplugin.vim"[J
+1355308032.1351: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/after/ftplugin.vim"[J
+1355308032.13518: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/after/ftplugin.vim"[J
+1355308032.13526: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim//after/ftplugin.vim"[J
+1355308032.13538: Searching for "/home/roberto/.vim/bundle/vim-ruby/after/ftplugin.vim"[J
+1355308032.13545: Searching for "/home/roberto/.vim/bundle/vim-tmux/after/ftplugin.vim"[J
+1355308032.13555: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/after/ftplugin.vim"[J
+1355308032.13565: Searching for "/home/roberto/.vim/bundle/JSON.vim/after/ftplugin.vim"[J
+1355308032.13575: Searching for "/home/roberto/.vim/bundle/vim-cucumber/after/ftplugin.vim"[J
+1355308032.13582: Searching for "/home/roberto/.vim/bundle/vim-haml/after/ftplugin.vim"[J
+1355308032.13596: Searching for "/home/roberto/.vim/bundle/vim-markdown/after/ftplugin.vim"[J
+1355308032.13612: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/after/ftplugin.vim"[J
+1355308032.13627: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/after/ftplugin.vim"[J
+1355308032.1364: Searching for "/home/roberto/.vim/bundle/jade.vim/after/ftplugin.vim"[J
+1355308032.13652: Searching for "/home/roberto/.vim/bundle/vim-stylus/after/ftplugin.vim"[J
+1355308032.13666: Searching for "/home/roberto/.vim/bundle/VimClojure/after/ftplugin.vim"[J
+1355308032.13679: Searching for "/home/roberto/.vim/bundle/vim-slim/after/ftplugin.vim"[J
+1355308032.13687: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/after/ftplugin.vim"[J
+1355308032.13691: Searching for "/home/roberto/.vim/bundle/vim-repeat/after/ftplugin.vim"[J
+1355308032.137: Searching for "/home/roberto/.vim/bundle/vim-gitignore/after/ftplugin.vim"[J
+1355308032.13707: Searching for "/home/roberto/.vim/bundle/vim-space/after/ftplugin.vim"[J
+1355308032.13714: Searching for "/home/roberto/.vim/bundle/gist-vim/after/ftplugin.vim"[J
+1355308032.13724: Searching for "/home/roberto/.vim/bundle/webapi-vim/after/ftplugin.vim"[J
+1355308032.13734: Searching for "/home/roberto/.vim/bundle/zencoding-vim/after/ftplugin.vim"[J
+1355308032.13744: Searching for "/home/roberto/.vim/bundle/vim-css-color/after/ftplugin.vim"[J
+1355308032.13755: Searching for "/home/roberto/.vim/bundle/vim-matchit/after/ftplugin.vim"[J
+1355308032.13761: Searching for "/home/roberto/.vim/bundle/csapprox/after/ftplugin.vim"[J
+1355308032.13864: Searching for "indent.vim" in "/home/roberto/.vim/bundle/vundle,/home/roberto/.vim/bundle/nerdtree,/home/roberto/.vim/bundle/nerdcommenter,/home/roberto/.vim/bundle/ctrlp.vim,/home/roberto/.vim/bundle/AutoComplPop,/home/roberto/.vim/bundle/taglist.vim,/home/roberto/.vim/bundle/YankRing.vim,/home/roberto/.vim/bundle/vim-fugitive,/home/roberto/.vim/bundle/syntastic,/home/roberto/.vim/bundle/snipmate.vim,/home/roberto/.vim/bundle/vim-surround,/home/roberto/.vim/bundle/vim-align,/home/roberto/.vim/bundle/ack.vim,/home/roberto/.vim/bundle/vim-indentobject,/home/roberto/.vim/bundle/greplace.vim,/home/roberto/.vim/bundle/vim-powerline,/home/roberto/.vim/bundle/threesome.vim,/home/roberto/.vim/bundle/Indent-Guides,/home/roberto/.vim/bundle/vim-endwise,/home/roberto/.vim/bundle/delimitMate,/home/roberto/.vim/bundle/calendar.vim--Matsumoto,/home/roberto/.vim/bundle/NrrwRgn,/home/roberto/.vim/bundle/utl.vim,/home/roberto/.vim/bundle/VimOrganizer,/home/roberto/.vim/bundle/gundo.vim,/home/roberto/.vim/bundle/switch.vim,/h[J
+1355308032.13869: Searching for "/home/roberto/.vim/bundle/vundle/indent.vim"[J
+1355308032.13877: Searching for "/home/roberto/.vim/bundle/nerdtree/indent.vim"[J
+1355308032.13888: Searching for "/home/roberto/.vim/bundle/nerdcommenter/indent.vim"[J
+1355308032.13903: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/indent.vim"[J
+1355308032.13916: Searching for "/home/roberto/.vim/bundle/AutoComplPop/indent.vim"[J
+1355308032.13926: Searching for "/home/roberto/.vim/bundle/taglist.vim/indent.vim"[J
+1355308032.13928: Searching for "/home/roberto/.vim/bundle/YankRing.vim/indent.vim"[J
+1355308032.13935: Searching for "/home/roberto/.vim/bundle/vim-fugitive/indent.vim"[J
+1355308032.13942: Searching for "/home/roberto/.vim/bundle/syntastic/indent.vim"[J
+1355308032.13949: Searching for "/home/roberto/.vim/bundle/snipmate.vim/indent.vim"[J
+1355308032.13956: Searching for "/home/roberto/.vim/bundle/vim-surround/indent.vim"[J
+1355308032.13962: Searching for "/home/roberto/.vim/bundle/vim-align/indent.vim"[J
+1355308032.13967: Searching for "/home/roberto/.vim/bundle/ack.vim/indent.vim"[J
+1355308032.13974: Searching for "/home/roberto/.vim/bundle/vim-indentobject/indent.vim"[J
+1355308032.13981: Searching for "/home/roberto/.vim/bundle/greplace.vim/indent.vim"[J
+1355308032.13989: Searching for "/home/roberto/.vim/bundle/vim-powerline/indent.vim"[J
+1355308032.13995: Searching for "/home/roberto/.vim/bundle/threesome.vim/indent.vim"[J
+1355308032.14005: Searching for "/home/roberto/.vim/bundle/Indent-Guides/indent.vim"[J
+1355308032.14011: Searching for "/home/roberto/.vim/bundle/vim-endwise/indent.vim"[J
+1355308032.14018: Searching for "/home/roberto/.vim/bundle/delimitMate/indent.vim"[J
+1355308032.14026: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/indent.vim"[J
+1355308032.14033: Searching for "/home/roberto/.vim/bundle/NrrwRgn/indent.vim"[J
+1355308032.14038: Searching for "/home/roberto/.vim/bundle/utl.vim/indent.vim"[J
+1355308032.14047: Searching for "/home/roberto/.vim/bundle/VimOrganizer/indent.vim"[J
+1355308032.14053: Searching for "/home/roberto/.vim/bundle/gundo.vim/indent.vim"[J
+1355308032.14061: Searching for "/home/roberto/.vim/bundle/switch.vim/indent.vim"[J
+1355308032.14067: Searching for "/home/roberto/.vim/bundle/vim-rails/indent.vim"[J
+1355308032.14073: Searching for "/home/roberto/.vim/bundle/vim-bundler/indent.vim"[J
+1355308032.1408: Searching for "/home/roberto/.vim/bundle/vim-rake/indent.vim"[J
+1355308032.14089: Searching for "/home/roberto/.vim/bundle/vim-textobj-rubyblock/indent.vim"[J
+1355308032.14096: Searching for "/home/roberto/.vim/bundle/vim-ruby-refactoring/indent.vim"[J
+1355308032.14104: Searching for "/home/roberto/.vim/bundle/apidock.vim/indent.vim"[J
+1355308032.14114: Searching for "/home/roberto/.vim/bundle/vim-colors-solarized/indent.vim"[J
+1355308032.14123: Searching for "/home/roberto/.vim/bundle/vim-vividchalk/indent.vim"[J
+1355308032.14132: Searching for "/home/roberto/.vim/bundle/tomorrow-theme/vim/indent.vim"[J
+1355308032.1414: Searching for "/home/roberto/.vim/bundle/vim-ruby/indent.vim"[J
+1355308032.14147: Searching for "/home/roberto/.vim/bundle/vim-tmux/indent.vim"[J
+1355308032.14161: Searching for "/home/roberto/.vim/bundle/Puppet-Syntax-Highlighting/indent.vim"[J
+1355308032.14169: Searching for "/home/roberto/.vim/bundle/JSON.vim/indent.vim"[J
+1355308032.14177: Searching for "/home/roberto/.vim/bundle/vim-cucumber/indent.vim"[J
+1355308032.14187: Searching for "/home/roberto/.vim/bundle/vim-haml/indent.vim"[J
+1355308032.14194: Searching for "/home/roberto/.vim/bundle/vim-markdown/indent.vim"[J
+1355308032.14203: Searching for "/home/roberto/.vim/bundle/vim-coffee-script/indent.vim"[J
+1355308032.14214: Searching for "/home/roberto/.vim/bundle/vim-syntastic-coffee/indent.vim"[J
+1355308032.14222: Searching for "/home/roberto/.vim/bundle/jade.vim/indent.vim"[J
+1355308032.14229: Searching for "/home/roberto/.vim/bundle/vim-stylus/indent.vim"[J
+1355308032.14235: Searching for "/home/roberto/.vim/bundle/VimClojure/indent.vim"[J
+1355308032.14243: Searching for "/home/roberto/.vim/bundle/vim-slim/indent.vim"[J
+1355308032.14251: Searching for "/home/roberto/.vim/bundle/vim-textobj-user/indent.vim"[J
+1355308032.14259: Searching for "/home/roberto/.vim/bundle/vim-repeat/indent.vim"[J
+1355308032.14267: Searching for "/home/roberto/.vim/bundle/vim-gitignore/indent.vim"[J
+1355308032.14275: Searching for "/home/roberto/.vim/bundle/vim-space/indent.vim"[J
+1355308032.14281: Searching for "/home/roberto/.vim/bundle/gist-vim/indent.vim"[J
+1355308032.14291: Searching for "/home/roberto/.vim/bundle/webapi-vim/indent.vim"[J
+1355308032.14298: Searching for "/home/roberto/.vim/bundle/zencoding-vim/indent.vim"[J
+1355308032.14307: Searching for "/home/roberto/.vim/bundle/vim-css-color/indent.vim"[J
+1355308032.14313: Searching for "/home/roberto/.vim/bundle/vim-matchit/indent.vim"[J
+1355308032.14322: Searching for "/home/roberto/.vim/bundle/csapprox/indent.vim"[J
+1355308032.14329: Searching for "/home/roberto/.vim/indent.vim"[J
+1355308032.14337: Searching for "/usr/share/vim/vimfiles/indent.vim"[J
+1355308032.14345: Searching for "/usr/share/vim/vim73/indent.vim"[J
+1355308032.14349: chdir(/usr/share/vim/vim73)[J
+1355308032.14353: fchdir() to previous dir[J
+1355308032.14365: line 4: sourcing "/usr/share/vim/vim73/indent.vim"[J
+1355308032.14369: finished sourcing /usr/share/vim/vim73/indent.vim[J
+1355308032.14372: continuing in /home/roberto/dotvim/global.vim[J
+1355308032.14378: Searching for "/usr/share/vim/vimfiles/after/indent.vim"[J
+1355308032.14387: Searching for "/home/roberto/.vim/after/indent.vim"[J
+1355308032.14395: Searching for "/home/roberto/.vim/bundle/vundle/indent.vim"[J
+1355308032.14403: Searching for "/home/roberto/.vim/bundle/vundle/after/indent.vim"[J
+1355308032.14411: Searching for "/home/roberto/.vim/bundle/nerdtree/after/indent.vim"[J
+1355308032.14422: Searching for "/home/roberto/.vim/bundle/nerdcommenter/after/indent.vim"[J
+1355308032.14432: Searching for "/home/roberto/.vim/bundle/ctrlp.vim/after/indent.vim"[J
+1355308032.14438: Searching for "/home/roberto/.vim/bundle/AutoComplPop/after/indent.vim"[J
+1355308032.14445: Searching for "/home/roberto/.vim/bundle/taglist.vim/after/indent.vim"[J
+1355308032.14455: Searching for "/home/roberto/.vim/bundle/YankRing.vim/after/indent.vim"[J
+1355308032.14464: Searching for "/home/roberto/.vim/bundle/vim-fugitive/after/indent.vim"[J
+1355308032.1447: Searching for "/home/roberto/.vim/bundle/syntastic/after/indent.vim"[J
+1355308032.1448: Searching for "/home/roberto/.vim/bundle/snipmate.vim/after/indent.vim"[J
+1355308032.14491: Searching for "/home/roberto/.vim/bundle/vim-surround/after/indent.vim"[J
+1355308032.14504: Searching for "/home/roberto/.vim/bundle/vim-align/after/indent.vim"[J
+1355308032.14516: Searching for "/home/roberto/.vim/bundle/ack.vim/after/indent.vim"[J
+1355308032.14528: Searching for "/home/roberto/.vim/bundle/vim-indentobject/after/indent.vim"[J
+1355308032.14541: Searching for "/home/roberto/.vim/bundle/greplace.vim/after/indent.vim"[J
+1355308032.14553: Searching for "/home/roberto/.vim/bundle/vim-powerline/after/indent.vim"[J
+1355308032.14563: Searching for "/home/roberto/.vim/bundle/threesome.vim/after/indent.vim"[J
+1355308032.14575: Searching for "/home/roberto/.vim/bundle/Indent-Guides/after/indent.vim"[J
+1355308032.14584: Searching for "/home/roberto/.vim/bundle/vim-endwise/after/indent.vim"[J
+1355308032.14592: Searching for "/home/roberto/.vim/bundle/delimitMate/after/indent.vim"[J
+1355308032.14601: Searching for "/home/roberto/.vim/bundle/calendar.vim--Matsumoto/after/indent.vim"[J
+1355308032.14609: Searching for "/home/roberto/.vim/bundle/NrrwRgn/after/indent.vim"[J
+1355308032.14616: Searching for "/home/roberto/.vim/bundle/utl.vim/after/indent.vim"[J
+1355308032.14623: Searching 

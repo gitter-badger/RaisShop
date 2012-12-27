@@ -1,0 +1,11 @@
+.cartMain
+  %h2 Shopping cart
+  .cartHeadings.clearfix
+    .title Items to buy
+    .quantity Quantity
+    .price Price
+  .cartItems= render @cart.line_items
+  .checkOut= button_to 'Checkout', root_path
+  .totalCost $#{@cart.line_items.sum{ |item| item.total_price }}
+  = button_to 'Empty cart', @cart, method: :delete, remote: true,confirm: "Are you sure, biatch?"
+  = button_to 'Back', carts_path

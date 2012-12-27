@@ -1,0 +1,8 @@
+.cartItem
+  .floatRight
+    .itemImg= image_tag line_item.product.image_url
+    .itemTitle= line_item.product.title
+    .itemPrice $#{line_item.product.price}
+    = text_field :line_item, :quantity, size: 3, class: "itemQuantity", value: line_item.quantity
+    .itemDelButton= button_to "Delete item", line_item, method: :delete, remote: true
+    %br

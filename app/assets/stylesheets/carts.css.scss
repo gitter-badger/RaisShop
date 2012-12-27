@@ -1,0 +1,57 @@
+// Place all the styles related to the carts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.cartMain{
+  margin-top:100px;
+  width: 75%;
+  .cartHeadings{
+    .title {
+      float:left;
+    }
+    .quantity{
+      margin-right:120px;
+      margin-left:30px;
+      float:right;
+    }
+    .clear_both{
+      clear:both;
+    }
+  }
+  .totalCost, .price{
+    float:right;
+  }
+}
+.cartItems{
+  padding-bottom:10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed lightgray;
+  .cartItem{
+    border-top: 1px solid grey;
+    margin-top: 10px;
+    padding-top:10px;
+    height:100px;
+
+    .floatRight{
+      float:right;
+      [class*="item"] {
+        vertical-align: middle;
+        overflow: hidden;
+        float: left;
+        margin-left: 30px;
+      }
+
+      .itemImg{
+        img{
+          width:100px;
+          height:100px;
+        }
+      }
+
+      .itemTitle{
+        width:300px;
+        font:16px/16px monaco;
+        color:red;
+      }
+    }
+  }
+}

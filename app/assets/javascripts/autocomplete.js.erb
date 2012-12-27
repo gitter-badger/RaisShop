@@ -1,0 +1,25 @@
+
+$(document).ready(function(){
+  $('.search-query').autocomplete({
+    source: '/search.json',
+    focus: function(event, ui) {
+      $('.search-query').val(ui.item.title);
+      return false;
+    },
+    // Once a value in the drop down list is selected, do the following:
+    select: function(event, ui) {
+      // place the product.title value into the textfield
+      $('.search-query').val(ui.item.title);
+      // and place the product.id into the hidden textfield called 'link_origin_id'. 
+      $('#link_origin_id').val(ui.item.id);
+      window.location.replace('/products/' + ui.item.id);
+      return false;
+    }
+  }).data( "autocomplete" )._renderItem = function( ul, item ) {
+            return $( "<li></li>" )
+                .data( "item.autocomplete", item )
+ // For now which just want to show the title in the list.
+                .append( "<a>" + item.title + "</a>" )
+                .appendTo( ul );
+        };
+});
