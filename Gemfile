@@ -9,11 +9,13 @@ gem "haml"
 gem 'devise'
 gem 'ancestry'
 gem 'faker'
+gem 'bootstrap-sass'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'tire'
 #gem "therubyracer", :require => 'v8'
 group :development, :test do 
+  gem 'spork'
   gem 'sqlite3'
   gem 'meta_request', '0.2.0'
   gem "rails_best_practices"
@@ -30,7 +32,6 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'bootstrap-sass'
 end
 
 gem 'jquery-rails'
