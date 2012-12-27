@@ -5,19 +5,21 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem "haml"
 gem 'devise'
-gem "rails_best_practices"
-gem 'guard'
-gem 'guard-ctags-bundler'
 gem 'ancestry'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'tire'
-gem 'meta_request', '0.2.0'
 gem "therubyracer", :require => 'v8'
+group :development, :test do 
+  gem 'sqlite3'
+  gem 'meta_request', '0.2.0'
+  gem "rails_best_practices"
+  gem 'guard'
+  gem 'guard-ctags-bundler'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
