@@ -7,6 +7,7 @@ RaisShop::Application.routes.draw do
 
   match "admin" => "shop#admin"
   match "search" => "shop#search"
+  match "query_freq" => "freq#get"
 
   resources :categories, :line_items, :carts
 
