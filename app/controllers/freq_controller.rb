@@ -1,7 +1,14 @@
 class FreqController < ApplicationController
   def get
-    word = Freq.find_by_word(params[:word])
-    word_id = word.nil? ? 9999 : word.id
-    render json: {id: word_id}, callback: params[:callback]
+    words = params[:words].split(",")
+    freqs = Array.new
+    words.each do |word|
+      freq = nil
+      Freq.uniq.pluck(:list).each do |list|
+        freq ||= Freq.find_by_word_and_list(word, list)
+      end
+      freqs << ( freq.nil? ? ":(": freq.rank)
+    end
+    render json: freqs, callback: params[:callback]
   end
 end

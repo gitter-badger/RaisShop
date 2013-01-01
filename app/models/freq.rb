@@ -1,3 +1,3 @@
 class Freq < ActiveRecord::Base
-  attr_accessible :word, :id
+  attr_accessible :word, :id, :rank, :list
 end
