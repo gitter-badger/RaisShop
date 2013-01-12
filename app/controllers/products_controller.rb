@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  #before_filter :authenticate_user!, except: [:index, :show]
   before_filter :check_authorization, except: [:index, :show]
   # GET /products
   # GET /products.json
@@ -17,7 +16,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
-
+    @reviews = @product.reviews
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @product }

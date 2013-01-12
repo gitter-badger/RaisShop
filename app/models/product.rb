@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
   attr_accessible :title, :description, :image_url, :price, :category_id
   has_many :line_items
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   belongs_to :category
   before_destroy :ensure_not_referenced_by_any_line_item
   validates_presence_of :title, :description, :image_url, :price, :category

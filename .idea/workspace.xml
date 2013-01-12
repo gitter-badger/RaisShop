@@ -89,7 +89,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -106,7 +105,7 @@
       <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/carts/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="63" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+            <state line="1" column="63" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,7 +114,7 @@
       <file leaf-file-name="shop_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/shop_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="4" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
+            <state line="4" column="4" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,7 +132,7 @@
       <file leaf-file-name="_line_item.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/line_items/_line_item.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="3" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+            <state line="1" column="3" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -142,7 +141,7 @@
       <file leaf-file-name="_navbar.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_navbar.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="10" selection-start="22" selection-end="22" vertical-scroll-proportion="0.01901566">
+            <state line="8" column="56" selection-start="333" selection-end="333" vertical-scroll-proportion="0.14830971">
               <folding />
             </state>
           </provider>
@@ -160,7 +159,7 @@
       <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="20" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+            <state line="13" column="20" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,10 +202,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
     <option name="y" value="17" />
-    <option name="width" value="958" />
-    <option name="height" value="1061" />
+    <option name="width" value="1920" />
+    <option name="height" value="1063" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -625,7 +623,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="17" width="958" height="1061" extended-state="0" />
+    <frame x="0" y="17" width="1920" height="1063" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -782,7 +780,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/carts/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="63" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+        <state line="1" column="63" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -803,28 +801,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/shop_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
+        <state line="4" column="4" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/line_items/_line_item.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="3" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+        <state line="1" column="3" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+        <state line="13" column="20" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_navbar.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="10" selection-start="22" selection-end="22" vertical-scroll-proportion="0.01901566">
+        <state line="8" column="56" selection-start="333" selection-end="333" vertical-scroll-proportion="0.14830971">
           <folding />
         </state>
       </provider>

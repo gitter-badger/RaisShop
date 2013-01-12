@@ -1,6 +1,6 @@
 RaisShop::Application.routes.draw do
 
-  resources :reviews
+  resources :reviews, except: [:index, :show]
 
 
   root to: "shop#index"
@@ -11,9 +11,7 @@ RaisShop::Application.routes.draw do
 
   resources :categories, :line_items, :carts
 
-  resources :products do
-    get :autocomplete_category_name, on: :collection
-  end
+  resources :products
 
   devise_for :users, path_names: {sign_in: "login"}
 

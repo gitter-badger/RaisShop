@@ -1,6 +1,10 @@
 @import 'bootstrap';
-/*@import 'bootstrap-responsive';*/
+@import 'bootstrap-responsive';
 
+.navbar {
+  .container{
+    width:940px;
+  }}
 #navbar {
   height: 60px;
   margin: 0;
