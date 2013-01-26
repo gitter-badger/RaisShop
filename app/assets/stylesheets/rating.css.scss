@@ -1,0 +1,62 @@
+.rating {
+  float: left;
+  &:not(:checked) {
+    > {
+      input {
+        position: absolute;
+        top: -9999px;
+        clip: rect(0, 0, 0, 0);
+      }
+      label {
+        float: right;
+        width: 1em;
+        padding: 0 .1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 200%;
+        line-height: 1.2;
+        color: #ddd;
+        text-shadow: 1px 1px #bbbbbb, 2px 2px #666666, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+        &:before {
+          content: '★ ';
+        }
+      }
+    }
+    > label:hover {
+      color: gold;
+      text-shadow: 1px 1px goldenrod, 2px 2px #b57340, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+      ~ label {
+        color: gold;
+        text-shadow: 1px 1px goldenrod, 2px 2px #b57340, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  > input:checked ~ label {
+    color: #f70;
+    text-shadow: 1px 1px #cc6600, 2px 2px #994400, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+  }
+  > {
+    input:checked {
+      + label:hover, ~ label:hover {
+        color: #ea0;
+        text-shadow: 1px 1px goldenrod, 2px 2px #b57340, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+        ~ label {
+          color: #ea0;
+          text-shadow: 1px 1px goldenrod, 2px 2px #b57340, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+    label {
+      &:hover ~ input:checked ~ label {
+        color: #ea0;
+        text-shadow: 1px 1px goldenrod, 2px 2px #b57340, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+      }
+      &:active {
+        position: relative;
+        top: 2px;
+        left: 2px;
+      }
+    }
+  }
+}

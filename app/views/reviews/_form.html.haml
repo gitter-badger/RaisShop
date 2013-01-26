@@ -1,0 +1,17 @@
+= form_for @product.reviews.build do |f|
+  %fieldset.rating
+    %legend Please rate:
+    = f.radio_button :rating, "5"
+    = f.label :rating_5, title: "Rocks!"
+    = f.radio_button :rating, "4"
+    = f.label :rating_4, title: "Rocks!"
+    = f.radio_button :rating, "3"
+    = f.label :rating_3, title: "Rocks!"
+    = f.radio_button :rating, "2"
+    = f.label :rating_2, title: "Rocks!"
+    = f.radio_button :rating, "1"
+    = f.label :rating_1, title: "Rocks!"
+  = f.label "review"
+  = f.text_area :comment
+  = f.hidden_field :product_id
+  = f.submit 
