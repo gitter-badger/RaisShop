@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
-gem 'rails', '3.2.10'
+gem 'rails'
 
 
 gem 'pg'
@@ -16,12 +16,13 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 group :development, :test do 
+  gem 'pry'
+  gem 'pry-stack_explorer'
+  gem 'pry-debugger'
   gem "pry-rails"
-  gem 'meta_request', '0.2.0'
-  gem "rails_best_practices"
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'capybara-webkit'
+  #gem 'capybara-webkit'
   gem 'factory_girl_rails'
   gem 'spork'
   gem 'guard'
@@ -30,6 +31,11 @@ group :development, :test do
   gem 'guard-ctags-bundler'
   gem 'rb-inotify', '~> 0.8.8'
   gem 'rb-fsevent'
+  gem 'meta_request', '0.2.0'
+  gem "rails_best_practices"
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :assets do
