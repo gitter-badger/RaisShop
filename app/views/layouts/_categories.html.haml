@@ -3,4 +3,10 @@
     %ul.nav.nav-list.nav-stacked
       %li= link_to "All", products_path
       - Category.roots.each do |category|
-        %li= link_to_unless_current category.name, category, class: ("active" if @category == category)
+        %li= link_to_unless_current category.name, category,
+          class: ("active" if @category == category)
+  %table#recent_history
+    %tbody
+      - @recent_history.reverse_each do |item|
+        %tr
+          %td= Product.find(item).title

@@ -1,7 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :recent_history
 
   private
+
+  def recent_history
+    session[:recent_history] ||= Array.new
+    @recent_history = session[:recent_history]
+  end
 
   def current_cart
     Cart.find(session[:cart_id])

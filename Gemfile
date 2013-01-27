@@ -21,11 +21,17 @@ group :development, :test do
   gem 'pry-debugger'
   gem "pry-rails"
   gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'fakeweb'
+  gem 'vcr'
   gem 'capybara'
   #gem 'capybara-webkit'
   gem 'factory_girl_rails'
   gem 'spork'
   gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-livereload'
+  gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'guard-ctags-bundler'
@@ -36,6 +42,8 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'simplecov'
+  gem 'launchy'
 end
 
 group :assets do
