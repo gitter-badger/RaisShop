@@ -14,6 +14,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'draper'
 
 group :development, :test do 
   gem 'pry'

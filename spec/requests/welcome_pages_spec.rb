@@ -9,22 +9,31 @@ describe "WelcomePages" do
 
     #it { should have_selector('title', text: full_title('')) }
 
-    it "should have a list of recently viewed items" do
-      product = create(:product)
-      visit product_path(product)
-      visit root_path
-      history = [product]
-      page.should have_selector('#recent_history tr td',product.title)
-      product2 = create(:product)
-      visit product_path(product2)
-      visit root_path
-      history << product2
-      page.should have_selector('#recent_history tr td',product2.title)
-      #subject.should have_selector('table tr td', text: product.title)
-    end
-    context "when user is signed-in" do
-      let(:user) { create(:user) }
-      before { sign_in user }
+    describe "Recent history" do 
+
+      def visit_product(product)
+        visit product_path(product)
+        visit root_path
+      end
+
+      let(:products) { create_list(:product, 5) }
+
+      before(:each) do
+        products.each {|prod| visit_product(prod) }
+      end
+
+      it "should contain product after visiting it" do
+        products.each do |prod|
+          page.should have_selector('#recent_history tr td', prod.title)
+        end
+      end
+
+      it "should contain only last visited instance of the same product" do
+        visit_product(products.first)
+        all_history = page.all(:css, "#recent_history tr td")
+        all_history.first.text.should == products.first.title
+        all_history.last.text.should  == products[1].title
+      end
     end
   end
 end
