@@ -1,0 +1,9 @@
+%p#notice= notice
+= render 'layouts/categories'
+%h1
+  = @category.name
+%table
+  = render @products
+= will_paginate @products
+= link_to 'Edit', edit_category_path(@category) if current_user.try(:admin?)
+= link_to 'Back', categories_path

@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %b Comment:
+  = @review.comment
+%p
+  %b Stars:
+  = @review.rating
+%p
+  %b Helpful:
+  = @review.helpful
+= link_to 'Edit', edit_review_path(@review)
+|
+\#{link_to 'Back', reviews_path}
