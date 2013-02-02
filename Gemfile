@@ -4,6 +4,7 @@ gem 'rails'
 
 
 gem 'pg'
+#gem 'sqlite3'
 gem 'devise'
 gem 'ancestry'
 gem 'tire'
@@ -15,7 +16,10 @@ gem 'bootstrap-will_paginate'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'draper'
-
+gem 'simple_form'
+gem 'country_select'
+gem 'therubyracer'
+gem 'newrelic_rpm'
 group :development, :test do 
   gem 'pry'
   gem 'pry-stack_explorer'

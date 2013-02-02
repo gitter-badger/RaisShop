@@ -1,5 +1,5 @@
 .span8
-  %h1 Listing products
-  %table.table
+  %h1= header
+  %table.table.table-bordered.table-hover
     = render @products
   = will_paginate @products

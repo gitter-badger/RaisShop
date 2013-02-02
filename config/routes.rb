@@ -11,9 +11,10 @@ RaisShop::Application.routes.draw do
 
   resources :categories, :line_items, :carts
 
-  resources :products
-
   devise_for :users, path_names: {sign_in: "login"}
+
+  resources :products, only: [:index, :new, :create]
+  resources :products, path: "", except: [:index, :new, :create]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

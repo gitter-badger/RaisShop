@@ -1,5 +1,3 @@
 = render 'layouts/categories'
 .main
-  %h1 Listing products
-  %table
-    = render @products
+  = render 'products/product_list', header: "All products"

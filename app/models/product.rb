@@ -1,11 +1,23 @@
 class Product < ActiveRecord::Base
   attr_accessible :title, :description, :image_url, :price, :category_id
   has_many :line_items
-  has_many :reviews, dependent: :destroy
+  has_many :reviews, dependent: :destroy, order: "reviews.created_at ASC"
   belongs_to :category
   before_destroy :ensure_not_referenced_by_any_line_item
   validates_presence_of :title, :description, :image_url, :price, :category
+  validates :title, uniqueness: true
+  validates :slug, presence: true, uniqueness: true
 
+  before_validation :generate_slug
+
+  def to_param
+    slug
+  end
+
+
+  def generate_slug
+    self.slug ||= title.parameterize
+  end
   #include Tire::Model::Search
   #include Tire::Model::Callbacks
 

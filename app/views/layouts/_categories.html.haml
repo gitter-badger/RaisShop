@@ -5,7 +5,7 @@
       - Category.roots.each do |category|
         %li= link_to_unless_current category.name, category,
           class: ("active" if @category == category)
-  %table#recent_history
+  %table#recent_history.table.table-condensed
     %tbody
       - @recent_history.reverse_each do |item|
         %tr
