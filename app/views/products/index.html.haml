@@ -1,3 +1,4 @@
 = render 'layouts/categories'
 .main
-  = render 'products/product_list', header: "All products"
+  = render 'products/product_list',
+    header: ("Search results for \"#{params[:term]}\"" if params[:term]) || "All products"

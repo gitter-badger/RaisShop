@@ -2,13 +2,9 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 gem 'rails'
 
-
 gem 'pg'
-#gem 'sqlite3'
 gem 'devise'
 gem 'ancestry'
-gem 'tire'
-gem 'faker'
 gem "haml"
 gem 'bootstrap-sass'
 gem 'will_paginate'
@@ -20,7 +16,9 @@ gem 'simple_form'
 gem 'country_select'
 gem 'therubyracer'
 gem 'newrelic_rpm'
+
 group :development, :test do 
+  gem 'faker'
   gem 'pry'
   gem 'pry-stack_explorer'
   gem 'pry-debugger'
@@ -49,7 +47,10 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'simplecov'
   gem 'launchy'
+  gem 'bullet'
+  gem 'rack-mini-profiler'
 end
+
 
 group :assets do
   gem 'sass-rails'

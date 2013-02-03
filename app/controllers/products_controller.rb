@@ -2,12 +2,17 @@ class ProductsController < ApplicationController
   before_filter :check_authorization, except: [:index, :show]
   before_filter :find_product, only: [:show, :edit, :update, :destroy]
   respond_to :html
+  respond_to :json, only: [:index]
 
   def index
-    #@products = Product.all
-    @products = Product.order(:title).page(params[:page])
-    respond_with(@products)
+    @products = Product.order(:title).where("title like ?", "%#{ params[:term] }%")
+      .page(params[:page])
+    respond_with(@products) do |format|
+      format.html
+      format.json { render json: @products.map(&:title) }
+    end
   end
+
 
   def show
     session[:recent_history].delete(@product.id)
