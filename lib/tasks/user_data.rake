@@ -66,8 +66,8 @@ namespace :db do
     },
       image_url: 'rtp.jpg',
       category_id: book_category,               price: 34.95)
-    puts "Adding 1k fake products"
-    1000.times.each do |n|
+    puts "Adding 10k fake products"
+    10000.times.each do |n|
       Product.create(title: Faker::Lorem.words(1+rand(5)).join(" ").capitalize,
                      description: Faker::Lorem.sentence(30),
                      image_url:'ruby.jpg',

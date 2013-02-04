@@ -17,8 +17,9 @@ class Product < ActiveRecord::Base
   include PgSearch
 
   pg_search_scope :search_by_title, against: :title,
-    using: [:tsearch, :trigram, :dmetaphone]
-
+    using: {
+            dmetaphone: {prefix: true}
+           }
 
   def generate_slug
     self.slug ||= title.parameterize

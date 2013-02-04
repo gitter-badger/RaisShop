@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   def index
     #@products = Product.order(:title).where("title like ?", "%#{ params[:term] }%")
     @products = Product.search_by_title(params[:term])
-      .page(params[:page])
+      .page(params[:page]) || Product.all
     respond_with(@products) do |format|
       format.html
       format.json { render json: @products.map(&:title) }

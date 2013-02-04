@@ -66,6 +66,17 @@ COMMENT ON EXTENSION pg_trgm IS 'text similarity measurement and index searching
 
 SET search_path = public, pg_catalog;
 
+--
+-- Name: pg_search_dmetaphone(text); Type: FUNCTION; Schema: public; Owner: -
+--
+
+CREATE FUNCTION pg_search_dmetaphone(text) RETURNS text
+    LANGUAGE sql IMMUTABLE STRICT
+    AS $_$
+  SELECT array_to_string(ARRAY(SELECT dmetaphone(unnest(regexp_split_to_array($1, E'\\s+')))), ' ')
+$_$;
+
+
 SET default_tablespace = '';
 
 SET default_with_oids = false;
@@ -521,3 +532,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130105113208');
 INSERT INTO schema_migrations (version) VALUES ('20130129145012');
 
 INSERT INTO schema_migrations (version) VALUES ('20130204070520');
+
+INSERT INTO schema_migrations (version) VALUES ('20130204192456');

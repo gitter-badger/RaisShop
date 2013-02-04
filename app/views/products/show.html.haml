@@ -4,7 +4,7 @@
     %dt= link_to @product.title, @product
     %dd= @product.description
   %td= @product.price
-  %td= button_to 'Add to cart', line_items_path(product_id: @product)
+  %td= button_to 'Add to cart', line_items_path(product_id: @product.id)
 = render @product.reviews
 = render 'reviews/form' if can_write_review?
 - if current_user.try(:admin?)
