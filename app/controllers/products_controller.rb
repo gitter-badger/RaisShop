@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   respond_to :json, only: [:index]
 
   def index
-    @products = Product.order(:title).where("title like ?", "%#{ params[:term] }%")
+    #@products = Product.order(:title).where("title like ?", "%#{ params[:term] }%")
+    @products = Product.search_by_title(params[:term])
       .page(params[:page])
     respond_with(@products) do |format|
       format.html
@@ -16,7 +17,7 @@ class ProductsController < ApplicationController
 
   def show
     session[:recent_history].delete(@product.id)
-    session[:recent_history] << @product.id
+    session[:recent_history][@product.id] = Time.now
     respond_with(@product)
   end
 

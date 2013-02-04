@@ -5,8 +5,10 @@ class ApplicationController < ActionController::Base
   private
 
   def recent_history
-    session[:recent_history] ||= Array.new
-    @recent_history = session[:recent_history]
+    session[:recent_history] ||= Hash.new
+    history = session[:recent_history]
+    items_with_time = Product.find(history.keys).flat_map{|e| [e, history[e.id]]}
+    @recent_history = Hash[*items_with_time].sort_by{ |k,v| v }.reverse
   end
 
   def current_cart

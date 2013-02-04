@@ -3,6 +3,7 @@ ruby '1.9.3'
 gem 'rails'
 
 gem 'pg'
+gem 'pg_search'
 gem 'devise'
 gem 'ancestry'
 gem "haml"
@@ -16,6 +17,8 @@ gem 'simple_form'
 gem 'country_select'
 gem 'therubyracer'
 gem 'newrelic_rpm'
+
+gem 'better_errors', group: :development
 
 group :development, :test do 
   gem 'faker'
@@ -43,7 +46,6 @@ group :development, :test do
   gem 'meta_request', '0.2.0'
   gem "rails_best_practices"
   gem 'quiet_assets'
-  gem 'better_errors'
   gem 'binding_of_caller'
   gem 'simplecov'
   gem 'launchy'
