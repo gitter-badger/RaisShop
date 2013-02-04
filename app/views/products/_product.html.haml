@@ -6,4 +6,5 @@
       %dt= link_to product.title, product
       %dd= product.description
   %td #{number_to_currency(product.price)}
-  %td= button_to 'Add to cart', line_items_path(product_id: product)
+  %td= button_to 'Add to cart', line_items_path(product_id: product.id),
+    class: "btn"
