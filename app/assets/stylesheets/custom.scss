@@ -1,6 +1,9 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 
+body {
+  background-image:url(subtle_grunge.png);
+}
 .navbar {
   .container{
     width:940px;
