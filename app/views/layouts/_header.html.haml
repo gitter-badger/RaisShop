@@ -24,9 +24,9 @@
   .navbar-inner
     .container
       .nav
-        = form_tag "products", method: :get ,class: "navbar-search pull-right" do
+        = form_tag "/products", method: :get ,class: "navbar-search pull-right" do
           = text_field_tag :term, params[:term], class: "search-query"
-          %input#link_origin_id{:name => "link[origin_id]", :type => "hidden"}/          
+          %input#link_origin_id{:name => "link[origin_id]", :type => "hidden"}/
           -#%select#drop-categories
             -#%option All
             -#%option Stuff

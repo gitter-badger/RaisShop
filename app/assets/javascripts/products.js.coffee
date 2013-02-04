@@ -5,4 +5,4 @@
 
 jQuery ->
   $(".search-query").autocomplete
-    source: 'products.json'
+    source: '/products.json'

@@ -1,7 +1,7 @@
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
-    puts 'SETTING UP DEFAULT ADMIN LOGIN and 10000 regular users'
+    puts 'SETTING UP DEFAULT ADMIN LOGIN and 1000 regular users'
     password = "password"
     admin = User.create!(
       first_name: "Volodymyr",
@@ -11,8 +11,8 @@ namespace :db do
       password_confirmation: password)
     admin.toggle!(:admin)
 
-    10000.times do |n|
-      User.create!(
+    1000.times do |n|
+      User.create(
         first_name: Faker::Name.first_name,
         last_name:  Faker::Name.last_name,
         email: "admin#{n}@admin.com",
@@ -66,8 +66,8 @@ namespace :db do
     },
       image_url: 'rtp.jpg',
       category_id: book_category,               price: 34.95)
-    puts "Adding ten thousand fake products"
-    10000.times.each do |n|
+    puts "Adding 1k fake products"
+    1000.times.each do |n|
       Product.create(title: Faker::Lorem.words(1+rand(5)).join(" ").capitalize,
                      description: Faker::Lorem.sentence(30),
                      image_url:'ruby.jpg',
