@@ -18,51 +18,35 @@ class Product < ActiveRecord::Base
 
   pg_search_scope :search_by_title, against: :title,
     using: {
-            dmetaphone: {prefix: true}
+            trigram: {prefix: true},
+            dmetaphone: {
+              any_word: true,
+              dictionary: "english",
+              tsvector_columnt: 'tsv',
+              prefix: true}
            }
 
   def generate_slug
     self.slug ||= title.parameterize
   end
-  #include Tire::Model::Search
-  #include Tire::Model::Callbacks
 
-  #settings :number_of_shards => 1,
-    #:number_of_replicas => 1, :analysis => {
-      #:filter => {
-        #:url_ngram  => {
-          #"type"     => "nGram",
-          #"max_gram" => 5,
-          #"min_gram" => 3 }
-      #},
-      #:analyzer => {
-        #:url_analyzer => {
-          #"tokenizer"    => "lowercase",
-          #"filter"       => ["stop", "url_ngram"],
-          #"type"         => "custom" }
-      #}
-    #} do
-      #mapping do
-        #indexes :title, boost: 10
-        #indexes :description
-        #indexes :image_url, index:'no'
-        #indexes :price, index: 'no'
-      #end
-    #end
-
-    #def self.search(params)
-      #tire.search(page: params[:page], per_page: 5) do 
-        #query { string params[:query], default_operator: "AND" } if params[:query].present?
-      #end
-    #end
-    private
-
-    def ensure_not_referenced_by_any_line_item
-      if line_items.empty?
-        true
-      else
-        errors.add(:base, 'Line Items Present')
-        false
-      end
+  def self.title_search(query)
+    if query.present?
+      search_by_title(query)
+    else
+      scoped
     end
+  end
+
+
+private
+
+  def ensure_not_referenced_by_any_line_item
+    if line_items.empty?
+      true
+    else
+      errors.add(:base, 'Line Items Present')
+      false
+    end
+  end
 end

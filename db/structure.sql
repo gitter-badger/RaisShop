@@ -222,7 +222,8 @@ CREATE TABLE products (
     image_url character varying(255),
     price numeric(8,2),
     category_id integer,
-    slug character varying(255)
+    slug character varying(255),
+    tsv tsvector
 );
 
 
@@ -494,6 +495,13 @@ CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (v
 
 
 --
+-- Name: tsvectorupdate; Type: TRIGGER; Schema: public; Owner: -
+--
+
+CREATE TRIGGER tsvectorupdate BEFORE INSERT OR UPDATE ON products FOR EACH ROW EXECUTE PROCEDURE tsvector_update_trigger('tsv', 'pg_catalog.english', 'title');
+
+
+--
 -- PostgreSQL database dump complete
 --
 
@@ -534,3 +542,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130129145012');
 INSERT INTO schema_migrations (version) VALUES ('20130204070520');
 
 INSERT INTO schema_migrations (version) VALUES ('20130204192456');
+
+INSERT INTO schema_migrations (version) VALUES ('20130205070702');
