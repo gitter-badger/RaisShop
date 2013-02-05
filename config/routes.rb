@@ -1,5 +1,8 @@
 RaisShop::Application.routes.draw do
 
+  resources :search_suggestions
+
+
   resources :reviews, except: [:index, :show]
 
 

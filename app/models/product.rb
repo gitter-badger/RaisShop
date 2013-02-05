@@ -10,9 +10,6 @@ class Product < ActiveRecord::Base
 
   before_validation :generate_slug
 
-  def to_param
-    slug
-  end
 
   include PgSearch
 
@@ -26,9 +23,6 @@ class Product < ActiveRecord::Base
               prefix: true}
            }
 
-  def generate_slug
-    self.slug ||= title.parameterize
-  end
 
   def self.title_search(query)
     if query.present?
@@ -38,6 +32,13 @@ class Product < ActiveRecord::Base
     end
   end
 
+  def to_param
+    slug
+  end
+
+  def generate_slug
+    self.slug ||= title.parameterize
+  end
 
 private
 

@@ -291,6 +291,38 @@ CREATE TABLE schema_migrations (
 
 
 --
+-- Name: search_suggestions; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE search_suggestions (
+    id integer NOT NULL,
+    term character varying(255),
+    popularity integer,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: search_suggestions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE search_suggestions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: search_suggestions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE search_suggestions_id_seq OWNED BY search_suggestions.id;
+
+
+--
 -- Name: users; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -379,6 +411,13 @@ ALTER TABLE ONLY reviews ALTER COLUMN id SET DEFAULT nextval('reviews_id_seq'::r
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY search_suggestions ALTER COLUMN id SET DEFAULT nextval('search_suggestions_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
 
 
@@ -428,6 +467,14 @@ ALTER TABLE ONLY products
 
 ALTER TABLE ONLY reviews
     ADD CONSTRAINT reviews_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: search_suggestions_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY search_suggestions
+    ADD CONSTRAINT search_suggestions_pkey PRIMARY KEY (id);
 
 
 --
@@ -544,3 +591,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130204070520');
 INSERT INTO schema_migrations (version) VALUES ('20130204192456');
 
 INSERT INTO schema_migrations (version) VALUES ('20130205070702');
+
+INSERT INTO schema_migrations (version) VALUES ('20130205121807');

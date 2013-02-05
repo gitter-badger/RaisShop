@@ -65,6 +65,7 @@ module RaisShop
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    config.middleware.insert_before 0, "SearchSuggestions"
 
     Rack::MiniProfiler.config.position = 'right'
   end

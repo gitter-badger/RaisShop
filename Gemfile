@@ -4,6 +4,7 @@ gem 'rails'
 
 gem 'pg'
 gem 'pg_search'
+gem 'redis'
 gem 'devise'
 gem 'ancestry'
 gem "haml"
