@@ -222,8 +222,8 @@ CREATE TABLE products (
     image_url character varying(255),
     price numeric(8,2),
     category_id integer,
-    slug character varying(255),
-    tsv tsvector
+    tsv tsvector,
+    rating integer
 );
 
 
@@ -299,7 +299,8 @@ CREATE TABLE search_suggestions (
     term character varying(255),
     popularity integer,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    product_id integer
 );
 
 
@@ -500,13 +501,6 @@ CREATE INDEX index_products_on_category_id ON products USING btree (category_id)
 
 
 --
--- Name: index_products_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_products_on_slug ON products USING btree (slug);
-
-
---
 -- Name: index_reviews_on_product_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -518,6 +512,13 @@ CREATE INDEX index_reviews_on_product_id ON reviews USING btree (product_id);
 --
 
 CREATE INDEX index_reviews_on_user_id ON reviews USING btree (user_id);
+
+
+--
+-- Name: index_search_suggestions_on_product_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_search_suggestions_on_product_id ON search_suggestions USING btree (product_id);
 
 
 --
@@ -593,3 +594,9 @@ INSERT INTO schema_migrations (version) VALUES ('20130204192456');
 INSERT INTO schema_migrations (version) VALUES ('20130205070702');
 
 INSERT INTO schema_migrations (version) VALUES ('20130205121807');
+
+INSERT INTO schema_migrations (version) VALUES ('20130211162655');
+
+INSERT INTO schema_migrations (version) VALUES ('20130212111608');
+
+INSERT INTO schema_migrations (version) VALUES ('20130212111714');

@@ -1,7 +1,7 @@
 %tr
   %td.productImage= image_tag product.image_url
   %td
-    .stars-rating{style: average_rating(product.reviews)}
+    .stars-rating{style: stars_image(product.rating)}
     %dl
       %dt= link_to product.title, product
       %dd= product.description

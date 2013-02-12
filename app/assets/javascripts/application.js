@@ -16,3 +16,26 @@
 //= require bootstrap
 //= require_tree .
 // require turbolinks
+//
+
+$(function (){
+
+  $("#search-query").autocomplete({
+    source: "/search_suggestions",
+    minLength: 2,
+    focus: function(event, ui) {
+      $('#search-query').val(ui.item.title);
+    },
+    select: function(event, ui) {
+      window.location.replace('/' + ui.item.slug);
+    }
+  }).data( "autocomplete" )._renderItem = function( ul, item ) {
+    return $( "<li></li>" )
+    .data( "item.autocomplete", item )
+    .append("<a><img class=\"autocomplete_image\" src=/assets/" + item.image_url + "/>" +
+              "<div class=\"autocomplete_details\">" +
+              "<div class=\"autocomplete_title\">" + item.title + "</div>" +
+              "<div class=\"autocomplete_price\">" + item.price + " USD</div></div></a>")
+    .appendTo( ul );
+  };
+});

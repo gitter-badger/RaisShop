@@ -1,15 +1,7 @@
 module ReviewsHelper
   def stars_image(rating)
-    stars = (5 - rating ) * -13 - 1
+    stars = (5 - (rating || 0) ) * -13 - 1
     "background-position: #{stars}px 0;"
-  end
-
-  def average_rating(reviews)
-    if reviews.count == 0
-      stars_image(0)
-    else
-      stars_image(reviews.average(:rating).round)
-    end
   end
 
   def can_write_review?

@@ -1,17 +1,18 @@
 class Product < ActiveRecord::Base
-  attr_accessible :title, :description, :image_url, :price, :category_id
+  include PgSearch
+
+  attr_accessible :title, :description, :image_url, :price, :category_id, :rating
+
   has_many :line_items
   has_many :reviews, dependent: :destroy, order: "reviews.created_at ASC"
   belongs_to :category
-  before_destroy :ensure_not_referenced_by_any_line_item
+
   validates_presence_of :title, :description, :image_url, :price, :category
   validates :title, uniqueness: true
-  validates :slug, presence: true, uniqueness: true
 
-  before_validation :generate_slug
+  before_destroy :ensure_not_referenced_by_any_line_item
+  before_save :average_rating
 
-
-  include PgSearch
 
   pg_search_scope :search_by_title, against: :title,
     using: {
@@ -33,14 +34,15 @@ class Product < ActiveRecord::Base
   end
 
   def to_param
-    slug
-  end
-
-  def generate_slug
-    self.slug ||= title.parameterize
+    "#{id}-#{title}".parameterize
   end
 
 private
+
+  def average_rating
+    write_attribute(:rating, (reviews.average(:rating) || 0).round)
+    true
+  end
 
   def ensure_not_referenced_by_any_line_item
     if line_items.empty?

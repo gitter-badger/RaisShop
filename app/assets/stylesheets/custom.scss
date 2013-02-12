@@ -106,3 +106,15 @@ body {
   border-top:1px solid #E5E5E5;
   background-color: whiteSmoke;
 }
+
+.autocomplete_image {
+  float: left;
+  width: 40px;
+  height: 40px;
+  padding-right: 10px;
+}
+.autocomplete_details {
+  .autocomplete_price {
+    color: green;
+  }
+}

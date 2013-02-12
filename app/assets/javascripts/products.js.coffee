@@ -3,6 +3,6 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 #
 
-jQuery ->
-  $("#search-query").autocomplete
-    source: '/search_suggestions'
+#jQuery ->
+  #$("#search-query").autocomplete
+    #source: '/search_suggestions'
