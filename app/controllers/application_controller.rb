@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :recent_history
+  before_filter :recent_history, :current_cart
 
   private
 
@@ -12,11 +12,10 @@ class ApplicationController < ActionController::Base
   end
 
   def current_cart
-    Cart.find(session[:cart_id])
+    @cart ||= Cart.find(session[:cart_id])
   rescue ActiveRecord::RecordNotFound
-    cart = Cart.create
-    session[:cart_id] = cart.id
-    cart
+    @cart = Cart.create
+    session[:cart_id] = @cart.id
   end
 
   # If the user is not authorized
@@ -25,6 +24,4 @@ class ApplicationController < ActionController::Base
       render file: 'public/403.html', status: 403, layout: false
     end
   end
-
-  helper_method :current_cart
 end
