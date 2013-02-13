@@ -74,5 +74,14 @@ namespace :db do
                      category_id:Category.all.sample.id,
                      price:rand(599..1500099) / 100.0)
     end
+    puts "Adding 0..3 reviews for each product"
+    Product.all.each do |product|
+      rand(4).times do
+        review = product.reviews.build(comment: Faker::Lorem.sentence(10),
+                                       rating:  1 + rand(5),
+                                       user_id: 1 + rand(50))
+        review.save
+      end
+    end
   end
 end

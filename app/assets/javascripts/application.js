@@ -27,7 +27,7 @@ $(function (){
       $('#search-query').val(ui.item.title);
     },
     select: function(event, ui) {
-      window.location.replace('/' + ui.item.slug);
+      window.location.replace('/' + ui.item.id);
     }
   }).data( "autocomplete" )._renderItem = function( ul, item ) {
     return $( "<li></li>" )

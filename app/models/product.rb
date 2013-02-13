@@ -11,7 +11,7 @@ class Product < ActiveRecord::Base
   validates :title, uniqueness: true
 
   before_destroy :ensure_not_referenced_by_any_line_item
-  before_save :average_rating
+  after_save :average_rating
 
 
   pg_search_scope :search_by_title, against: :title,
@@ -40,8 +40,8 @@ class Product < ActiveRecord::Base
 private
 
   def average_rating
-    write_attribute(:rating, (reviews.average(:rating) || 0).round)
-    true
+    average = (self.reviews.average(:rating) || 0).round
+    update_attribute(:rating, average) unless average == self.rating
   end
 
   def ensure_not_referenced_by_any_line_item

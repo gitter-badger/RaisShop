@@ -8,8 +8,8 @@ class SearchSuggestion < ActiveRecord::Base
       suggestions = where("term ILIKE ?", "#{prefix}%")
       suggestions.includes(:product).order("popularity desc").limit(10).map do |item|
         product = item.product
-        {title: product.title, image_url: product.image_url, price: product.price,
-         rating: product.rating}
+        {id: product.to_param, title: product.title, image_url: product.image_url,
+         price: product.price, rating: product.rating}
       end
     end
   end
@@ -17,7 +17,6 @@ class SearchSuggestion < ActiveRecord::Base
   def self.index_products
     Product.find_each do |product|
       index_term(product.title, product.id)
-      #index_term(product.category.name)
       product.title.split.each { |t| index_term(t, product.id) }
     end
   end
