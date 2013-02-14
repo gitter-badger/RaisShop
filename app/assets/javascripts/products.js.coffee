@@ -6,3 +6,15 @@
 #jQuery ->
   #$("#search-query").autocomplete
     #source: '/search_suggestions'
+    #
+
+jQuery ->
+  if $('#endless_paginate').attr('on') == 'true'
+    alert("fdshjfdhghsgljkdshlghsdhglsd")
+    $(window).scroll ->
+      url = $('.pagination .next_page a').attr('href')
+      if url && $(window).scrollTop() > $(document).height() -
+                                        $(window).height() - 200
+        $('.pagination').text('Loading...')
+        $.getScript(url)
+    $(window).scroll()

@@ -1,7 +1,7 @@
 %nav#header
   .container
     = link_to image_tag( "http://placekitten.com/160/60"), "/"
-    .cart
+    #cart
       = link_to "#{@cart.count} items for #{@cart.total_price} dollars.",@cart
     .user_nav
       - flash.each do |name, msg|

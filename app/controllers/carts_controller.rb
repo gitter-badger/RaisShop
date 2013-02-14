@@ -1,19 +1,8 @@
 class CartsController < ApplicationController
 
-  def index
-    @carts = Cart.all
-  end
-
   def show
+    redirect_to @cart unless params[:id].to_i == @cart.id
     @line_items = @cart.line_items.includes(:product)
-  end
-
-  def new
-    @cart = Cart.new
-  end
-
-  def edit
-    @cart = Cart.find(params[:id])
   end
 
   def create

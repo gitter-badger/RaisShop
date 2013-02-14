@@ -6,10 +6,16 @@ class ProductsController < ApplicationController
 
   def index
     #@products = Product.order(:title).where("title like ?", "%#{ params[:term] }%")
-    @products = Product.title_search(params[:term])
-      .page(params[:page])
+
+    per_page = params[:per_page]
+    @endless_pagination = per_page == 'all' ? 'true' : 'false'
+    per_page = 10 if per_page == 'all' or per_page.nil?
+
+    @products = Product.title_search(params[:term]).page(params[:page])
+      .per_page(per_page.to_i)
     respond_with(@products) do |format|
       format.html
+      format.js
       format.json { render json: @products.map(&:title) }
     end
   end

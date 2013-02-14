@@ -1,28 +1,16 @@
 class LineItemsController < ApplicationController
 
-  def index
-    @line_items = LineItem.all
-  end
-
   def show
-    @line_item = LineItem.find(params[:id])
-  end
-
-  def new
-    @line_item = LineItem.new
-  end
-
-  def edit
     @line_item = LineItem.find(params[:id])
   end
 
   def create
     @line_item = @cart.add_product(params[:product_id])
+    @line_item.save
 
-    if @line_item.save
-      redirect_to @line_item, notice: 'Line item was successfully created.'
-    else
-      render action: "new"
+    respond_to do |format|
+      format.html { redirect_to @cart }
+      format.js
     end
   end
 

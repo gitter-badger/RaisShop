@@ -1,5 +1,11 @@
 .span9
   %h1= header
-  %table.table.table-bordered.table-hover
+  %span.pull-right
+    = form_tag products_path, method: :get do
+      = select_tag "per_page", options_for_select(['10', '20', 'all'])
+      = submit_tag "Filter", class: 'btn'
+
+  %table#products.table.table-bordered.table-hover
     = render @products
-  = will_paginate @products
+  #endless_paginate{on: @endless_pagination}
+    = will_paginate @products

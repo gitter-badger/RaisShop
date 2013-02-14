@@ -1,16 +1,16 @@
 RaisShop::Application.routes.draw do
 
 
-  resources :reviews, except: [:index, :show]
-
-
   root to: "shop#index"
 
   match "admin" => "shop#admin"
   match "search" => "shop#search"
   match "query_freq" => "freq#get"
 
-  resources :categories, :line_items, :carts
+  resources :reviews, except: [:index, :show]
+  resources :categories
+  resources :line_items, except: [:index, :show, :edit, :new]
+  resources :carts, except: [:index, :edit, :new]
 
   devise_for :users, path_names: {sign_in: "login"}
 
