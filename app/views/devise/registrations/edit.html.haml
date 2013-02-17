@@ -20,6 +20,13 @@
     %i (we need your current password to confirm your changes)
     %br/
     = f.password_field :current_password
+  #addresses
+    - @user.addresses.build if @user.addresses.empty?
+    = f.fields_for :addresses do |builder|
+      %fieldset
+        = builder.label :full_name, "Full name"
+        %br/
+        = builder.text_field :full_name
   %div= f.submit "Update"
 %h3 Cancel my account
 %p

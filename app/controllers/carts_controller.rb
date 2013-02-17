@@ -28,6 +28,6 @@ class CartsController < ApplicationController
   def destroy
     @cart.destroy
     session[:cart_id] = nil
-    redirect_to shop_url
+    redirect_to root_url, notice: "Your cart is empty"
   end
 end

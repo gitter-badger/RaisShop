@@ -6,12 +6,12 @@
     .user_nav
       - flash.each do |name, msg|
         - if msg.is_a?(String)
-          = content_tag :div, msg, :id => "flash_#{name}"
+          = content_tag :div, msg, class: 'alert'
       - if user_signed_in?
         Hello,
         = link_to edit_user_registration_path do
           %strong
-            = current_user.first_name
+            = current_user.full_name
         |
         = link_to 'Logout', destroy_user_session_path, method: :delete
       - else

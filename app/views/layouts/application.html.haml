@@ -9,6 +9,12 @@
   /[if IE]
     %script {src:"http://html5shim.googlecode.com/svn/trunk/html5.js"}
   %body
+    %noscript
+      .alert
+        For full functionality of this site it is necessary to enable JavaScript.
+        Here are the 
+        %a{ href: "http://www.enable-javascript.com/", target: "_blank"}
+          instructions how to enable JavaScript in your web browser.
     = render 'layouts/header'
     .container
       .row

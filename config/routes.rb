@@ -1,6 +1,12 @@
 RaisShop::Application.routes.draw do
 
 
+  resources :addresses
+
+
+  resources :orders
+
+
   root to: "shop#index"
 
   match "admin" => "shop#admin"

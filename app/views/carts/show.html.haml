@@ -5,7 +5,7 @@
     .quantity Quantity
     .price Price
   .cartItems= render @line_items
-  .checkOut= button_to 'Checkout', root_path
+  = button_to 'Checkout', new_order_path, checkout_params
   .totalCost= number_to_currency(@cart.total_price)
   = button_to 'Empty cart', @cart, method: :delete, confirm: "Are you sure, biatch?"
   = button_to 'Back', :back, method: :get

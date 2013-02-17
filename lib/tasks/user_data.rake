@@ -4,20 +4,22 @@ namespace :db do
     puts 'SETTING UP DEFAULT ADMIN LOGIN and 100 regular users'
     password = "password"
     admin = User.create!(
-      first_name: "Volodymyr",
-      last_name: "Barna",
       email: "admin@admin.com",
       password: password,
-      password_confirmation: password)
+      password_confirmation: password,
+        addresses_attributes:[{
+          full_name: "Volodymyr Barna"
+        }])
     admin.toggle!(:admin)
 
     100.times do |n|
       User.create(
-        first_name: Faker::Name.first_name,
-        last_name:  Faker::Name.last_name,
         email: "admin#{n}@admin.com",
         password:password,
-        password_confirmation:password)
+        password_confirmation:password,
+        addresses_attributes:[{
+          full_name: "#{Faker::Name.first_name} #{Faker::Name.last_name}"
+        }])
     end
 
     def make_categories

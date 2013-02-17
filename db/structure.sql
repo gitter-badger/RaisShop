@@ -82,6 +82,44 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
+-- Name: addresses; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE addresses (
+    id integer NOT NULL,
+    full_name character varying(255),
+    line_1 character varying(255),
+    line_2 character varying(255),
+    city character varying(255),
+    country character varying(255),
+    postcode integer,
+    phone_number character varying(255),
+    user_id integer,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: addresses_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE addresses_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: addresses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE addresses_id_seq OWNED BY addresses.id;
+
+
+--
 -- Name: carts; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -186,7 +224,8 @@ CREATE TABLE line_items (
     cart_id integer,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    quantity integer DEFAULT 1
+    quantity integer DEFAULT 1,
+    order_id integer
 );
 
 
@@ -207,6 +246,38 @@ CREATE SEQUENCE line_items_id_seq
 --
 
 ALTER SEQUENCE line_items_id_seq OWNED BY line_items.id;
+
+
+--
+-- Name: orders; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE orders (
+    id integer NOT NULL,
+    name character varying(255),
+    pay_type character varying(255),
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: orders_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE orders_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: orders_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE orders_id_seq OWNED BY orders.id;
 
 
 --
@@ -342,8 +413,7 @@ CREATE TABLE users (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     admin boolean DEFAULT false,
-    first_name character varying(255),
-    last_name character varying(255)
+    current_address_id integer
 );
 
 
@@ -364,6 +434,13 @@ CREATE SEQUENCE users_id_seq
 --
 
 ALTER SEQUENCE users_id_seq OWNED BY users.id;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY addresses ALTER COLUMN id SET DEFAULT nextval('addresses_id_seq'::regclass);
 
 
 --
@@ -398,6 +475,13 @@ ALTER TABLE ONLY line_items ALTER COLUMN id SET DEFAULT nextval('line_items_id_s
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY orders ALTER COLUMN id SET DEFAULT nextval('orders_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY products ALTER COLUMN id SET DEFAULT nextval('products_id_seq'::regclass);
 
 
@@ -420,6 +504,14 @@ ALTER TABLE ONLY search_suggestions ALTER COLUMN id SET DEFAULT nextval('search_
 --
 
 ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
+
+
+--
+-- Name: addresses_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY addresses
+    ADD CONSTRAINT addresses_pkey PRIMARY KEY (id);
 
 
 --
@@ -455,6 +547,14 @@ ALTER TABLE ONLY line_items
 
 
 --
+-- Name: orders_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY orders
+    ADD CONSTRAINT orders_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: products_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -487,10 +587,24 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: index_addresses_on_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_addresses_on_user_id ON addresses USING btree (user_id);
+
+
+--
 -- Name: index_categories_on_ancestry; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX index_categories_on_ancestry ON categories USING btree (ancestry);
+
+
+--
+-- Name: index_line_items_on_order_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_line_items_on_order_id ON line_items USING btree (order_id);
 
 
 --
@@ -600,3 +714,17 @@ INSERT INTO schema_migrations (version) VALUES ('20130211162655');
 INSERT INTO schema_migrations (version) VALUES ('20130212111608');
 
 INSERT INTO schema_migrations (version) VALUES ('20130212111714');
+
+INSERT INTO schema_migrations (version) VALUES ('20130215115434');
+
+INSERT INTO schema_migrations (version) VALUES ('20130215115854');
+
+INSERT INTO schema_migrations (version) VALUES ('20130215144649');
+
+INSERT INTO schema_migrations (version) VALUES ('20130215145534');
+
+INSERT INTO schema_migrations (version) VALUES ('20130215145838');
+
+INSERT INTO schema_migrations (version) VALUES ('20130215153204');
+
+INSERT INTO schema_migrations (version) VALUES ('20130217103440');
