@@ -3,6 +3,7 @@ class Address < ActiveRecord::Base
                   :phone_number, :postcode
 
   belongs_to :user, inverse_of: :addresses
+  has_many   :orders
 
   validates :user, presence: true
   validates :full_name, presence: true

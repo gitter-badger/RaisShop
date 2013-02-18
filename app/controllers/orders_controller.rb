@@ -22,6 +22,10 @@ class OrdersController < ApplicationController
     @order = Order.new
 
     redirect_to root_url, notice: "Your cart is empty" if @cart.empty?
+
+    if user_signed_in?
+    else
+    end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @order }

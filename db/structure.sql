@@ -254,10 +254,11 @@ ALTER SEQUENCE line_items_id_seq OWNED BY line_items.id;
 
 CREATE TABLE orders (
     id integer NOT NULL,
-    name character varying(255),
     pay_type character varying(255),
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    shipping_type character varying(255),
+    status character varying(255)
 );
 
 
@@ -728,3 +729,9 @@ INSERT INTO schema_migrations (version) VALUES ('20130215145838');
 INSERT INTO schema_migrations (version) VALUES ('20130215153204');
 
 INSERT INTO schema_migrations (version) VALUES ('20130217103440');
+
+INSERT INTO schema_migrations (version) VALUES ('20130218115045');
+
+INSERT INTO schema_migrations (version) VALUES ('20130218120103');
+
+INSERT INTO schema_migrations (version) VALUES ('20130218163332');

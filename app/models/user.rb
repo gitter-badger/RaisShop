@@ -19,6 +19,10 @@ class User < ActiveRecord::Base
     addresses.find(current_address_id).full_name
   end
 
+  def available_address_ids
+    addresses.map(&:id)
+  end
+
 private
 
   def set_current_address(id)

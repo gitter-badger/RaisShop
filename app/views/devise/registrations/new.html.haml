@@ -8,7 +8,6 @@
   = f.input :password_confirmation
   - @user.addresses.build if @user.addresses.empty?
   = f.simple_fields_for :addresses do |builder|
-    %fieldset#addresses
-      = builder.input :full_name
+    = render 'address_fields', f: builder
   = f.button :submit
 = render "devise/shared/links"
