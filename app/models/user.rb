@@ -7,9 +7,9 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password,
                   :password_confirmation, :remember_me, :addresses_attributes
-  has_many :reviews
-  has_many :addresses
-  accepts_nested_attributes_for :addresses
+  has_many :reviews, dependent: :nullify
+  has_many :addresses, dependent: :destroy, inverse_of: :user
+  accepts_nested_attributes_for :addresses, allow_destroy: true
 
   after_save :set_default_address
 
