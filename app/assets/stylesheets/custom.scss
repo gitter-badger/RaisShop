@@ -9,6 +9,13 @@ body {
     width:940px;
   }
 }
+.xhr{
+  border-bottom: 1px dashed;
+  text-decoration: none !important;
+  &:hover{
+    cursor: pointer;
+  }
+}
 
 #header {
   height: 60px;

@@ -12,7 +12,7 @@
     collection: @user.addresses, include_blank: false
   %a.edit_address Edit address
   = f.simple_fields_for :addresses do |builder|
-    = render 'address_fields', f: builder
+    = render 'addresses/address_fields', f: builder
   %a#add_address Add address
   = f.button :submit
 

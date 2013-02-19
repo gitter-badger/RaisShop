@@ -19,10 +19,13 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @order = Order.new
     if @cart.empty?
       redirect_to root_url, notice: "Your cart is empty"
     else
+      @order = Order.new
+
+      @address = Address.new unless user_signed_in?
+
       respond_to do |format|
         format.html # new.html.erb
         format.json { render json: @order }
