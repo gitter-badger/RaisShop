@@ -1,0 +1,13 @@
+%h1 New order
+.row
+  .span4
+    - if user_signed_in?
+    - else
+      If you are regular customer or you want to save address, please
+      = link_to 'login', new_user_session_path
+      = render 'devise/sessions/form'
+    = render 'form'
+    = link_to 'Back', :back
+  .span8
+    .cartItems= render @cart.line_items.includes(:product)
+    .totalCost= number_to_currency(@cart.total_price)

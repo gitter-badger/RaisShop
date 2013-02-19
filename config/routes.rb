@@ -18,7 +18,8 @@ RaisShop::Application.routes.draw do
   resources :line_items, except: [:index, :show, :edit, :new]
   resources :carts, except: [:index, :edit, :new]
 
-  devise_for :users, path_names: {sign_in: "login"}
+  devise_for :users, path_names: {sign_in: "login"},
+    controllers: { sessions: "sessions" }
 
   resources :products, only: [:index, :new, :create]
   resources :products, path: "", except: [:index, :new, :create]

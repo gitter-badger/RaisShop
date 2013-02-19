@@ -1,8 +1,28 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :recent_history, :current_cart
+  after_filter  :store_location
 
-  private
+
+  #def after_sign_in_path_for(resource)
+    #request.env['omniauth.origin'] || stored_location_for(resource) || root_path
+  #end
+
+  def after_sign_in_path_for(resource)
+    session[:previous_url] || root_path
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    session[:previous_url] || root_path
+    #request.referrer
+  end
+
+
+private
+
+  def store_location
+    session[:previous_url] = request.fullpath unless request.fullpath =~ /\/users/
+  end
 
   def recent_history
     session[:recent_history] ||= Hash.new
@@ -21,7 +41,8 @@ class ApplicationController < ActionController::Base
   # If the user is not authorized
   def check_authorization
     unless current_user.try(:admin?)
-      render file: 'public/403.html', status: 403, layout: false
+      #render file: 'public/403.html', status: 403, layout: false
+      redirect_to root_path
     end
   end
 end

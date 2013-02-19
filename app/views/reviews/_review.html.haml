@@ -1,6 +1,6 @@
 %ul.reviews
   %li.review
     .stars-rating{style: stars_image(review.rating) }
-    .user_name= user_name(review.user)
+    .user_name= review.user.full_name
     .date= review.created_at
     .comment= review.comment

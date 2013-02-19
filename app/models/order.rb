@@ -4,7 +4,9 @@ class Order < ActiveRecord::Base
   attr_accessible :pay_type, :shipping_type
 
   belongs_to :address
+  has_many :line_items, dependent: :destroy
 
+  validates :address, presence: true
   validates :pay_type, inclusion: PAYMENT_TYPES
   validates :shipping_type, inclusion: SHIPPING_TYPES
 end
