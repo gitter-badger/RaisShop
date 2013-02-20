@@ -4,6 +4,6 @@
 jQuery ->
   $('#user_login').hide()
   $('#login_show_toggle').click ->
-    $('#user_login').toggle()
-    $('#address_form').toggle()
+    $('#user_login').toggle('blind',500)
+    $('#order_form').toggle('blind',500)
     return false

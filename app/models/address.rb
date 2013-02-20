@@ -5,6 +5,6 @@ class Address < ActiveRecord::Base
   belongs_to :user, inverse_of: :addresses
   has_many   :orders
 
-  validates :user, presence: true
+  #validates :user, presence: true
   validates :full_name, presence: true
 end

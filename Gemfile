@@ -23,6 +23,7 @@ gem 'newrelic_rpm'
 gem 'better_errors', group: :development
 
 group :development, :test do 
+  #gem 'ruby-prof'
   gem 'faker'
   gem 'pry'
   gem 'pry-stack_explorer'

@@ -1,15 +1,24 @@
 %h1 New order
 .span4
-  - if user_signed_in?
-  - else
+  - unless user_signed_in?
     If you are a regular customer, please login
     %a.xhr#login_show_toggle toggle login form
     #user_login
       = render 'devise/sessions/form'
-    #address_form
-      = simple_form_for @address do |builder|
-        = render 'addresses/address_fields', f: builder
-  = render 'form'
+  #order_form
+    = simple_form_for(@order) do |f|
+      = f.error_notification
+      - unless user_signed_in?
+        = f.simple_fields_for :address do |builder|
+          = render 'addresses/address_fields', f: builder
+      = f.input :pay_type, collection: Order::PAYMENT_TYPES,
+        include_blank: false
+      = f.input :shipping_type, collection: Order::SHIPPING_TYPES,
+        include_blank: false
+      -#= f.association :address, collection: current_user.addresses,
+        -#include_blank: false
+      = f.button :submit, "Confirm order", id: 'submit_order'
+  -#= render 'form'
   = link_to 'Back', :back
 .span8
   .cartItems= render @cart.line_items.includes(:product)

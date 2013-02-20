@@ -5,6 +5,5 @@
       include_blank: false
     = f.input :shipping_type, collection: Order::SHIPPING_TYPES,
       include_blank: false
-    = f.input :address, as: :hidden
   .form-actions
     = f.button :submit, "Confirm order"

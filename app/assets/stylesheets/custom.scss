@@ -9,6 +9,11 @@ body {
     width:940px;
   }
 }
+
+.debug_dump {
+  white-space: pre-wrap;
+}
+
 .xhr{
   border-bottom: 1px dashed;
   text-decoration: none !important;

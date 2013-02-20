@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
     else
       @order = Order.new
 
-      @address = Address.new unless user_signed_in?
+      @address = @order.build_address unless user_signed_in?
 
       respond_to do |format|
         format.html # new.html.erb

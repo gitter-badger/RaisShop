@@ -258,7 +258,8 @@ CREATE TABLE orders (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     shipping_type character varying(255),
-    status character varying(255)
+    status character varying(255),
+    address_id integer
 );
 
 
@@ -609,6 +610,13 @@ CREATE INDEX index_line_items_on_order_id ON line_items USING btree (order_id);
 
 
 --
+-- Name: index_orders_on_address_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_orders_on_address_id ON orders USING btree (address_id);
+
+
+--
 -- Name: index_products_on_category_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -735,3 +743,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130218115045');
 INSERT INTO schema_migrations (version) VALUES ('20130218120103');
 
 INSERT INTO schema_migrations (version) VALUES ('20130218163332');
+
+INSERT INTO schema_migrations (version) VALUES ('20130220125716');
