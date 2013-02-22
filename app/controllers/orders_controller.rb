@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
 
   def index
-    @orders = Order.all
+    @orders = Order.includes(:address).all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -39,10 +39,13 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(params[:order])
+    @order.add_line_items_from_cart(@cart)
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+        format.html { redirect_to root_path, notice: 'Your order is accepted and being processed' }
         format.json { render json: @order, status: :created, location: @order }
       else
         format.html { render action: "new" }

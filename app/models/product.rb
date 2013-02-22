@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   attr_accessible :title, :description, :image_url, :price, :category_id, :rating
 
   has_many :line_items
+  has_many :orders, through: :line_items
   has_many :reviews, dependent: :destroy, order: "reviews.created_at ASC"
   belongs_to :category
 

@@ -259,7 +259,8 @@ CREATE TABLE orders (
     updated_at timestamp without time zone NOT NULL,
     shipping_type character varying(255),
     status character varying(255),
-    address_id integer
+    address_id integer,
+    comment text
 );
 
 
@@ -745,3 +746,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130218120103');
 INSERT INTO schema_migrations (version) VALUES ('20130218163332');
 
 INSERT INTO schema_migrations (version) VALUES ('20130220125716');
+
+INSERT INTO schema_migrations (version) VALUES ('20130222134158');

@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :email, :password,
-                  :password_confirmation, :remember_me, :addresses_attributes
+  attr_accessible :email, :password, :password_confirmation,
+    :remember_me, :addresses_attributes, :current_address_id
   has_many :reviews, dependent: :nullify
   has_many :addresses, dependent: :destroy, inverse_of: :user
   accepts_nested_attributes_for :addresses, allow_destroy: true

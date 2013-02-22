@@ -8,17 +8,17 @@
   #order_form
     = simple_form_for(@order) do |f|
       = f.error_notification
-      - unless user_signed_in?
+      - if user_signed_in?
+        = f.collection_radio_buttons(:address_id, current_user.addresses, :id, :info)
+      - else
         = f.simple_fields_for :address do |builder|
           = render 'addresses/address_fields', f: builder
       = f.input :pay_type, collection: Order::PAYMENT_TYPES,
         include_blank: false
       = f.input :shipping_type, collection: Order::SHIPPING_TYPES,
         include_blank: false
-      -#= f.association :address, collection: current_user.addresses,
-        -#include_blank: false
+      = f.input :comment
       = f.button :submit, "Confirm order", id: 'submit_order'
-  -#= render 'form'
   = link_to 'Back', :back
 .span8
   .cartItems= render @cart.line_items.includes(:product)

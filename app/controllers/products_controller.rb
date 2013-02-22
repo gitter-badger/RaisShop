@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
   before_filter :check_authorization, except: [:index, :show]
-  before_filter :find_product, only: [:show, :edit, :update, :destroy]
   respond_to :html
   respond_to :json, only: [:index]
 
@@ -22,6 +21,7 @@ class ProductsController < ApplicationController
 
 
   def show
+    @product = Product.find(params[:id])
     session[:recent_history].delete(@product.id)
     session[:recent_history][@product.id] = Time.now
     respond_with(@product)
@@ -33,6 +33,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @product = Product.find(params[:id])
   end
 
   def create
@@ -42,6 +43,7 @@ class ProductsController < ApplicationController
   end
 
   def update
+    @product = Product.find(params[:id])
     if @product.update_attributes(params[:product])
       flash[:notice] = "Product was successfully updated." 
     end
@@ -49,14 +51,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    @product = Product.find(params[:id])
     @product.destroy
     respond_with(@product)
   end
-
-private
-
-  def find_product
-    @product ||= Product.find(params[:id])
-  end
-
 end
