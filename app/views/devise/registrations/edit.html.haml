@@ -1,19 +1,19 @@
 %h2
   Edit #{resource_name.to_s.humanize}
 = simple_form_for(resource, as: resource_name,
-  url: registration_path(resource_name), html: {class: 'form-horizontal', method: :put}) do |f|
+  url: registration_path(resource_name),
+  html: {class: 'form-horizontal', method: :put}) do |f|
   = devise_error_messages!
   = f.input :email
   = f.input :password, hint: "(leave blank if you don't want to change it)"
   = f.input :password_confirmation
   = f.input :current_password,
     hint: "(we need your current password to confirm your changes)"
-  = f.input :current_address_id, priority: @user.current_address_id,
-    collection: @user.addresses, include_blank: false
-  %a.edit_address Edit address
-  = f.simple_fields_for :addresses do |builder|
-    = render 'addresses/address_fields', f: builder
-  %a#add_address Add address
+  Choose your current address
+  = f.collection_radio_buttons(:current_address_id, current_user.addresses, :id, :info)
+  -#= link_to "Edit address", edit_address_path(@address), class: 'edit_address'
+  = link_to "Show addresses", addresses_path, class: 'edit_address'
+  = link_to 'Add address', new_address_path, id: 'add_address'
   = f.button :submit
 
 %h3 Cancel my account

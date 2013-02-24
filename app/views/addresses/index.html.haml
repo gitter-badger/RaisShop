@@ -8,7 +8,6 @@
     %th Country
     %th Postcode
     %th Phone number
-    %th Belongs to
     %th
     %th
     %th
@@ -21,7 +20,6 @@
       %td= address.country
       %td= address.postcode
       %td= address.phone_number
-      %td= address.belongs_to
       %td= link_to 'Show', address
       %td= link_to 'Edit', edit_address_path(address)
       %td= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' }

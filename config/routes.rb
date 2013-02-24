@@ -1,18 +1,13 @@
 RaisShop::Application.routes.draw do
 
-
-  resources :addresses
-
-
-  resources :orders
-
-
   root to: "shop#index"
 
   match "admin" => "shop#admin"
   match "search" => "shop#search"
   match "query_freq" => "freq#get"
 
+  resources :addresses, except: [:show]
+  resources :orders
   resources :reviews, except: [:index, :show]
   resources :categories
   resources :line_items, except: [:index, :show, :edit, :new]

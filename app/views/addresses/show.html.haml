@@ -20,9 +20,6 @@
 %p
   %b Phone number:
   = @address.phone_number
-%p
-  %b Belongs to:
-  = @address.belongs_to
 = link_to 'Edit', edit_address_path(@address)
 |
 \#{link_to 'Back', addresses_path}

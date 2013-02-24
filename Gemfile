@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 gem 'rails'
 
+#gem 'rails4_upgrade', github: 'alindeman/rails4_upgrade'
+
 gem 'pg'
 gem 'pg_search'
 #gem 'redis'

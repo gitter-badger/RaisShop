@@ -92,7 +92,7 @@ CREATE TABLE addresses (
     line_2 character varying(255),
     city character varying(255),
     country character varying(255),
-    postcode integer,
+    postcode character varying(255),
     phone_number character varying(255),
     user_id integer,
     created_at timestamp without time zone NOT NULL,
@@ -748,3 +748,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130218163332');
 INSERT INTO schema_migrations (version) VALUES ('20130220125716');
 
 INSERT INTO schema_migrations (version) VALUES ('20130222134158');
+
+INSERT INTO schema_migrations (version) VALUES ('20130224121643');

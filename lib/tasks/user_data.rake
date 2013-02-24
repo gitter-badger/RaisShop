@@ -8,7 +8,12 @@ namespace :db do
       password: password,
       password_confirmation: password,
         addresses_attributes:[{
-          full_name: "Volodymyr Barna"
+          full_name: "Volodymyr Barna",
+          line_1: 'Ruska 10/18',
+          city: 'Ternopil',
+          country: 'Ukraine',
+          phone_number: '+380970377658',
+          postcode: '46000'
         }])
     admin.toggle!(:admin)
 
@@ -19,6 +24,11 @@ namespace :db do
         password_confirmation:password,
         addresses_attributes:[{
           full_name: "#{Faker::Name.first_name} #{Faker::Name.last_name}"
+          line_1: "#{Faker::Address.street_address}",
+          city: "#{Faker::Address.city}",
+          country: "#{Faker::Address.country}",
+          phone_number: "#{Faker::PhoneNumber.cell_phone}",
+          postcode: "#{Faker::Address.postcode}"
         }])
     end
 
