@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.0.0'
 gem 'rails'
 
 #gem 'rails4_upgrade', github: 'alindeman/rails4_upgrade'
 
+gem 'unicorn-rails'
 gem 'pg'
 gem 'pg_search'
 #gem 'redis'
@@ -28,8 +29,8 @@ group :development, :test do
   #gem 'ruby-prof'
   gem 'faker'
   gem 'pry'
-  gem 'pry-stack_explorer'
-  gem 'pry-debugger'
+  #gem 'pry-stack_explorer'
+  #gem 'pry-debugger'
   gem "pry-rails"
   gem 'rspec-rails'
   gem 'shoulda'
