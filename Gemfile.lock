@@ -57,6 +57,10 @@ GEM
       xpath (~> 1.0.0)
     childprocess (0.3.8)
       ffi (~> 1.0, >= 1.0.11)
+    client_side_validations (3.2.2)
+    client_side_validations-simple_form (2.0.1)
+      client_side_validations (~> 3.2.0)
+      simple_form (~> 2.0.3)
     code_analyzer (0.3.1)
       sexp_processor
     coderay (1.0.9)
@@ -107,7 +111,7 @@ GEM
       em-websocket (>= 0.2.0)
       guard (>= 1.5.0)
       multi_json (~> 1.0)
-    guard-rails (0.3.1)
+    guard-rails (0.3.2)
       guard (>= 0.2.2)
       version (>= 1.0.0)
     guard-rspec (2.4.1)
@@ -206,7 +210,7 @@ GEM
     rb-fsevent (0.9.3)
     rb-inotify (0.8.8)
       ffi (>= 0.5.0)
-    rdoc (3.12.1)
+    rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.2)
     rspec (2.13.0)
@@ -299,6 +303,8 @@ DEPENDENCIES
   bootstrap-will_paginate
   bullet
   capybara
+  client_side_validations
+  client_side_validations-simple_form
   coffee-rails
   country_select
   devise

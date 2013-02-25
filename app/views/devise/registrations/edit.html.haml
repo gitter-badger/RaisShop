@@ -2,7 +2,7 @@
   Edit #{resource_name.to_s.humanize}
 = simple_form_for(resource, as: resource_name,
   url: registration_path(resource_name),
-  html: {class: 'form-horizontal', method: :put}) do |f|
+  html: {class: 'form-horizontal', method: :put}, validate: true) do |f|
   = devise_error_messages!
   = f.input :email
   = f.input :password, hint: "(leave blank if you don't want to change it)"

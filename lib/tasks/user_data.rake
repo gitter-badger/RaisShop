@@ -23,7 +23,7 @@ namespace :db do
         password:password,
         password_confirmation:password,
         addresses_attributes:[{
-          full_name: "#{Faker::Name.first_name} #{Faker::Name.last_name}"
+          full_name: "#{Faker::Name.first_name} #{Faker::Name.last_name}",
           line_1: "#{Faker::Address.street_address}",
           city: "#{Faker::Address.city}",
           country: "#{Faker::Address.country}",

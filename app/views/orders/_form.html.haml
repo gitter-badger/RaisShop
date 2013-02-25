@@ -1,4 +1,4 @@
-= simple_form_for(@order) do |f|
+= simple_form_for(@order, validate: true) do |f|
   = f.error_notification
   .form-inputs
     = f.input :pay_type, collection: Order::PAYMENT_TYPES,

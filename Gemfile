@@ -22,7 +22,8 @@ gem 'simple_form'
 gem 'country_select'
 gem 'therubyracer'
 gem 'newrelic_rpm'
-
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'
 gem 'better_errors', group: :development
 
 group :development, :test do 

@@ -10,7 +10,7 @@ class Address < ActiveRecord::Base
   validates :city, presence: true
   validates :country, presence: true
   validates :line_1, presence: true
-  validates :line_2, presence: false
+  #validates :line_2, allow_blank: true
   validates :phone_number, presence: true
   validates :postcode, presence: true, format:{
                     :with => %r{^\d{5}(-\d{4})?$},

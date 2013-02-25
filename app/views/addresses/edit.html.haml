@@ -1,5 +1,5 @@
 %h1 Editing address
-= simple_form_for(@address) do |builder|
+= simple_form_for(@address, validate: true) do |builder|
   = render 'addresses/address_fields', f: builder
   = builder.button :submit
 = link_to 'Show', @address

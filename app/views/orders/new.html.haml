@@ -6,7 +6,7 @@
     #user_login
       = render 'devise/sessions/form'
   #order_form
-    = simple_form_for(@order) do |f|
+    = simple_form_for(@order, validate: true) do |f|
       = f.error_notification
       - if user_signed_in?
         = f.collection_radio_buttons(:address_id, current_user.addresses, :id, :info)
