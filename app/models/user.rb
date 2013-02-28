@@ -7,16 +7,22 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation,
     :remember_me, :addresses_attributes, :current_address_id
-  has_many :reviews, dependent: :nullify
+
   has_many :addresses, dependent: :destroy, inverse_of: :user
-  accepts_nested_attributes_for :addresses, allow_destroy: true
+  has_many :reviews, through: :addresses
+  accepts_nested_attributes_for :addresses
 
   after_save :set_default_address
 
   validates :addresses, presence: true
+  validates :password, confirmation: true
+
+  def current_address
+    addresses.find(current_address_id)
+  end
 
   def full_name
-    addresses.find(current_address_id).full_name
+    current_address.full_name
   end
 
   def available_address_ids

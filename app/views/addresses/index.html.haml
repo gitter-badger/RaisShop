@@ -10,7 +10,6 @@
     %th Phone number
     %th
     %th
-    %th
   - @addresses.each do |address|
     %tr
       %td= address.full_name
@@ -20,7 +19,6 @@
       %td= address.country
       %td= address.postcode
       %td= address.phone_number
-      %td= link_to 'Show', address
       %td= link_to 'Edit', edit_address_path(address)
       %td= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' }
 %br/

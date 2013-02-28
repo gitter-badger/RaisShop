@@ -4,6 +4,7 @@ class Address < ActiveRecord::Base
 
   belongs_to :user, inverse_of: :addresses
   has_many   :orders
+  has_many :reviews, dependent: :nullify
 
   validates :user, presence: false
   validates :full_name, presence: true
