@@ -6,6 +6,6 @@ module ReviewsHelper
 
   def can_write_review?
     user_signed_in? &&
-      @product.reviews.find_by_user_id(current_user.id) == nil
+      @product.reviews.find_by_address_id(current_user.id) == nil
   end
 end
