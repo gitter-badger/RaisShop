@@ -24,14 +24,17 @@ gem 'therubyracer'
 gem 'newrelic_rpm'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
+gem 'rack-mini-profiler'
 gem 'better_errors', group: :development
 
 group :development, :test do 
   #gem 'ruby-prof'
+  gem "lol_dba"
+  gem 'railroady'
   gem 'faker'
   gem 'pry'
-  #gem 'pry-stack_explorer'
-  #gem 'pry-debugger'
+  gem 'pry-stack_explorer'
+  gem 'pry-debugger'
   gem "pry-rails"
   gem 'rspec-rails'
   gem 'shoulda'
@@ -57,7 +60,6 @@ group :development, :test do
   gem 'simplecov'
   gem 'launchy'
   gem 'bullet'
-  gem 'rack-mini-profiler'
 end
 
 

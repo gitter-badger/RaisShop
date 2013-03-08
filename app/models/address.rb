@@ -6,16 +6,18 @@ class Address < ActiveRecord::Base
   has_many   :orders
   has_many :reviews, dependent: :nullify
 
-  validates :user, presence: false
-  validates :full_name, presence: true
-  validates :city, presence: true
-  validates :country, presence: true
-  validates :line_1, presence: true
+  with_options presence: true do |check|
+    check.validates :full_name
+    check.validates :city
+    check.validates :country
+    check.validates :line_1
+    check.validates :phone_number
+    check.validates :postcode, format:{
+                      :with => %r{^\d{5}(-\d{4})?$},
+                      :message => "should be 12345 or 12345-1234"}
+  end
+  #validates :user, presence: false
   #validates :line_2, allow_blank: true
-  validates :phone_number, presence: true
-  validates :postcode, presence: true, format:{
-                    :with => %r{^\d{5}(-\d{4})?$},
-                    :message => "should be 12345 or 12345-1234"}
 
 
   def info

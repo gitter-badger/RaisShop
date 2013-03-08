@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :addresses, dependent: :destroy, inverse_of: :user
   has_many :reviews, through: :addresses
-  accepts_nested_attributes_for :addresses
+  accepts_nested_attributes_for :addresses, allow_destroy: true
 
   after_save :set_default_address
 

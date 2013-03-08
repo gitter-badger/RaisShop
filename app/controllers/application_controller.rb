@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :recent_history, :current_cart
+  before_filter :recent_history, :current_cart, :mini_profiler
   after_filter  :store_location
 
 
@@ -17,6 +17,11 @@ class ApplicationController < ActionController::Base
     #request.referrer
   end
 
+protected
+
+  def step(name, &blk)
+    Rack::MiniProfiler.step(name, &blk)
+  end
 
 private
 
@@ -25,10 +30,14 @@ private
   end
 
   def recent_history
-    session[:recent_history] ||= Hash.new
-    history = session[:recent_history]
-    items_with_time = Product.find(history.keys).flat_map{|e| [e, history[e.id]]}
-    @recent_history = Hash[*items_with_time].sort_by{ |k,v| v }.reverse
+    step("Recent history") do
+      session[:recent_history] ||= Hash.new
+      history = session[:recent_history]
+      items_with_time = Product.find(history.keys).flat_map{|e| [e, history[e.id]]}
+      step("sorting") do
+        @recent_history = Hash[*items_with_time].sort_by{ |k,v| v }.reverse
+      end
+    end
   end
 
   def current_cart
@@ -44,5 +53,9 @@ private
       #render file: 'public/403.html', status: 403, layout: false
       redirect_to root_path
     end
+  end
+
+  def mini_profiler
+    Rack::MiniProfiler.authorize_request #if current_user.try(:admin?)
   end
 end
