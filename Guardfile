@@ -19,7 +19,7 @@ guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' }, :rspec_env => { 'RAIL
   watch(%r{^spec/support/.+\.rb$})
 end
 
-guard 'rspec', cli: "--drb --color --format documentation" do
+guard 'rspec', cli: "--drb --format Fuubar --color spec" do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
@@ -38,6 +38,9 @@ guard 'rspec', cli: "--drb --color --format documentation" do
   # Turnip features and steps
   watch(%r{^spec/acceptance/(.+)\.feature$})
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
+
+  #factories
+  watch('spec/factories.rb')
 end
 
 guard 'bundler' do

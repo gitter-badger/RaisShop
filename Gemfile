@@ -29,6 +29,7 @@ gem 'better_errors', group: :development
 
 group :development, :test do 
   #gem 'ruby-prof'
+  gem 'fuubar'
   gem "lol_dba"
   gem 'railroady'
   gem 'faker'
@@ -51,7 +52,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'guard-ctags-bundler'
-  gem 'rb-inotify', '~> 0.8.8'
+  gem 'rb-inotify', '~> 0.9'
   gem 'rb-fsevent'
   gem 'meta_request', '0.2.0'
   gem "rails_best_practices"
