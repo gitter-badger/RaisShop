@@ -1,9 +1,9 @@
 FactoryGirl.define do
+
   factory :user do
     sequence(:email) { |n| "foo#{n}@example.com" }
     password "password"
-    first_name "qwerty"
-    last_name "lolovich"
+    full_name "Volodymyr Barna"
     admin false
 
     factory :admin do
@@ -23,4 +23,19 @@ FactoryGirl.define do
     price 25.39
   end
 
+  factory :address do
+    sequence(:line_1) { |n| "Ruska 1#{n}/3#{n}" }
+    line_2 "2 floor, from backdoor"
+    city "Ternopil"
+    country "Ukraine"
+    postcode 12345
+    phone_number "+380970377658"
+    user
+  end
+
+  factory :order do
+    address
+    pay_type "Check"
+    shipping_type "Express"
+  end
 end
