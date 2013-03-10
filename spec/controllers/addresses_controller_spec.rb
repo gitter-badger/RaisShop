@@ -27,13 +27,15 @@ describe AddressesController do
     end
 
     it "redirect to login page" do
-      get :edit
+      get :new
       response.should redirect_to new_user_session_path
     end
   end
 
   describe "GET edit" do
+
     it "assigns the requested address as @address" do
+      sign_in user
       get :edit, {:id => address.to_param}
       assigns(:address).should eq(address)
     end
@@ -45,14 +47,15 @@ describe AddressesController do
 
     context "when user tries to access disowned address" do
 
+      let(:user2) { create(:user_with_address) }
+
       before(:each) do
-        user2 = create(:user)
         sign_in user2
       end
 
       it "redirects to #index" do
         get :edit, {:id => address.to_param}
-        response.should redirect_to :index
+        response.should redirect_to(addresses_path)
       end
 
       it "sets flash message" do
@@ -70,33 +73,30 @@ describe AddressesController do
 
     describe "with valid params" do
 
-      before(:each) do
-        valid_address = build(:address)
-      end
+      let(:valid_address_attributes) { { address: attributes_for(:address) } }
 
       it "creates a new Address" do
         expect {
-          post :create, valid_address
+          post :create, valid_address_attributes
         }.to change(Address, :count).by(1)
       end
 
       it "assigns a newly created address as @address" do
-        post :create, valid_address
+        post :create, valid_address_attributes
+        response.should redirect_to(addresses_path)
         assigns(:address).should be_a(Address)
         assigns(:address).should be_persisted
       end
 
       it "redirects to user addresses" do
-        post :create, :address
+        post :create, valid_address_attributes
         response.should redirect_to(addresses_path)
       end
     end
 
     describe "with invalid params" do
 
-      before(:each) do
-        invalid_address = { address: {city: "Ternopil"} }
-      end
+      let(:invalid_address) { {  address: {city: "Ternopil"} } }
 
       it "assigns a newly created but unsaved address as @address" do
         Address.any_instance.stub(:save).and_return(false)
@@ -120,9 +120,7 @@ describe AddressesController do
 
     describe "with valid params" do
 
-      before(:each) do
-        valid_address = build(:address)
-      end
+      let(:valid_address_attributes) { attributes_for(:address) }
 
       it "updates the requested address" do
         city = { "city" => "Moscow" }
@@ -131,13 +129,13 @@ describe AddressesController do
       end
 
       it "assigns the requested address as @address" do
-        put :update, {:id => address.to_param, :address => valid_address}
+        put :update, {id:  address.to_param, address: valid_address_attributes }
         assigns(:address).should eq(address)
       end
 
       it "redirects to the address" do
-        put :update, {:id => address.to_param, :address => valid_address}
-        response.should redirect_to(address)
+        put :update, {id: address.to_param, address: valid_address_attributes }
+        response.should redirect_to(addresses_path)
       end
     end
 
@@ -159,6 +157,7 @@ describe AddressesController do
   end
 
   describe "DELETE destroy" do
+    before { sign_in user }
     it "destroys the requested address" do
       expect {
         delete :destroy, {:id => address.to_param}
