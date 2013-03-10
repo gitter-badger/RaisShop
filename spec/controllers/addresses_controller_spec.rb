@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe AddressesController do
 
-  let(:user) { create(:user) }
+  let(:user) { create(:user_with_address) }
   #let(:address) { create(:address) }
   let(:address) { user.addresses.first }
 
@@ -10,7 +10,7 @@ describe AddressesController do
     it "assigns current signed in user addresses" do
       sign_in user
       get :index
-      assigns(:addresses).should eq(current_user.addresses)
+      assigns(:addresses).should eq([address])
     end
 
     it "redirects to login page" do
@@ -125,7 +125,7 @@ describe AddressesController do
       end
 
       it "updates the requested address" do
-        city = { city: "Moscow" }
+        city = { "city" => "Moscow" }
         Address.any_instance.should_receive(:update_attributes).with(city)
         put :update, {:id => address.to_param, :address => city}
       end

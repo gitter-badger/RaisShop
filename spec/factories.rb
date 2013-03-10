@@ -9,6 +9,10 @@ FactoryGirl.define do
     factory :admin do
       admin true
     end
+
+    factory :user_with_address do
+      after(:create){ |user| create_list(:address, 1, user: user) }
+    end
   end
 
   factory :category do
@@ -30,7 +34,10 @@ FactoryGirl.define do
     country "Ukraine"
     postcode 12345
     phone_number "+380970377658"
-    user
+
+    factory :address_with_user do
+      user
+    end
   end
 
   factory :order do
