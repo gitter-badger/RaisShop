@@ -47,7 +47,7 @@ Spork.prefork do
 
     config.include FactoryGirl::Syntax::Methods
     config.include Capybara::DSL
-    #config.include Devise::TestHelpers, type: :controller
+    config.include Devise::TestHelpers, type: :controller
   end
 end
 
