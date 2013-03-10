@@ -1,13 +1,12 @@
 class Address < ActiveRecord::Base
-  attr_accessible :user, :city, :country, :full_name, :line_1, :line_2,
+  attr_accessible :user, :city, :country, :line_1, :line_2,
                   :phone_number, :postcode, :info
 
   belongs_to :user, inverse_of: :addresses
   has_many   :orders
-  has_many :reviews, dependent: :nullify
+  has_many   :reviews, dependent: :nullify
 
   with_options presence: true do |check|
-    check.validates :full_name
     check.validates :city
     check.validates :country
     check.validates :line_1

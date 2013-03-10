@@ -5,24 +5,20 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :email, :password, :password_confirmation,
+  attr_accessible :full_name, :email, :password, :password_confirmation,
     :remember_me, :addresses_attributes, :current_address_id
 
   has_many :addresses, dependent: :destroy, inverse_of: :user
   has_many :reviews, through: :addresses
   accepts_nested_attributes_for :addresses, allow_destroy: true
 
-  after_save :set_default_address
+  #after_save :set_default_address
 
-  validates :addresses, presence: true
+  #validates :addresses, presence: true
   validates :password, confirmation: true
 
   def current_address
     addresses.find(current_address_id)
-  end
-
-  def full_name
-    current_address.full_name
   end
 
   def available_address_ids

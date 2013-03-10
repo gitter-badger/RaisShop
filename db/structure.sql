@@ -87,7 +87,6 @@ SET default_with_oids = false;
 
 CREATE TABLE addresses (
     id integer NOT NULL,
-    full_name character varying(255),
     line_1 character varying(255),
     line_2 character varying(255),
     city character varying(255),
@@ -417,7 +416,8 @@ CREATE TABLE users (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     admin boolean DEFAULT false,
-    current_address_id integer
+    current_address_id integer,
+    full_name character varying(255)
 );
 
 
@@ -760,3 +760,7 @@ INSERT INTO schema_migrations (version) VALUES ('20130222134158');
 INSERT INTO schema_migrations (version) VALUES ('20130224121643');
 
 INSERT INTO schema_migrations (version) VALUES ('20130227133855');
+
+INSERT INTO schema_migrations (version) VALUES ('20130310121842');
+
+INSERT INTO schema_migrations (version) VALUES ('20130310123934');

@@ -4,11 +4,11 @@ namespace :db do
     puts 'SETTING UP DEFAULT ADMIN LOGIN and 100 regular users'
     password = "password"
     admin = User.create!(
+      full_name: "Volodymyr Barna",
       email: "admin@admin.com",
       password: password,
       password_confirmation: password,
         addresses_attributes:[{
-          full_name: "Volodymyr Barna",
           line_1: 'Ruska 10/18',
           city: 'Ternopil',
           country: 'Ukraine',
@@ -19,11 +19,11 @@ namespace :db do
 
     100.times do |n|
       User.create(
+        full_name: "#{Faker::Name.first_name} #{Faker::Name.last_name}",
         email: "admin#{n}@admin.com",
         password:password,
         password_confirmation:password,
         addresses_attributes:[{
-          full_name: "#{Faker::Name.first_name} #{Faker::Name.last_name}",
           line_1: "#{Faker::Address.street_address}",
           city: "#{Faker::Address.city}",
           country: "#{Faker::Address.country}",

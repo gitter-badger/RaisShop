@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe AddressesController do
 
-  let(:user) { create(:address) }
+  let(:user) { create(:user) }
   #let(:address) { create(:address) }
   let(:address) { user.addresses.first }
 
