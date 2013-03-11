@@ -44,5 +44,9 @@ FactoryGirl.define do
     address
     pay_type "Check"
     shipping_type "Express"
+
+    factory :order_with_user do
+      association :address, factory: :address_with_user
+    end
   end
 end
