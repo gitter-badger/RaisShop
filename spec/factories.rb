@@ -4,10 +4,14 @@ FactoryGirl.define do
     full_name "Volodymyr Barna"
     sequence(:email) { |n| "foo#{n}@example.com" }
     password "password"
-    admin false
+    guest false
 
     factory :admin do
       admin true
+    end
+
+    factory :guest do
+      guest true
     end
 
     factory :user_with_address do
@@ -25,6 +29,14 @@ FactoryGirl.define do
     image_url 'ruby.jpg'
     category
     price 25.39
+  end
+
+  factory :line_item do
+    product
+  end
+
+  factory :cart do
+    after(:create){ |cart| create_list(:line_item, 1, cart: cart) }
   end
 
   factory :address do

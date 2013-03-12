@@ -3,19 +3,22 @@ class User < ActiveRecord::Base
   #default_scope includes(:addresses)
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable
 
   attr_accessible :full_name, :email, :password, :password_confirmation,
-    :remember_me, :addresses_attributes, :current_address_id
+    :remember_me, :addresses_attributes, :current_address_id, :guest
 
   has_many :addresses, dependent: :destroy, inverse_of: :user
+  has_many :orders,  through: :addresses
   has_many :reviews, through: :addresses
   accepts_nested_attributes_for :addresses, allow_destroy: true
 
-  #after_save :set_default_address
-
-  #validates :addresses, presence: true
-  validates :password, confirmation: true
+  validates_presence_of :email, unless: :guest?
+  validate  :full_name, presence: true
+  validates :email, uniqueness: true,
+    format: { with: Devise.email_regexp }, allow_blank: true, if: :email_changed?
+  validates :password, presence: true, confirmation: true,
+            length: { within: Devise.password_length }, unless: :guest?
 
   def current_address
     addresses.find(current_address_id)

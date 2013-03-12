@@ -9,7 +9,6 @@
   - @orders.each do |order|
     %tr
       %td= order.address
-      %td= order.address.full_name
       %td= order.address.line_1
       %td= order.pay_type
       %td= link_to 'Show', order

@@ -417,7 +417,8 @@ CREATE TABLE users (
     updated_at timestamp without time zone NOT NULL,
     admin boolean DEFAULT false,
     current_address_id integer,
-    full_name character varying(255)
+    full_name character varying(255),
+    guest boolean
 );
 
 
@@ -764,3 +765,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130227133855');
 INSERT INTO schema_migrations (version) VALUES ('20130310121842');
 
 INSERT INTO schema_migrations (version) VALUES ('20130310123934');
+
+INSERT INTO schema_migrations (version) VALUES ('20130311135236');

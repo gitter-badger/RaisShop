@@ -1,21 +1,9 @@
 class OrdersController < ApplicationController
+  before_filter :check_authorization, except: [:index, :new, :create]
+  before_filter :signed_in_only, only: [:index]
 
   def index
-    @orders = Order.includes(:address).all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @orders }
-    end
-  end
-
-  def show
-    @order = Order.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @order }
-    end
+    @orders = current_user.orders.includes(:address).all
   end
 
   def new
@@ -24,11 +12,9 @@ class OrdersController < ApplicationController
     else
       @order = Order.new
 
-      @address = @order.build_address unless user_signed_in?
-
-      respond_to do |format|
-        format.html # new.html.erb
-        format.json { render json: @order }
+      if !user_signed_in?
+        @address = @order.build_address
+        @user    = @address.build_user
       end
     end
   end
@@ -38,19 +24,20 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(params[:order])
+    if user_signed_in?
+      @order = Order.new(params[:order])
+    else
+      @order = Order.new_with_guest(params[:order])
+    end
+
     @order.add_line_items_from_cart(@cart)
 
-    respond_to do |format|
-      if @order.save
-        Cart.destroy(session[:cart_id])
-        session[:cart_id] = nil
-        format.html { redirect_to root_path, notice: 'Your order is accepted and being processed' }
-        format.json { render json: @order, status: :created, location: @order }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
+    if @order.save
+      Cart.destroy(session[:cart_id])
+      session[:cart_id] = nil
+      redirect_to root_path, notice: 'Your order is accepted and being processed'
+    else
+      render action: "new"
     end
   end
 
@@ -59,7 +46,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.update_attributes(params[:order])
-        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -71,10 +58,6 @@ class OrdersController < ApplicationController
   def destroy
     @order = Order.find(params[:id])
     @order.destroy
-
-    respond_to do |format|
-      format.html { redirect_to orders_url }
-      format.json { head :no_content }
-    end
+    redirect_to orders_url
   end
 end
