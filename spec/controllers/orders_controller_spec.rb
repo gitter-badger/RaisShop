@@ -39,7 +39,7 @@ describe OrdersController do
 
       context "when user logged in" do
         before { sign_in user }
-        it "shouldn't assign a new address and user" do
+        it "doesn't assign a new address and user" do
           get :new
           assigns(:address).should be_nil
           assigns(:user).should be_nil
@@ -101,13 +101,13 @@ describe OrdersController do
         response.should redirect_to root_path
       end
 
-      it "should add line items from the cart" do
+      it "adds line items from the cart" do
         Order.any_instance.should_receive(:add_line_items_from_cart)
           .with(cart)
         post :create, {order: @valid_attributes}
       end
 
-      it "should destroy cart" do
+      it "destroys cart" do
         expect {
           post :create, {order: @valid_attributes}
         }.to change(Cart, :count).by(-1)
@@ -130,13 +130,13 @@ describe OrdersController do
         response.should render_template("new")
       end
 
-      it "should call new_with_guest for guest user" do
+      it "calls new_with_guest for guest user" do
         Order.any_instance.should_receive(:save).and_return(false)
         Order.should_receive(:new_with_guest).and_call_original
         post :create, invalid_order
       end
 
-      it "should not save an order" do
+      it "does not save an order" do
         Order.any_instance.should_receive(:save).and_return(false)
         post :create, invalid_order
         assigns(:order).should_not be_persisted
@@ -191,7 +191,7 @@ describe OrdersController do
       end
     end
 
-    it "should redirect to root path for non-admin user" do
+    it "redirects to root path for non-admin user" do
       put :update, {id: order.id, order: @valid_attributes}
       response.should redirect_to root_path
     end

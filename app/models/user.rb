@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :addresses, dependent: :destroy, inverse_of: :user
   has_many :orders,  through: :addresses
-  has_many :reviews, through: :addresses
+  has_many :reviews
   accepts_nested_attributes_for :addresses, allow_destroy: true
 
   validates_presence_of :email, unless: :guest?

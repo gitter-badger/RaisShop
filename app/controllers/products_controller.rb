@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
 
 
   def show
-    @product = Product.includes(reviews: :address).find(params[:id])
+    @product = Product.includes(reviews: :user).find(params[:id])
     session[:recent_history].delete(@product.id)
     session[:recent_history][@product.id] = Time.now
     respond_with(@product)

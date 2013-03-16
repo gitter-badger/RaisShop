@@ -1,7 +1,7 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
-guard 'ctags-bundler', :src_path => ["app", "lib", "spec/support"] do
+guard 'ctags-bundler', :src_path => ["app", "lib", "spec/support"], :stdlib => true do
   watch(/^(app|lib|spec\/support)\/.*\.rb$/)
   watch('Gemfile.lock')
 end
@@ -33,8 +33,7 @@ guard 'rspec', cli: "--drb --format Fuubar --color spec" do
   watch('app/controllers/application_controller.rb')  { "spec/controllers" }
 
   # Capybara features specs
-  watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/features/#{m[1]}_spec.rb" }
-
+  watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/features/#{m[1]}_spec.rb" } 
   # Turnip features and steps
   watch(%r{^spec/acceptance/(.+)\.feature$})
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }

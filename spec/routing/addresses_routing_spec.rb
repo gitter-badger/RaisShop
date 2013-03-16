@@ -11,10 +11,6 @@ describe AddressesController do
       get("/addresses/new").should route_to("addresses#new")
     end
 
-    it "routes to #show" do
-      get("/addresses/1").should route_to("addresses#show", :id => "1")
-    end
-
     it "routes to #edit" do
       get("/addresses/1/edit").should route_to("addresses#edit", :id => "1")
     end

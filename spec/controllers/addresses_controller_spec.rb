@@ -73,7 +73,7 @@ describe AddressesController do
 
     describe "with valid params" do
 
-      let(:valid_address_attributes) { { address: attributes_for(:address) } }
+      let(:valid_address_attributes) { { address: attributes_for(:address_with_user) } }
 
       it "creates a new Address" do
         expect {

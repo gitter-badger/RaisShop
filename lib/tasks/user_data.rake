@@ -91,7 +91,7 @@ namespace :db do
       rand(4).times do
         review = product.reviews.build(comment: Faker::Lorem.sentence(10),
                                        rating:  1 + rand(5),
-                                       address_id: 1 + rand(50))
+                                       user_id: 1 + rand(50))
         review.save
       end
     end
