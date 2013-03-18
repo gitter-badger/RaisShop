@@ -6,12 +6,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable
 
   attr_accessible :full_name, :email, :password, :password_confirmation,
-    :remember_me, :addresses_attributes, :current_address_id, :guest
+    :remember_me, :addresses_attributes, :current_address_id
 
   has_many :addresses, dependent: :destroy, inverse_of: :user
-  has_many :orders,  through: :addresses
+  has_many :orders, through: :addresses
   has_many :reviews
   accepts_nested_attributes_for :addresses, allow_destroy: true
+
+  before_validation :check_if_guest
 
   validates_presence_of :email, unless: :guest?
   validate  :full_name, presence: true
@@ -29,6 +31,14 @@ class User < ActiveRecord::Base
   end
 
 private
+
+  def check_if_guest
+    if password.blank?
+      self.guest = true
+    else
+      self.guest = false
+    end
+  end
 
   def set_current_address(id)
     update_attribute :current_address_id, id if addresses.one? do |address|

@@ -11,7 +11,6 @@ class OrdersController < ApplicationController
       redirect_to root_url, notice: "Your cart is empty"
     else
       @order = Order.new
-
       if !user_signed_in?
         @address = @order.build_address
         @user    = @address.build_user
@@ -24,11 +23,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    if user_signed_in?
-      @order = Order.new(params[:order])
-    else
-      @order = Order.new_with_guest(params[:order])
-    end
+    @order = Order.new(params[:order])
 
     @order.add_line_items_from_cart(@cart)
 

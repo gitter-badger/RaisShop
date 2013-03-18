@@ -20,15 +20,4 @@ class Order < ActiveRecord::Base
       line_items << item
     end
   end
-
-  def self.new_with_guest(params)
-    begin
-      params[:address_attributes][:user_attributes][:guest] = true
-    rescue NoMethodError
-      order = new(params)
-      order.errors[:guest] = "There are some missing attributes when creating order with guest user"
-      return order
-    end
-    new(params)
-  end
 end

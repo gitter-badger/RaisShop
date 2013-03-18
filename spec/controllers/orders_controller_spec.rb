@@ -130,12 +130,6 @@ describe OrdersController do
         response.should render_template("new")
       end
 
-      it "calls new_with_guest for guest user" do
-        Order.any_instance.should_receive(:save).and_return(false)
-        Order.should_receive(:new_with_guest).and_call_original
-        post :create, invalid_order
-      end
-
       it "does not save an order" do
         Order.any_instance.should_receive(:save).and_return(false)
         post :create, invalid_order
