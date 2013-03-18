@@ -22,7 +22,7 @@ class AddressesController < ApplicationController
     if @address.save
       redirect_to addresses_path, notice: 'Address was successfully created.'
     else
-      render action: "new", notice: 'lol'
+      render action: "new"
     end
   end
 
