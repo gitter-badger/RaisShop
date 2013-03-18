@@ -81,9 +81,8 @@ describe AddressesController do
         }.to change(Address, :count).by(1)
       end
 
-      it "assigns a newly created address as @address" do
+      it "assigns a newly created address" do
         post :create, valid_address_attributes
-        response.should redirect_to(addresses_path)
         assigns(:address).should be_a(Address)
         assigns(:address).should be_persisted
       end

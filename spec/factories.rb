@@ -27,7 +27,7 @@ FactoryGirl.define do
     sequence(:title) { |n| "Intel Core i5-375#{n}k BOX" }
     description "OMGWTFBBQ"
     image_url 'ruby.jpg'
-    category
+    category_id { create(:category).id }
     price 25.39
   end
 
