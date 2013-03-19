@@ -4,19 +4,21 @@ FactoryGirl.define do
     full_name "Volodymyr Barna"
     sequence(:email) { |n| "foo#{n}@example.com" }
     password "password"
-    guest false
 
     factory :admin do
       admin true
     end
 
-    factory :guest do
-      guest true
-    end
-
     factory :user_with_address do
       after(:create){ |user| create_list(:address, 1, user: user) }
     end
+  end
+
+  factory :guest, class: User do
+    full_name "Guest"
+    sequence(:email) { |n| "guest#{n}@example.com" }
+    addresses { [build(:address)] }
+    password ""
   end
 
   factory :category do
