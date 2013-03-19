@@ -8,23 +8,19 @@ class User < ActiveRecord::Base
   attr_accessible :full_name, :email, :password, :password_confirmation,
     :remember_me, :addresses_attributes, :current_address_id
 
-  has_many :addresses, dependent: :destroy, inverse_of: :user
+  has_many :addresses, dependent: :destroy
   has_many :orders, through: :addresses
-  has_many :reviews
-  accepts_nested_attributes_for :addresses, allow_destroy: true
+  has_many :reviews, dependent: :nullify
+  accepts_nested_attributes_for :addresses
 
   before_validation :check_if_guest
 
   validates_presence_of :email, unless: :guest?
-  validate  :full_name, presence: true
+  validates_presence_of :full_name
   validates :email, uniqueness: true,
     format: { with: Devise.email_regexp }, allow_blank: true, if: :email_changed?
   validates :password, presence: true, confirmation: true,
             length: { within: Devise.password_length }, unless: :guest?
-
-  def current_address
-    addresses.find(current_address_id)
-  end
 
   def available_address_ids
     addresses.map(&:id)
@@ -33,22 +29,10 @@ class User < ActiveRecord::Base
 private
 
   def check_if_guest
-    if password.blank?
-      self.guest = true
-    else
-      self.guest = false
+    if new_record?
+      can_be_guest = password.blank? && !addresses.blank?
+      write_attribute(:guest, can_be_guest)
     end
-  end
-
-  def set_current_address(id)
-    update_attribute :current_address_id, id if addresses.one? do |address|
-      address.id == id
-    end
-  end
-
-  def set_default_address
-    if current_address_id.nil?
-      set_current_address(addresses.first.id)
-    end
+    true
   end
 end
