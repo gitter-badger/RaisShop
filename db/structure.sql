@@ -658,7 +658,7 @@ CREATE INDEX index_search_suggestions_on_product_id ON search_suggestions USING 
 -- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE UNIQUE INDEX index_users_on_email ON users USING btree (email);
+CREATE INDEX index_users_on_email ON users USING btree (email);
 
 
 --
@@ -767,3 +767,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130310121842');
 INSERT INTO schema_migrations (version) VALUES ('20130310123934');
 
 INSERT INTO schema_migrations (version) VALUES ('20130311135236');
+
+INSERT INTO schema_migrations (version) VALUES ('20130318161533');
