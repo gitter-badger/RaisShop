@@ -38,7 +38,8 @@ group :development, :test do
   gem 'pry-debugger'
   gem "pry-rails"
   gem 'rspec-rails'
-  gem 'shoulda'
+  gem 'shoulda-matchers'
+  gem "mocha", "~> 0.13.3"
   gem 'fakeweb'
   gem 'vcr'
   gem 'capybara'

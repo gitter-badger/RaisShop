@@ -43,8 +43,6 @@ GEM
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.9)
       will_paginate
-    bourne (1.2.1)
-      mocha (= 0.12.7)
     builder (3.0.4)
     bullet (4.4.0)
       uniform_notifier
@@ -166,7 +164,7 @@ GEM
     metaclass (0.0.1)
     method_source (0.8.1)
     mime-types (1.21)
-    mocha (0.12.7)
+    mocha (0.13.3)
       metaclass (~> 0.0.1)
     multi_json (1.7.1)
     newrelic_rpm (3.5.8.72)
@@ -263,13 +261,8 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     sexp_processor (4.2.0)
-    shoulda (3.4.0)
-      shoulda-context (~> 1.0, >= 1.0.1)
-      shoulda-matchers (~> 1.0, >= 1.4.1)
-    shoulda-context (1.0.2)
-    shoulda-matchers (1.5.0)
+    shoulda-matchers (1.4.1)
       activesupport (>= 3.0.0)
-      bourne (~> 1.2.0)
     simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -346,6 +339,7 @@ DEPENDENCIES
   launchy
   lol_dba
   meta_request (= 0.2.0)
+  mocha (~> 0.13.3)
   newrelic_rpm
   pg
   pg_search
@@ -362,7 +356,7 @@ DEPENDENCIES
   rb-inotify (~> 0.9)
   rspec-rails
   sass-rails
-  shoulda
+  shoulda-matchers
   simple_form
   simplecov
   spork
