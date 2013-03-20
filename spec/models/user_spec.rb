@@ -19,20 +19,23 @@ describe User do
   end
 
   describe "validators" do
-    describe "presence of attribute" do
-      [:full_name].each do |attr|
-        it { should validate_presence_of(attr) }
-      end
-    end
+
+    it { should validate_presence_of(:full_name) }
+    it { should validate_presence_of(:email) }
+    it { should validate_uniqueness_of(:email) }
+    it { should allow_value('robert@gmail.com').for(:email) }
+    it { should_not allow_value('gmail.com').for(:email) }
+    it { should_not allow_mass_assignment_of(:guest) }
 
     context "when user is a guest" do
-
       subject { guest }
+
+      it { should allow_value('').for(:password) }
 
       it "allows blank email" do
         2.times do |n|
           u = build(:guest, email: "")
-          expect(u.save).to be_true
+          expect(u.valid?).to be_true
         end
       end
 
@@ -44,15 +47,7 @@ describe User do
         end
         it { should_not be_valid }
       end
-
-      it { should allow_value('').for(:password) }
     end
-
-    it { should_not allow_mass_assignment_of(:guest) }
-    it { should validate_presence_of(:email) }
-    it { should validate_uniqueness_of(:email) }
-    it { should allow_value('robert@gmail.com').for(:email) }
-    it { should_not allow_value('gmail.com').for(:email) }
   end
 
   describe "makes user a guest" do
