@@ -54,8 +54,17 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  # This code will be run each time you run your specs.
-  FactoryGirl.reload
+  Raishop::Application.reload_routes!
+
+  if Spork.using_spork?
+    ActionDispatch::Reloader.cleanup!
+    ActionDispatch::Reloader.prepare!
+
+    ActiveSupport::Dependencies.clear
+    ActiveRecord::Base.instantiate_observers
+
+    FactoryGirl.reload
+  end
 end
 
 # --- Instructions ---

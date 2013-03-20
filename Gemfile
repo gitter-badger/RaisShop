@@ -47,7 +47,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'spork'
   gem 'guard'
-  gem 'guard-bundler'
   gem 'guard-livereload'
   gem 'guard-rails'
   gem 'guard-rspec'

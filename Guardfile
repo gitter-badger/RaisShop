@@ -42,12 +42,6 @@ guard 'rspec', all_on_start: false, cli: "--drb --format Fuubar --color" do
   watch('spec/factories.rb')
 end
 
-guard 'bundler' do
-  watch('Gemfile')
-  # Uncomment next line if Gemfile contain `gemspec' command
-  # watch(/^.+\.gemspec/)
-end
-
 guard 'livereload' do
   watch(%r{app/views/.+\.(erb|haml|slim)$})
   watch(%r{app/helpers/.+\.rb})
