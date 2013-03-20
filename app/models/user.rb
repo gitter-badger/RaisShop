@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable
 
   attr_accessible :full_name, :email, :password, :password_confirmation,
-    :remember_me, :addresses_attributes, :current_address_id
+    :remember_me, :addresses_attributes
 
   has_many :addresses, dependent: :destroy
   has_many :orders, through: :addresses
