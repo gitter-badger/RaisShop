@@ -54,7 +54,7 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  Raishop::Application.reload_routes!
+  RaisShop::Application.reload_routes!
 
   if Spork.using_spork?
     ActionDispatch::Reloader.cleanup!
