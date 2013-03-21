@@ -331,8 +331,7 @@ CREATE TABLE reviews (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     product_id integer,
-    user_id integer,
-    address_id integer
+    user_id integer
 );
 
 
@@ -626,13 +625,6 @@ CREATE INDEX index_products_on_category_id ON products USING btree (category_id)
 
 
 --
--- Name: index_reviews_on_address_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_reviews_on_address_id ON reviews USING btree (address_id);
-
-
---
 -- Name: index_reviews_on_product_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -770,3 +762,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130311135236');
 INSERT INTO schema_migrations (version) VALUES ('20130318161533');
 
 INSERT INTO schema_migrations (version) VALUES ('20130320075445');
+
+INSERT INTO schema_migrations (version) VALUES ('20130320134842');

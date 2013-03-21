@@ -1,10 +1,10 @@
 class Review < ActiveRecord::Base
-  attr_accessible :comment, :helpful, :rating, :product_id, :user_id
+  attr_accessible :comment, :helpful, :rating, :product_id
 
   belongs_to :user
-  belongs_to :product, touch: true#, autosave: true
+  belongs_to :product, inverse_of: :reviews
 
-  validates_presence_of :comment, :rating, :product_id, :user_id
+  validates_presence_of :comment, :rating, :product_id, :user
 
   after_save :average_rating_for_product
 
@@ -15,6 +15,6 @@ class Review < ActiveRecord::Base
 private
 
   def average_rating_for_product
-    self.product.save!
+    product.average_rating
   end
 end
