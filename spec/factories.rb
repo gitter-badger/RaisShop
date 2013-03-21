@@ -21,26 +21,6 @@ FactoryGirl.define do
     password ""
   end
 
-  factory :category do
-    sequence(:name) { |n| "Category#{n}" }
-  end
-
-  factory :product do
-    sequence(:title) { |n| "Intel Core i5-375#{n}k BOX" }
-    description "OMGWTFBBQ"
-    image_url 'ruby.jpg'
-    category_id { create(:category).id }
-    price 25.39
-  end
-
-  factory :line_item do
-    product
-  end
-
-  factory :cart do
-    after(:create){ |cart| create_list(:line_item, 1, cart: cart) }
-  end
-
   factory :address do
     sequence(:line_1) { |n| "Ruska 1#{n}/3#{n}" }
     line_2 "2 floor, from backdoor"
@@ -62,5 +42,32 @@ FactoryGirl.define do
     factory :order_with_user do
       association :address, factory: :address_with_user
     end
+  end
+
+  factory :category do
+    sequence(:name) { |n| "Category#{n}" }
+  end
+
+  factory :product do
+    sequence(:title) { |n| "Intel Core i5-375#{n}k BOX" }
+    description "OMGWTFBBQ"
+    image_url 'ruby.jpg'
+    category_id { create(:category).id }
+    price 25.39
+  end
+
+  factory :line_item do
+    product
+  end
+
+  factory :cart do
+    after(:create){ |cart| create_list(:line_item, 1, cart: cart) }
+  end
+
+  factory :review do
+    product
+    user
+    sequence(:comment) { |n| "LOL! NICE! #{Faker::Lorem.sentence}" }
+    sequence(:rating) { |n| 1 + n % 5 }
   end
 end
