@@ -296,7 +296,7 @@ CREATE TABLE products (
     price numeric(8,2),
     category_id integer,
     tsv tsvector,
-    rating integer
+    rating integer DEFAULT 0
 );
 
 
@@ -764,3 +764,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130318161533');
 INSERT INTO schema_migrations (version) VALUES ('20130320075445');
 
 INSERT INTO schema_migrations (version) VALUES ('20130320134842');
+
+INSERT INTO schema_migrations (version) VALUES ('20130322091932');
