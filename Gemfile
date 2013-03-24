@@ -28,6 +28,9 @@ gem 'rack-mini-profiler'
 gem 'better_errors', group: :development
 
 group :development, :test do 
+  gem "query_reviewer"
+  gem 'rails-footnotes'
+  #gem 'rails-perftest'
   #gem 'ruby-prof'
   gem 'fuubar'
   gem "lol_dba"
