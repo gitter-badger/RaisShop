@@ -10,12 +10,12 @@ gem 'pg_search'
 #gem 'redis'
 gem 'devise'
 gem 'ancestry'
+gem 'jquery-rails'
 gem "haml"
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-gem 'jquery-rails'
 #gem 'turbolinks'
 #gem 'draper'
 gem 'simple_form'
@@ -24,10 +24,11 @@ gem 'therubyracer'
 gem 'newrelic_rpm'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
+gem 'jquery-star-rating-rails'
 gem 'rack-mini-profiler'
 gem 'better_errors', group: :development
 
-group :development, :test do 
+group :development, :test do
   gem "query_reviewer"
   gem 'rails-footnotes'
   #gem 'rails-perftest'
