@@ -16,6 +16,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.includes(reviews: :user).find(params[:id])
+    @review = Review.new
+    @review_errors = flash[:review_errors]
     session[:recent_history][@product.id] = Time.now
   end
 

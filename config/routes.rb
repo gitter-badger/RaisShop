@@ -8,7 +8,6 @@ RaisShop::Application.routes.draw do
 
   resources :addresses, except: [:show]
   resources :orders
-  resources :reviews, except: [:index, :show]
   resources :categories
   resources :line_items, except: [:index, :show, :edit, :new]
   resources :carts, except: [:index, :edit, :new]
@@ -17,7 +16,9 @@ RaisShop::Application.routes.draw do
     controllers: { sessions: "sessions" }
 
   resources :products, only: [:index, :new, :create]
-  resources :products, path: "", except: [:index, :new, :create]
+  resources :products, path: "", except: [:index, :new, :create] do
+    resources :reviews, only: [:create, :destroy]
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
