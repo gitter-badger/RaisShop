@@ -1,6 +1,6 @@
 %h2 Leave your review
 = simple_form_for [@product, @review], html: { class: 'form-horizontal' }, validate: true do |f|
-  - if @review_errors.any?
+  - if @review_errors.present?
     #errorExplanation
       %h2
         = pluralize(@review_errors.count, "error")
