@@ -15,14 +15,14 @@ describe Review do
       end
     end
 
-    it "does not allow rating less than 0" do
-      rating = -1
-      should_not be_valid
+    describe "does not allow rating less than 1" do
+      before { review.rating = 0 }
+      it { should_not be_valid }
     end
 
-    it "does not allow rating greater than 5" do
-      rating = 6
-      should_not be_valid
+    describe "does not allow rating greater than 5" do
+      before { review.rating = 6 }
+      it { should_not be_valid }
     end
 
     describe "only one review from user per product" do
@@ -41,8 +41,9 @@ describe Review do
     subject { product }
     before do
       product.save
+      puts product.reviews.where(user_id: user.id).count == 0
       product.reviews << review
-      review.save
+      review.save!
     end
 
     its(:rating) { should == 5 }

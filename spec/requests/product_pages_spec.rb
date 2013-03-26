@@ -12,7 +12,7 @@ describe "Product pages" do
   context "user signed out" do
     before { visit product_path(product) }
 
-    it { should_not have_selector("legend", text: "Please rate:") }
+    it { should_not have_review_form }
   end
 
   context "user signed in" do
@@ -21,7 +21,7 @@ describe "Product pages" do
       visit product_path(product)
     end
 
-    it { should have_selector("legend", text: "Please rate:") }
+    it { should have_review_form }
 
     describe "review creation" do
       context "with valid information" do
@@ -38,7 +38,7 @@ describe "Product pages" do
 
         it "doesn't allow a review for a product more than once" do
           click_button("Create Review")
-          should_not have_selector("legend", text: "Please rate:")
+          should_not have_review_form
         end
 
         it "calculates average product rating" do
@@ -93,5 +93,9 @@ describe "Product pages" do
     it "allows destroy any review" do
       expect(all('a', text: "Destroy review").size).to eq(4)
     end
+  end
+
+  def have_review_form
+    have_selector('form#new_review')
   end
 end

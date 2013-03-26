@@ -5,9 +5,11 @@ class Review < ActiveRecord::Base
   belongs_to :product, inverse_of: :reviews
 
   validates_presence_of :comment, :rating, :product_id, :user
-  validates_numericality_of :rating, greater_than_or_equal_to: 0,
-                                     less_than_or_equal_to: 5
-  before_validation :is_uniq_for_product?
+
+  validates_inclusion_of :rating, in: 1..5,
+                         message: "Rating should be between 1 and 5"
+
+  before_save :is_uniq_for_product?
 
   after_save :average_rating_for_product
   after_destroy :average_rating_for_product
@@ -19,12 +21,8 @@ class Review < ActiveRecord::Base
 private
 
   def is_uniq_for_product?
-    if user.nil? || product.nil? ||
-        product.reviews.where(user_id: user.id).count == 0
-      true
-    else
+    if new_record? && product.reviews.where(user_id: user.id).count > 0
       errors[:base] << "You already wrote a review for that product"
-      false
     end
   end
 
