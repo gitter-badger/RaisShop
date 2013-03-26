@@ -70,8 +70,15 @@ GEM
       execjs
     coffee-script-source (1.6.1)
     colored (1.2)
+    colorize (0.5.8)
     columnize (0.3.6)
     country_select (1.1.3)
+    coveralls (0.6.3)
+      colorize
+      multi_json (~> 1.3)
+      rest-client
+      simplecov (>= 0.7)
+      thor
     debug_inspector (0.0.2)
     debugger (1.5.0)
       columnize (>= 0.3.1)
@@ -234,6 +241,8 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.3)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -323,6 +332,7 @@ DEPENDENCIES
   client_side_validations-simple_form
   coffee-rails
   country_select
+  coveralls
   devise
   factory_girl_rails
   faker

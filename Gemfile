@@ -29,6 +29,7 @@ gem 'rack-mini-profiler'
 gem 'better_errors', group: :development
 
 group :development, :test do
+  gem 'coveralls', require: false
   gem "query_reviewer"
   gem 'rails-footnotes'
   #gem 'rails-perftest'
