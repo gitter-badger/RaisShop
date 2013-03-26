@@ -41,7 +41,6 @@ describe Review do
     subject { product }
     before do
       product.save
-      puts product.reviews.where(user_id: user.id).count == 0
       product.reviews << review
       review.save!
     end

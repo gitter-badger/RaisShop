@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 gem 'rails'
 
 #gem 'rails4_upgrade', github: 'alindeman/rails4_upgrade'

@@ -1,3 +1,4 @@
 {<img src="https://codeclimate.com/github/RobertoUa/RaisShop.png" />}[https://codeclimate.com/github/RobertoUa/RaisShop]
 {<img src="https://gemnasium.com/RobertoUa/RaisShop.png" alt="Dependency Status" />}[https://gemnasium.com/RobertoUa/RaisShop]
 {<img src="https://travis-ci.org/RobertoUa/RaisShop.png" />}[https://travis-ci.org/RobertoUa/RaisShop]
+{<img src="https://coveralls.io/repos/RobertoUa/RaisShop/badge.png?branch=master" alt="Coverage Status" />}[https://coveralls.io/r/RobertoUa/RaisShop]
