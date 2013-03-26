@@ -12,6 +12,9 @@
         = f.collection_radio_buttons(:address_id, current_user.addresses, :id, :info)
       - else
         = f.simple_fields_for :address do |builder|
+          = builder.simple_fields_for :user, validate: true do |user|
+            = user.input :full_name
+            = user.input :email, hint: "(Optional) if you want to track the delivery"
           = render 'addresses/address_fields', f: builder
       = f.input :pay_type, collection: Order::PAYMENT_TYPES,
         include_blank: false

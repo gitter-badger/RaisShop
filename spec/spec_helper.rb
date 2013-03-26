@@ -1,3 +1,7 @@
+require 'coveralls'
+Coveralls.wear!
+require 'simplecov'
+SimpleCov.start
 require 'rubygems'
 require 'spork'
 #uncomment the following line to use spork with the debugger
@@ -19,7 +23,7 @@ Spork.prefork do
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
-  Capybara.javascript_driver = :webkit
+  #Capybara.javascript_driver = :webkit
   RSpec.configure do |config|
     # ## Mock Framework
     #
@@ -47,13 +51,22 @@ Spork.prefork do
 
     config.include FactoryGirl::Syntax::Methods
     config.include Capybara::DSL
-    #config.include Devise::TestHelpers, type: :controller
+    config.include Devise::TestHelpers, type: :controller
   end
 end
 
 Spork.each_run do
-  # This code will be run each time you run your specs.
-  FactoryGirl.reload
+  RaisShop::Application.reload_routes!
+
+  if Spork.using_spork?
+    ActionDispatch::Reloader.cleanup!
+    ActionDispatch::Reloader.prepare!
+
+    ActiveSupport::Dependencies.clear
+    ActiveRecord::Base.instantiate_observers
+
+    FactoryGirl.reload
+  end
 end
 
 # --- Instructions ---

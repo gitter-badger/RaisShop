@@ -87,7 +87,6 @@ SET default_with_oids = false;
 
 CREATE TABLE addresses (
     id integer NOT NULL,
-    full_name character varying(255),
     line_1 character varying(255),
     line_2 character varying(255),
     city character varying(255),
@@ -297,7 +296,7 @@ CREATE TABLE products (
     price numeric(8,2),
     category_id integer,
     tsv tsvector,
-    rating integer
+    rating integer DEFAULT 0
 );
 
 
@@ -332,8 +331,7 @@ CREATE TABLE reviews (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     product_id integer,
-    user_id integer,
-    address_id integer
+    user_id integer
 );
 
 
@@ -417,7 +415,8 @@ CREATE TABLE users (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     admin boolean DEFAULT false,
-    current_address_id integer
+    full_name character varying(255),
+    guest boolean
 );
 
 
@@ -626,13 +625,6 @@ CREATE INDEX index_products_on_category_id ON products USING btree (category_id)
 
 
 --
--- Name: index_reviews_on_address_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_reviews_on_address_id ON reviews USING btree (address_id);
-
-
---
 -- Name: index_reviews_on_product_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -657,7 +649,7 @@ CREATE INDEX index_search_suggestions_on_product_id ON search_suggestions USING 
 -- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE UNIQUE INDEX index_users_on_email ON users USING btree (email);
+CREATE INDEX index_users_on_email ON users USING btree (email);
 
 
 --
@@ -760,3 +752,17 @@ INSERT INTO schema_migrations (version) VALUES ('20130222134158');
 INSERT INTO schema_migrations (version) VALUES ('20130224121643');
 
 INSERT INTO schema_migrations (version) VALUES ('20130227133855');
+
+INSERT INTO schema_migrations (version) VALUES ('20130310121842');
+
+INSERT INTO schema_migrations (version) VALUES ('20130310123934');
+
+INSERT INTO schema_migrations (version) VALUES ('20130311135236');
+
+INSERT INTO schema_migrations (version) VALUES ('20130318161533');
+
+INSERT INTO schema_migrations (version) VALUES ('20130320075445');
+
+INSERT INTO schema_migrations (version) VALUES ('20130320134842');
+
+INSERT INTO schema_migrations (version) VALUES ('20130322091932');

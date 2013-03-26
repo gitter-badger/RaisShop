@@ -1,6 +1,8 @@
 = simple_form_for @product, html: { class: 'form-horizontal' }, validate: true do |f|
+  = f.error_notification
   = f.input :title
   = f.input :description
   = f.input :image_url
   = f.input :price
+  = f.input :category_id, collection: Category.all, include_blank: false
   = f.button :submit

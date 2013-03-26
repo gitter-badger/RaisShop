@@ -10,6 +10,5 @@ namespace :db do
       end
     end
     add_list("en3.txt", "5K")
-    add_list("en_50K.txt", "50K")
   end
 end

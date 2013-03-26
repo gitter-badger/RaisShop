@@ -9,8 +9,7 @@
     #
 
 jQuery ->
-  if $('#endless_paginate').attr('on') == 'true'
-    alert("fdshjfdhghsgljkdshlghsdhglsd")
+  if window.location.search.indexOf('per_page=all') != -1
     $(window).scroll ->
       url = $('.pagination .next_page a').attr('href')
       if url && $(window).scrollTop() > $(document).height() -

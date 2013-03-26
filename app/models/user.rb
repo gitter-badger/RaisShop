@@ -3,27 +3,24 @@ class User < ActiveRecord::Base
   #default_scope includes(:addresses)
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable
 
-  attr_accessible :email, :password, :password_confirmation,
-    :remember_me, :addresses_attributes, :current_address_id
+  attr_accessible :full_name, :email, :password, :password_confirmation,
+    :remember_me, :addresses_attributes
 
-  has_many :addresses, dependent: :destroy, inverse_of: :user
-  has_many :reviews, through: :addresses
-  accepts_nested_attributes_for :addresses, allow_destroy: true
+  has_many :addresses, dependent: :destroy
+  has_many :orders, through: :addresses
+  has_many :reviews, dependent: :nullify
+  accepts_nested_attributes_for :addresses
 
-  after_save :set_default_address
+  before_validation :check_if_guest
 
-  validates :addresses, presence: true
-  validates :password, confirmation: true
-
-  def current_address
-    addresses.find(current_address_id)
-  end
-
-  def full_name
-    current_address.full_name
-  end
+  validates_presence_of :email, unless: :guest?
+  validates_presence_of :full_name
+  validates :email, uniqueness: true,
+    format: { with: Devise.email_regexp }, allow_blank: true, if: :email_changed?
+  validates :password, presence: true, confirmation: true,
+            length: { within: Devise.password_length }, unless: :guest?
 
   def available_address_ids
     addresses.map(&:id)
@@ -31,15 +28,11 @@ class User < ActiveRecord::Base
 
 private
 
-  def set_current_address(id)
-    update_attribute :current_address_id, id if addresses.one? do |address|
-      address.id == id
+  def check_if_guest
+    if new_record?
+      can_be_guest = password.blank? && !addresses.blank?
+      write_attribute(:guest, can_be_guest)
     end
-  end
-
-  def set_default_address
-    if current_address_id.nil?
-      set_current_address(addresses.first.id)
-    end
+    true
   end
 end

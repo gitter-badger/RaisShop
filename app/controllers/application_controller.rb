@@ -23,6 +23,10 @@ protected
     Rack::MiniProfiler.step(name, &blk)
   end
 
+  def signed_in_only
+    redirect_to new_user_session_path unless user_signed_in?
+  end
+
 private
 
   def store_location

@@ -1,4 +1,5 @@
 class AddressesController < ApplicationController
+  before_filter :signed_in_only
 
   def index
     @addresses = current_user.addresses
@@ -9,43 +10,35 @@ class AddressesController < ApplicationController
   end
 
   def edit
-    @address = Address.find(params[:id])
+    @address = current_user.addresses.find_by_id(params[:id])
+    if @address.nil?
+      redirect_to addresses_path, notice: "You can access only your own address"
+    end
   end
 
   def create
-    if user_signed_in?
-      @address = current_user.addresses.build(params[:address])
-    else
-      @address = Address.new(params[:address])
-    end
+    @address = current_user.addresses.build(params[:address])
 
-    respond_to do |format|
-      if @address.save
-        format.html { redirect_to addresses_path, notice: 'Address was successfully created.' }
-        format.json { render json: @address, status: :created, location: @address }
-      else
-        format.html { render action: "new", notice: 'lol' }
-        format.json { render json: @address.errors, status: :unprocessable_entity }
-      end
+    if @address.save
+      redirect_to addresses_path, notice: 'Address was successfully created.'
+    else
+      render action: "new"
     end
   end
 
   def update
-    @address = Address.find(params[:id])
+    @address = current_user.addresses.find(params[:id])
 
-    respond_to do |format|
-      if @address.update_attributes(params[:address])
-        format.html { redirect_to addresses_path, notice: 'Address was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @address.errors, status: :unprocessable_entity }
-      end
+    if @address.update_attributes(params[:address])
+      redirect_to addresses_path, notice: 'Address was successfully updated.'
+    else
+      render action: "edit"
     end
   end
 
   def destroy
-    @address = Address.find(params[:id])
+    @address = current_user.addresses.find(params[:id])
     @address.destroy
+    redirect_to addresses_path
   end
 end

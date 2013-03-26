@@ -10,7 +10,8 @@
   = f.input :current_password,
     hint: "(we need your current password to confirm your changes)"
   Choose your current address
-  = f.collection_radio_buttons(:current_address_id, current_user.addresses, :id, :info)
+  = f.collection_radio_buttons(:current_address_id,
+                              current_user.addresses, :id, :info_in_html)
   -#= link_to "Edit address", edit_address_path(@address), class: 'edit_address'
   = link_to "Show addresses", addresses_path, class: 'edit_address'
   = link_to 'Add address', new_address_path, id: 'add_address'

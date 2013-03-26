@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 gem 'rails'
 
 #gem 'rails4_upgrade', github: 'alindeman/rails4_upgrade'
@@ -10,12 +9,12 @@ gem 'pg_search'
 #gem 'redis'
 gem 'devise'
 gem 'ancestry'
+gem 'jquery-rails'
 gem "haml"
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-gem 'jquery-rails'
 #gem 'turbolinks'
 #gem 'draper'
 gem 'simple_form'
@@ -24,11 +23,17 @@ gem 'therubyracer'
 gem 'newrelic_rpm'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
+gem 'jquery-star-rating-rails'
 gem 'rack-mini-profiler'
 gem 'better_errors', group: :development
 
-group :development, :test do 
+group :development, :test do
+  gem 'coveralls', require: false
+  gem "query_reviewer"
+  gem 'rails-footnotes'
+  #gem 'rails-perftest'
   #gem 'ruby-prof'
+  gem 'fuubar'
   gem "lol_dba"
   gem 'railroady'
   gem 'faker'
@@ -37,7 +42,8 @@ group :development, :test do
   gem 'pry-debugger'
   gem "pry-rails"
   gem 'rspec-rails'
-  gem 'shoulda'
+  gem 'shoulda-matchers'
+  gem "mocha", "~> 0.13.3"
   gem 'fakeweb'
   gem 'vcr'
   gem 'capybara'
@@ -45,13 +51,12 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'spork'
   gem 'guard'
-  gem 'guard-bundler'
   gem 'guard-livereload'
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'guard-ctags-bundler'
-  gem 'rb-inotify', '~> 0.8.8'
+  gem 'rb-inotify', '~> 0.9'
   gem 'rb-fsevent'
   gem 'meta_request', '0.2.0'
   gem "rails_best_practices"
