@@ -4,8 +4,7 @@ module ReviewsHelper
     "background-position: #{stars}px 0;"
   end
 
-  def can_write_review?
-    user_signed_in? &&
-      @product.reviews.find_by_user_id(current_user.id) == nil
+  def show_review_form?
+    user_signed_in? && current_user.can_write_review?(@product)
   end
 end

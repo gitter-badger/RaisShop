@@ -21,7 +21,7 @@ class Review < ActiveRecord::Base
 private
 
   def is_uniq_for_product?
-    if new_record? && product.reviews.where(user_id: user.id).count > 0
+    if new_record? && !user.can_write_review?(product)
       errors[:base] << "You already wrote a review for that product"
     end
   end

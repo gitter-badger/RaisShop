@@ -26,6 +26,10 @@ class User < ActiveRecord::Base
     addresses.map(&:id)
   end
 
+  def can_write_review?(product)
+    product.reviews.where(user_id: id).count == 0
+  end
+
 private
 
   def check_if_guest
