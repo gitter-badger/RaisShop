@@ -9,7 +9,7 @@ class Review < ActiveRecord::Base
   validates_inclusion_of :rating, in: 1..5,
                          message: "Rating should be between 1 and 5"
 
-  before_save :is_uniq_for_product?
+  validate :is_uniq_for_product?
 
   after_save :average_rating_for_product
   after_destroy :average_rating_for_product
@@ -21,7 +21,8 @@ class Review < ActiveRecord::Base
 private
 
   def is_uniq_for_product?
-    if new_record? && !user.can_write_review?(product)
+    if !user.nil? && !product.nil? &&
+        new_record? && !user.can_write_review?(product)
       errors[:base] << "You already wrote a review for that product"
     end
   end

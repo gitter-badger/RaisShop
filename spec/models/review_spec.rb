@@ -27,13 +27,15 @@ describe Review do
 
     describe "only one review from user per product" do
       before do
-        user.save
+        user.save!
+        product.save!
         user.reviews.create({comment: 'sdf', rating: 5, product_id: product.id})
-        review.product = product
+        review.product_id = product.id
         review.user = user
       end
 
       it { should_not be_valid }
+      it { should have(1).errors_on(:base) }
     end
   end
 
