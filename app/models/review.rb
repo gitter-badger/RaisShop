@@ -4,7 +4,7 @@ class Review < ActiveRecord::Base
   belongs_to :user
   belongs_to :product, inverse_of: :reviews
 
-  validates_presence_of :comment, :rating, :product_id, :user
+  validates_presence_of :comment, :product_id, :user
 
   validates_inclusion_of :rating, in: 1..5,
                          message: "Rating should be between 1 and 5"

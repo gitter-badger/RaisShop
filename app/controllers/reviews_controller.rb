@@ -5,13 +5,12 @@ class ReviewsController < ApplicationController
     params[:review][:product_id] = params[:product_id].to_i
     @review = current_user.reviews.build(params[:review])
 
-    notice = ''
     if @review.save
-      notice = 'Review was successfully created.'
+      redirect_to :back, notice: 'Review was successfully created.'
     else
       flash[:review_errors] = @review.errors.full_messages
+      redirect_to :back
     end
-    redirect_to :back, notice: notice
   end
 
   def destroy

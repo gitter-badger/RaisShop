@@ -2,9 +2,9 @@
 = simple_form_for [@product, @review], html: { class: 'form-horizontal' }, validate: true do |f|
   - if @review_errors.present?
     #errorExplanation
-      %h2
+      %h4
         = pluralize(@review_errors.count, "error")
-        prohibited this user from being saved:
+        prohibited this review from being saved:
       %ul
         - @review_errors.each do |msg|
           %li= msg
