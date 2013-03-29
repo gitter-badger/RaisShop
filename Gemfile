@@ -27,6 +27,7 @@ gem 'rack-mini-profiler'
 gem 'better_errors', group: :development
 
 group :development, :test do
+  gem 'foreman'
   gem 'zeus'
   gem 'awesome_print'
   gem 'coveralls', require: false

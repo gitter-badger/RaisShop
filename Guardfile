@@ -3,7 +3,7 @@ guard 'ctags-bundler', :src_path => ["app", "lib", "spec/support"], :stdlib => t
   watch('Gemfile.lock')
 end
 
-guard 'rspec', all_on_start: false, cli: "--format Fuubar --color", zeus: true do
+guard 'rspec', all_on_start: false, cli: "--tty --format Fuubar --color", zeus: true do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
