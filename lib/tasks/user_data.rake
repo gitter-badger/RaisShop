@@ -33,7 +33,7 @@ def make_users(users = 10)
   admin.toggle!(:admin)
 
   users.times do |n|
-    User.create(
+    User.create!(
       full_name: "#{Faker::Name.first_name} #{Faker::Name.last_name}",
       email: "admin#{n}@admin.com",
       password:password,
@@ -61,7 +61,7 @@ end
 def make_products
   puts "Adding 1k fake products"
   1000.times.each do |n|
-    Product.create(title: Faker::Lorem.words(1+rand(5)).join(" ").capitalize,
+    Product.create!(title: Faker::Lorem.words(1+rand(5)).join(" ").capitalize,
                    description: Faker::Lorem.sentence(30),
                    image_url:'ruby.jpg',
                    category_id:Category.all.sample.id,
@@ -76,7 +76,7 @@ def make_reviews
       review = User.all.sample.reviews.build(comment: Faker::Lorem.sentence(10),
                                      rating:  1 + rand(5),
                                      product_id: product.id)
-      review.save
+      review.save!
     end
   end
 end
@@ -84,7 +84,7 @@ end
 def make_pragmatic_books
     puts "Adding 3 Pragmatic books"
     book_category = Category.find_by_name("Books").id
-    Product.create(title: 'CoffeeScript',
+    Product.create!(title: 'CoffeeScript',
                    description:
                    %{
             CoffeeScript is JavaScript done right. It provides all of JavaScript's
@@ -96,7 +96,7 @@ def make_pragmatic_books
                   image_url: 'cs.jpg',
                   category_id: book_category,
                   price: 36.00)
-    Product.create(title: 'Programming Ruby 1.9',
+    Product.create!(title: 'Programming Ruby 1.9',
                    description:
                    %{
         Ruby is the fastest growing and most exciting dynamic language
@@ -105,7 +105,7 @@ def make_pragmatic_books
                   },
                   image_url: 'ruby.jpg',
                   category_id: book_category,               price: 49.95)
-    Product.create(title: 'Rails Test Prescriptions',
+    Product.create!(title: 'Rails Test Prescriptions',
                    description:
                    %{
         Rails Test Prescriptions is a comprehensive guide to testing
