@@ -3,6 +3,9 @@ rvm:
   - "2.0.0"
   - "1.9.3"
 before_script:
-  - psql -c 'create database RaishopDB_test;' -U postgres
-# uncomment this line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
+  - psql -c 'create database RaishopDB' -U postgres
+  - psql -c 'create database RaishopDB_test' -U postgres
+script:
+  - bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
