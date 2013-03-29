@@ -6,7 +6,6 @@ gem 'rails'
 gem 'unicorn-rails'
 gem 'pg'
 gem 'pg_search'
-#gem 'redis'
 gem 'devise'
 gem 'ancestry'
 gem 'jquery-rails'
@@ -28,6 +27,8 @@ gem 'rack-mini-profiler'
 gem 'better_errors', group: :development
 
 group :development, :test do
+  gem 'zeus'
+  gem 'awesome_print'
   gem 'coveralls', require: false
   gem "query_reviewer"
   gem 'rails-footnotes'
@@ -44,21 +45,15 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem "mocha", "~> 0.13.3"
-  gem 'fakeweb'
-  gem 'vcr'
   gem 'capybara'
-  #gem 'capybara-webkit'
   gem 'factory_girl_rails'
-  gem 'spork'
   gem 'guard'
   gem 'guard-livereload'
   gem 'guard-rails'
   gem 'guard-rspec'
-  gem 'guard-spork'
   gem 'guard-ctags-bundler'
-  gem 'rb-inotify', '~> 0.9'
-  gem 'rb-fsevent'
-  gem 'meta_request', '0.2.0'
+  gem 'rb-inotify', require: false
+  gem 'meta_request'
   gem "rails_best_practices"
   gem 'quiet_assets'
   gem 'binding_of_caller'
