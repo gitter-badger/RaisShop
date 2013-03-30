@@ -72,15 +72,8 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     colored (1.2)
-    colorize (0.5.8)
     columnize (0.3.6)
     country_select (1.1.3)
-    coveralls (0.6.3)
-      colorize
-      multi_json (~> 1.3)
-      rest-client
-      simplecov (>= 0.7)
-      thor
     debug_inspector (0.0.2)
     debugger (1.5.0)
       columnize (>= 0.3.1)
@@ -240,8 +233,6 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.4)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -271,7 +262,7 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     sexp_processor (4.2.0)
-    shoulda-matchers (1.5.5)
+    shoulda-matchers (1.5.6)
       activesupport (>= 3.0.0)
       bourne (~> 1.3)
     simple_form (2.0.4)
@@ -332,7 +323,6 @@ DEPENDENCIES
   client_side_validations-simple_form
   coffee-rails
   country_select
-  coveralls
   devise
   factory_girl_rails
   faker
@@ -350,7 +340,6 @@ DEPENDENCIES
   launchy
   lol_dba
   meta_request
-  mocha (~> 0.13.3)
   newrelic_rpm
   pg
   pg_search
@@ -372,7 +361,7 @@ DEPENDENCIES
   simple_form
   simplecov
   therubyracer
-  uglifier (>= 1.0.3)
+  uglifier
   unicorn-rails
   will_paginate
   zeus

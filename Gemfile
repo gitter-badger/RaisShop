@@ -24,52 +24,55 @@ gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
 gem 'jquery-star-rating-rails'
 gem 'rack-mini-profiler'
-gem 'better_errors', group: :development
 
 group :development, :test do
-  gem 'foreman'
-  gem 'zeus'
   gem 'awesome_print'
-  gem 'coveralls', require: false
-  gem "query_reviewer"
-  gem 'rails-footnotes'
-  #gem 'rails-perftest'
-  #gem 'ruby-prof'
-  gem 'fuubar'
-  gem "lol_dba"
-  gem 'railroady'
   gem 'faker'
   gem 'pry'
   gem 'pry-stack_explorer'
   gem 'pry-debugger'
   gem "pry-rails"
+end
+
+group :test do
+  #gem 'coveralls', require: false
+  gem 'simplecov'
+  gem 'launchy'
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem "mocha", "~> 0.13.3"
   gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'fuubar'
+end
+
+
+group :development do
+  gem 'foreman'
+  gem 'zeus'
+  gem "query_reviewer"
+  gem 'rails-footnotes'
+  gem "rails_best_practices"
+  gem 'bullet'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  #gem 'rails-perftest'
+  #gem 'ruby-prof'
+  gem "lol_dba"
   gem 'guard'
   gem 'guard-livereload'
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-ctags-bundler'
   gem 'rb-inotify', require: false
-  gem 'meta_request'
-  gem "rails_best_practices"
-  gem 'quiet_assets'
   gem 'binding_of_caller'
-  gem 'simplecov'
-  gem 'launchy'
-  gem 'bullet'
+  gem 'meta_request'
 end
-
 
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
 end
-
 
 group :production do
 end
