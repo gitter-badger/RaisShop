@@ -61,7 +61,10 @@ FactoryGirl.define do
   end
 
   factory :cart do
-    after(:create){ |cart| create_list(:line_item, 1, cart: cart) }
+
+    factory :cart_with_items do
+      after(:build){ |cart| create_list(:line_item, 10, cart: cart) }
+    end
   end
 
   factory :review do

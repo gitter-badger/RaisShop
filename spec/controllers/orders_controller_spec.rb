@@ -5,7 +5,7 @@ describe OrdersController do
   let(:order) { create(:order_with_user) }
   let(:address) { order.address }
   let(:user) { address.user }
-  let(:cart) { create(:cart) }
+  let(:cart) { create(:cart_with_items) }
   let(:admin) { create(:admin) }
 
   describe "GET index" do

@@ -6,7 +6,6 @@ class LineItemsController < ApplicationController
 
   def create
     @line_item = @cart.add_product(params[:product_id])
-    @line_item.save
 
     respond_to do |format|
       format.html { redirect_to @cart }
