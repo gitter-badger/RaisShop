@@ -1,13 +1,6 @@
 %h2 Leave your review
-= simple_form_for [@product, @review], html: { class: 'form-horizontal' }, validate: true do |f|
-  - if @review_errors.present?
-    #errorExplanation
-      %h4
-        = pluralize(@review_errors.count, "error")
-        prohibited this review from being saved:
-      %ul
-        - @review_errors.each do |msg|
-          %li= msg
+= simple_form_for [@product, @review], html: { class: 'form-horizontal' },
+                                        validate: true do |f|
   - 1.upto(5).each do |n|
     = f.radio_button :rating, n, class: 'star required'
   = f.input :comment

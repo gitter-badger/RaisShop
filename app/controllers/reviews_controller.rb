@@ -8,7 +8,6 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to :back, notice: 'Review was successfully created.'
     else
-      flash[:review_errors] = @review.errors.full_messages
       redirect_to :back
     end
   end

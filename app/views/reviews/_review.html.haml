@@ -1,9 +1,7 @@
 %ul.reviews
   %li.review
-    .stars-rating{style: stars_image(review.rating) }
+    = review.stars_rating
     .user_name= review.user_name
     .date= review.created_at
     .comment= review.comment
-    - if current_user == review.user || current_user.try(:admin?)
-      = link_to 'Destroy review', product_review_path(@product, review), method: :delete,
-        data: {confirm: 'Are you sure?'}
+    = review.destroy_review_link
