@@ -7,8 +7,9 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @products = @category.products.page(params[:page])
-      .per_page(params[:per_page] || 10)
+    paginated_products = @category.products
+      .paginate(page: params[:page], per_page: params[:per_page])
+    @products = ProductsDecorator.decorate(paginated_products)
   end
 
   def new

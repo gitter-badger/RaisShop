@@ -2,6 +2,4 @@
 = simple_form_for(@address, validate: true) do |builder|
   = render 'addresses/address_fields', f: builder
   = builder.button :submit
-= link_to 'Show', @address
-|
-\#{link_to 'Back', addresses_path}
+= link_to 'Back', addresses_path

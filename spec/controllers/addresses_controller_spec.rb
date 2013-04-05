@@ -3,21 +3,7 @@ require 'spec_helper'
 describe AddressesController do
 
   let(:user) { create(:user_with_address) }
-  #let(:address) { create(:address) }
   let(:address) { user.addresses.first }
-
-  describe "GET index" do
-    it "assigns current signed in user addresses" do
-      sign_in user
-      get :index
-      assigns(:addresses).should eq([address])
-    end
-
-    it "redirects to login page" do
-      get :index
-      response.should redirect_to new_user_session_path
-    end
-  end
 
   describe "GET new" do
     it "assigns a new address as @address" do

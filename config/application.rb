@@ -67,6 +67,12 @@ module RaisShop
 
     config.middleware.insert_before 0, "SearchSuggestions"
 
+    config.generators do |g|
+      g.fixture_replacement :factory_girl
+    end
+
+    config.autoload_paths += %W(#{config.root}/lib)
+
     Rack::MiniProfiler.config.position = 'right'
   end
 end

@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title RaisShop
+    %title= full_title(yield(:title))
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
@@ -19,5 +19,5 @@
     .container
       .row
         = yield
-    %footer.footer
+    %footer#footer
       .container

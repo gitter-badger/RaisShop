@@ -1,10 +1,6 @@
 class AddressesController < ApplicationController
   before_filter :signed_in_only
 
-  def index
-    @addresses = current_user.addresses
-  end
-
   def new
     @address = current_user.addresses.build
   end

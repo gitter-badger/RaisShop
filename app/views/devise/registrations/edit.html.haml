@@ -1,21 +1,38 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
-= simple_form_for(resource, as: resource_name,
-  url: registration_path(resource_name),
-  html: {class: 'form-horizontal', method: :put}, validate: true) do |f|
+= set_page_title @user.full_name
+%h2= @user.full_name
+= simple_form_for @user, url: registration_path(resource_name),
+    html: { class: 'form-horizontal', method: :put } do |f|
   = devise_error_messages!
   = f.input :email
   = f.input :password, hint: "(leave blank if you don't want to change it)"
   = f.input :password_confirmation
   = f.input :current_password,
     hint: "(we need your current password to confirm your changes)"
-  Choose your current address
-  = f.collection_radio_buttons(:current_address_id,
-                              current_user.addresses, :id, :info_in_html)
-  -#= link_to "Edit address", edit_address_path(@address), class: 'edit_address'
-  = link_to "Show addresses", addresses_path, class: 'edit_address'
-  = link_to 'Add address', new_address_path, id: 'add_address'
-  = f.button :submit
+  = f.button :submit, "Save changes"
+
+%h2 Listing addresses
+%table.table.table-condensed
+  %tr
+    %th Line 1
+    %th Line 2
+    %th City
+    %th Country
+    %th Postcode
+    %th Phone number
+    %th Edit
+    %th Destroy
+  - resource.addresses.each do |address|
+    %tr
+      %td= address.line_1
+      %td= address.line_2
+      %td= address.city
+      %td= address.country
+      %td= address.postcode
+      %td= address.phone_number
+      %td= link_to 'Edit', edit_address_path(address)
+      %td= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' }
+%tr= link_to 'New Address', new_address_path
+%br/
 
 %h3 Cancel my account
 %p

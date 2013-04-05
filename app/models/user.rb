@@ -22,10 +22,6 @@ class User < ActiveRecord::Base
   validates :password, presence: true, confirmation: true,
             length: { within: Devise.password_length }, unless: :guest?
 
-  def available_address_ids
-    addresses.map(&:id)
-  end
-
   def can_write_review?(product)
     product.reviews.where(user_id: id).count == 0
   end
