@@ -1,9 +1,10 @@
 .span9
   %h1= header
   %span.pull-right
-    = form_tag products_path, method: :get do
-      = select_tag "per_page", options_for_select(['10', '20', 'all'])
-      = submit_tag "Filter", class: 'btn'
+    = form_tag products_path, method: :get, class: 'form-horizontal' do
+      = @products.per_page_select_options(params[:per_page])
+      = @products.checkbox_for_endless_page(params[:endless])
+      = @products.submit_filtering
 
   %table#products.table.table-bordered.table-hover
     = render @products

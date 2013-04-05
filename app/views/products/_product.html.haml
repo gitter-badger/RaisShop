@@ -1,10 +1,9 @@
-%tr
-  %td.productImage= image_tag product.image_url
+%tr.product
+  %td.productImage= product.image
   %td
-    .stars-rating{style: stars_image(product.rating)}
+    .productRating= product.stars_rating
     %dl
-      %dt= link_to product.title, product
+      %dt= product.link_to_product
       %dd= product.description
-  %td= number_to_currency(product.price)
-  %td= button_to 'Buy', line_items_path(product_id: product.id), remote: true,
-    class: "btn"
+  %td= product.price
+  %td= product.add_to_cart_button

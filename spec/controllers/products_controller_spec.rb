@@ -98,7 +98,7 @@ describe ProductsController do
 
         it "redirects to the product" do
           post :create, valid_product
-          response.should redirect_to(products_path(assigns(:product)))
+          response.should redirect_to(product_path(assigns(:product)))
         end
 
         it "sets flash notice" do
@@ -150,7 +150,7 @@ describe ProductsController do
 
         it "redirects to the product" do
           put :update, { id: product.id, product: valid_product_attributes }
-          response.should redirect_to(products_path(assigns(:product)))
+          response.should redirect_to(product_path(assigns(:product)))
         end
 
         it "sets flash notice" do

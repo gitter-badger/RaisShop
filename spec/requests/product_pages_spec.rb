@@ -43,7 +43,8 @@ describe "Product pages" do
 
         it "calculates average product rating" do
           click_button("Create Review")
-          should have_selector("#rating", text: '3')
+          xpath = "//div[@class='productRating']/div[@style='background-position: -27px 0;']"
+          should have_xpath(xpath)
         end
       end
 
@@ -76,7 +77,8 @@ describe "Product pages" do
 
       it "recalculates average rating" do
         click_link("Destroy review")
-        should have_selector("#rating", text: '0')
+        xpath = "//div[@class='productRating']/div[@style='background-position: -66px 0;']"
+        should have_xpath(xpath)
       end
     end
   end
@@ -97,5 +99,36 @@ describe "Product pages" do
 
   def have_review_form
     have_selector('form#new_review')
+  end
+
+  context "products view customization" do
+    before do
+      create_list(:product, 20)
+      visit products_path
+    end
+
+    describe "choosing per page products count" do
+      before do
+        page.select('20', from: 'per_page')
+        click_button 'Filter'
+      end
+      it { should have_selector('table .product', count: 20) }
+    end
+
+    describe "10 products per page by default" do
+      it { should have_selector('table .product', count: 10) }
+    end
+
+    describe "endless pagination", js: true do
+      before do
+        page.select('10', from: 'per_page')
+        check('endless_page')
+        click_button 'Filter'
+        page.execute_script "window.scrollBy(0,10000)"
+        #find_by_id('footer').click
+      end
+
+      it { should have_selector('table .product', count: 20) }
+    end
   end
 end

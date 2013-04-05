@@ -2,10 +2,9 @@ class ProductsController < ApplicationController
   before_filter :check_authorization, except: [:index, :show]
 
   def index
-    #@products = Product.order(:title).where("title like ?", "%#{ params[:term] }%")
-
-    @products = Product.title_search(params[:term]).page(params[:page])
-      .per_page(set_default_per_page(params[:page]))
+    paginated_products = Product.title_search(params[:term])
+          .paginate(page: params[:page], per_page: params[:per_page])
+    @products = ProductsDecorator.decorate(paginated_products)
     respond_to do |format|
       format.html
       format.js
@@ -15,9 +14,9 @@ class ProductsController < ApplicationController
 
 
   def show
-    @product = Product.includes(reviews: :user).find(params[:id])
+    @product = Product.includes(reviews: :user).find(params[:id]).decorate
+    @reviews = @product.reviews
     @review = Review.new
-    @review_errors = flash[:review_errors]
     session[:recent_history][@product.id] = Time.now
   end
 
@@ -32,7 +31,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     if @product.save
-      redirect_to products_path(@product), notice: "Product was successfully created."
+      redirect_to product_path(@product), notice: "Product was successfully created."
     else
       render action: "new"
     end
@@ -41,7 +40,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update_attributes(params[:product])
-      redirect_to products_path(@product), notice: "Product was successfully updated."
+      redirect_to product_path(@product), notice: "Product was successfully updated."
     else
       render action: "edit"
     end
@@ -51,15 +50,5 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
     redirect_to admin_path
-  end
-
-private
-
-  def set_default_per_page(per_page)
-    if per_page == 'all' || per_page.nil?
-      10
-    else
-      per_page.to_i
-    end
   end
 end

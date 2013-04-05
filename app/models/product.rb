@@ -35,6 +35,8 @@ class Product < ActiveRecord::Base
     end
   end
 
+  self.per_page = 10
+
   def average_rating
     average = (self.reviews.average(:rating) || 0).round
     update_attribute(:rating, average) unless average == self.rating
