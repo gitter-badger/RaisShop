@@ -182,6 +182,9 @@ GEM
     newrelic_rpm (3.6.0.78)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
+    parallel (0.6.3)
+    parallel_tests (0.10.4)
+      parallel
     pg (0.15.0)
     pg_search (0.6.0)
       activerecord (>= 3.1)
@@ -321,6 +324,9 @@ GEM
     yajl-ruby (1.1.0)
     zeus (0.13.3)
       method_source (>= 0.6.7)
+    zeus-parallel_tests (0.2.0)
+      parallel_tests (~> 0.10.4)
+      zeus (~> 0.13.3)
 
 PLATFORMS
   ruby
@@ -359,6 +365,7 @@ DEPENDENCIES
   lol_dba
   meta_request
   newrelic_rpm
+  parallel_tests
   pg
   pg_search
   pry
@@ -383,3 +390,4 @@ DEPENDENCIES
   will_paginate
   yajl-ruby
   zeus
+  zeus-parallel_tests

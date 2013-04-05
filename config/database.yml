@@ -8,7 +8,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: RaishopDB_test
+  database: RaishopDB_test<%= ENV['TEST_ENV_NUMBER'] %>
   username: postgres
 
 production:
