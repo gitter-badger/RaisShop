@@ -23,9 +23,10 @@ guard 'rspec', all_on_start: false, notification: true,
   watch('spec/factories.rb')
 end
 
-guard 'livereload' do
+guard 'livereload', apply_js_live: true, apply_css_live: true do
   watch(%r{app/views/.+\.(erb|haml|slim)$})
   watch(%r{app/helpers/.+\.rb})
+  watch(%r{app/decorators/.+\.rb})
   watch(%r{public/.+\.(css|js|html)})
   watch(%r{config/locales/.+\.yml})
   # Rails Assets Pipeline
