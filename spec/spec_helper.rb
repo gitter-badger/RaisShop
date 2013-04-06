@@ -1,7 +1,9 @@
-require 'simplecov'
-SimpleCov.start 'rails'
-#require 'coveralls'
-#Coveralls.wear!('rails')
+if ENV['coverage']
+  require 'simplecov'
+  SimpleCov.start 'rails'
+  require 'coveralls'
+  Coveralls.wear!('rails')
+end
 require 'rubygems'
 
 ENV["RAILS_ENV"] = 'test'

@@ -3,8 +3,8 @@ guard 'ctags-bundler', :src_path => ["app", "lib", "spec/support"], :stdlib => t
   watch('Gemfile.lock')
 end
 
-guard 'rspec', all_on_start: false, notification: true,
-    cli: "--format Fuubar --tty --color", zeus: true, parallel: false, bundler: false do
+guard 'rspec', spring: true, parallel: false, bundler: false,
+            all_after_pass: false, all_on_start: false, notification: true  do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
@@ -21,6 +21,7 @@ guard 'rspec', all_on_start: false, notification: true,
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
 
   watch('spec/factories.rb')
+  callback(:start_begin) { 'spring start' }
 end
 
 guard 'livereload', apply_js_live: true, apply_css_live: true do
@@ -33,7 +34,7 @@ guard 'livereload', apply_js_live: true, apply_css_live: true do
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(scss|css|js|html))).*}) { |m| "/assets/#{m[3]}" }
 end
 
-guard 'rails', zeus: true do
+guard 'rails', cli: "spring rails server" do
   watch('Gemfile.lock')
   watch(%r{^(config|lib)/.*})
 end

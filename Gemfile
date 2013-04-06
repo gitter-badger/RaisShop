@@ -26,8 +26,6 @@ gem 'jquery-star-rating-rails'
 gem 'rack-mini-profiler'
 
 group :development, :test do
-  gem 'foreman'
-  gem 'zeus'
   gem 'awesome_print'
   gem 'faker'
   gem 'pry'
@@ -53,11 +51,13 @@ end
 
 
 group :development do
-  gem 'foreman'
-  gem 'zeus'
+  gem 'spring'
+  #gem 'zeus'
+  #gem 'foreman'
   gem 'rails-footnotes'
   gem "rails_best_practices"
   gem 'bullet'
+  gem 'brakeman', :require => false
   gem 'quiet_assets'
   gem 'better_errors'
   #gem 'rails-perftest'
@@ -68,8 +68,8 @@ group :development do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-ctags-bundler'
-  gem "parallel_tests"
-  gem 'zeus-parallel_tests'
+  #gem "parallel_tests"
+  #gem 'zeus-parallel_tests'
   gem 'rack-livereload'
   gem 'yajl-ruby'
   gem 'rb-inotify', require: false
