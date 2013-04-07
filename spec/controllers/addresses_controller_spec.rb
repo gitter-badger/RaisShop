@@ -22,12 +22,12 @@ describe AddressesController do
 
     it "assigns the requested address as @address" do
       sign_in user
-      get :edit, {:id => address.to_param}
+      get :edit, id: address.id
       assigns(:address).should eq(address)
     end
 
     it "redirects to log in page" do
-      get :edit, {:id => address.to_param}
+      get :edit, id: address.id
       response.should redirect_to new_user_session_path
     end
 
@@ -40,8 +40,8 @@ describe AddressesController do
       end
 
       it "redirects to #index" do
-        get :edit, {:id => address.to_param}
-        response.should redirect_to(addresses_path)
+        get :edit, id: address.id
+        response.should redirect_to edit_user_registration_path
       end
 
       it "sets flash message" do
@@ -75,7 +75,7 @@ describe AddressesController do
 
       it "redirects to user addresses" do
         post :create, valid_address_attributes
-        response.should redirect_to(addresses_path)
+        response.should redirect_to edit_user_registration_path
       end
     end
 
@@ -110,17 +110,17 @@ describe AddressesController do
       it "updates the requested address" do
         city = { "city" => "Moscow" }
         Address.any_instance.should_receive(:update_attributes).with(city)
-        put :update, {:id => address.to_param, :address => city}
+        put :update, { id: address.id, address: city}
       end
 
       it "assigns the requested address as @address" do
-        put :update, {id:  address.to_param, address: valid_address_attributes }
+        put :update, { id:  address.id, address: valid_address_attributes }
         assigns(:address).should eq(address)
       end
 
       it "redirects to the address" do
-        put :update, {id: address.to_param, address: valid_address_attributes }
-        response.should redirect_to(addresses_path)
+        put :update, { id: address.id, address: valid_address_attributes }
+        response.should redirect_to edit_user_registration_path
       end
     end
 
@@ -129,13 +129,13 @@ describe AddressesController do
       let(:invalid_postcode) { { postcode: 123 } }
 
       it "assigns the address as @address" do
-        put :update, {:id => address.to_param, :address => invalid_postcode }
+        put :update, { id: address.id, address: invalid_postcode }
         assigns(:address).should eq(address)
       end
 
       it "re-renders the 'edit' template" do
         Address.any_instance.stub(:save).and_return(false)
-        put :update, {:id => address.to_param, :address => invalid_postcode }
+        put :update, { id: address.id, address: invalid_postcode }
         response.should render_template("edit")
       end
     end
@@ -143,15 +143,31 @@ describe AddressesController do
 
   describe "DELETE destroy" do
     before { sign_in user }
-    it "destroys the requested address" do
+
+    context "with two addresses" do
+      before { user.addresses << create(:address) }
+
+      it "destroys requested address" do
+        expect {
+          delete :destroy, id: address.id
+        }.to change(Address, :count).by(-1)
+      end
+    end
+
+    it "doesn't destroy the only user address" do
       expect {
-        delete :destroy, {:id => address.to_param}
-      }.to change(Address, :count).by(-1)
+        delete :destroy, id: address.id
+      }.not_to change(Address, :count).by(-1)
+    end
+
+    it "sets flash error" do
+      delete :destroy, id: address.id
+      flash[:error].should == "You can't delete your only address"
     end
 
     it "redirects to the addresses list" do
-      delete :destroy, {:id => address.to_param}
-      response.should redirect_to(addresses_path)
+      delete :destroy, id: address.id
+      response.should redirect_to edit_user_registration_path
     end
   end
 end

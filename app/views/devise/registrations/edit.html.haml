@@ -30,7 +30,8 @@
       %td= address.postcode
       %td= address.phone_number
       %td= link_to 'Edit', edit_address_path(address)
-      %td= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to_if resource.addresses.count > 1, 'Destroy', address,
+        method: :delete, data: { confirm: 'Are you sure?' }
 %tr= link_to 'New Address', new_address_path
 %br/
 

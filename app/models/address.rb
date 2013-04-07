@@ -16,6 +16,8 @@ class Address < ActiveRecord::Base
                       :message => "should be 12345 or 12345-1234"}
   end
 
+  before_destroy :at_least_one_address
+
   def info_in_html
     "#{line_1}
     #{line_2}
@@ -23,6 +25,13 @@ class Address < ActiveRecord::Base
     #{city}
     #{postcode}
     #{phone_number}".gsub(/\n\s*/,'<br/>').html_safe
+  end
+
+
+private
+
+  def at_least_one_address
+    user.addresses.count > 1
   end
 
 end

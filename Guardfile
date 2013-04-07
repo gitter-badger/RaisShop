@@ -3,7 +3,7 @@ guard 'ctags-bundler', :src_path => ["app", "lib", "spec/support"], :stdlib => t
   watch('Gemfile.lock')
 end
 
-guard 'rspec', spring: true, parallel: false, bundler: false,
+guard 'rspec', binstubs: true, parallel: false, bundler: false,
             all_after_pass: false, all_on_start: false, notification: true  do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
@@ -21,6 +21,11 @@ guard 'rspec', spring: true, parallel: false, bundler: false,
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
 
   watch('spec/factories.rb')
+end
+
+guard 'rails', cli: "./bin/rails server" do
+  watch('Gemfile.lock')
+  watch(%r{^(config|lib)/.*})
   callback(:start_begin) { 'spring start' }
 end
 
@@ -34,7 +39,13 @@ guard 'livereload', apply_js_live: true, apply_css_live: true do
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(scss|css|js|html))).*}) { |m| "/assets/#{m[3]}" }
 end
 
-guard 'rails', cli: "spring rails server" do
-  watch('Gemfile.lock')
-  watch(%r{^(config|lib)/.*})
-end
+
+notification :tmux,
+  :display_message => true,
+  :timeout => 5, # in seconds
+  :default_message_format => '%s >> %s',
+  # the first %s will show the title, the second the message
+  # Alternately you can also configure *success_message_format*,
+  # *pending_message_format*, *failed_message_format*
+  :line_separator => ' > ', # since we are single line we need a separator
+  :color_location => 'status-left-bg' # to customize which tmux element will change color

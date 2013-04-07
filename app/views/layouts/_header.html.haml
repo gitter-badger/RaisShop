@@ -6,7 +6,7 @@
     .user_nav
       - flash.each do |name, msg|
         - if msg.is_a?(String)
-          = content_tag :div, msg, class: 'alert'
+          = content_tag :div, msg, class: "alert alert-#{name}"
       - if user_signed_in?
         Hello,
         = link_to edit_user_registration_path do

@@ -8,7 +8,7 @@ class AddressesController < ApplicationController
   def edit
     @address = current_user.addresses.find_by_id(params[:id])
     if @address.nil?
-      redirect_to addresses_path, notice: "You can access only your own address"
+      redirect_to edit_user_registration_path, notice: "You can access only your own address"
     end
   end
 
@@ -16,7 +16,7 @@ class AddressesController < ApplicationController
     @address = current_user.addresses.build(params[:address])
 
     if @address.save
-      redirect_to addresses_path, notice: 'Address was successfully created.'
+      redirect_to edit_user_registration_path, notice: 'Address was successfully created.'
     else
       render action: "new"
     end
@@ -26,7 +26,7 @@ class AddressesController < ApplicationController
     @address = current_user.addresses.find(params[:id])
 
     if @address.update_attributes(params[:address])
-      redirect_to addresses_path, notice: 'Address was successfully updated.'
+      redirect_to edit_user_registration_path, notice: 'Address was successfully updated.'
     else
       render action: "edit"
     end
@@ -34,7 +34,9 @@ class AddressesController < ApplicationController
 
   def destroy
     @address = current_user.addresses.find(params[:id])
-    @address.destroy
-    redirect_to addresses_path
+    unless @address.destroy
+      flash[:error] = "You can't delete your only address"
+    end
+    redirect_to edit_user_registration_path
   end
 end

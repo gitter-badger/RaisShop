@@ -35,4 +35,11 @@ describe Address do
       expect(address.info_in_html).to eq(info)
     end
   end
+
+  describe "can't be destroyed if it's the only user address" do
+    let(:user) { create(:user, addresses: [address]) }
+    before { address.user = user }
+
+    its(:destroy) { should be_false }
+  end
 end
