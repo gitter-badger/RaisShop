@@ -12,8 +12,11 @@ class OrdersController < ApplicationController
     else
       @order = Order.new
       if !user_signed_in?
-        @address = @order.build_address
-        @user    = @address.build_user
+        @user    = User.new
+        @address = Address.new
+      end
+      if user_signed_in? && current_user.addresses.count == 0
+        @address = Address.new
       end
     end
   end
@@ -23,11 +26,24 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(params[:order])
+    @valid = true
+    if params[:user].present?
+      @user = User.new_guest(params[:user])
+      @address = @user.addresses.build(params[:address])
+      @valid = @user.save
+      @order = @address.orders.build(params[:order])
+    elsif params[:address].present?
+      @address = current_user.addresses.build(params[:address])
+      @valid = @address.save
+      @order = @address.orders.build(params[:order])
+    else
+      @order = Order.new(params[:order])
+    end
+
 
     @order.add_line_items_from_cart(@cart)
 
-    if @order.save
+    if @order.save && @valid
       Cart.destroy(session[:cart_id])
       session[:cart_id] = nil
       redirect_to root_path, notice: 'Your order is accepted and being processed'

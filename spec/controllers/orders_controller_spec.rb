@@ -32,9 +32,15 @@ describe OrdersController do
       it "assigns a new address and user" do
         get :new
         assigns(:address).should be_a_new(Address)
-        assigns(:address).should == assigns(:order).address
         assigns(:user).should be_a_new(User)
-        assigns(:user).should == assigns(:address).user
+      end
+
+      context "when user taht has no addresses loggen in" do
+        before { sign_in create(:user) }
+        it "assigns a new address" do
+          get :new
+          assigns(:address).should be_a_new(Address)
+        end
       end
 
       context "when user logged in" do
