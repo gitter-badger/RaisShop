@@ -36,6 +36,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'rack_session_access'
   #gem 'coveralls', require: false
   #gem 'rack-webconsole-pry', :require => 'rack-webconsole'
   gem 'simplecov'
