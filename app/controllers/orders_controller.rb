@@ -6,6 +6,11 @@ class OrdersController < ApplicationController
     @orders = current_user.orders.includes(:address).all
   end
 
+  #TODO consider authorization for show action
+  def show
+    @order = Order.find(params[:id])
+  end
+
   def new
     if @cart.empty?
       redirect_to root_url, notice: "Your cart is empty"
