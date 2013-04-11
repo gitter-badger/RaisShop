@@ -35,7 +35,7 @@ class AddressesController < ApplicationController
   def destroy
     @address = current_user.addresses.find(params[:id])
     unless @address.destroy
-      flash[:error] = "You can't delete your only address"
+      flash[:error] = @address.errors[:destroy].join
     end
     redirect_to edit_user_registration_path
   end

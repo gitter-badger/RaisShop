@@ -31,7 +31,10 @@ class Address < ActiveRecord::Base
 private
 
   def at_least_one_address
-    user.addresses.count > 1
+    if !user.nil? && user.addresses.count <= 1
+      errors.add(:destroy, "You can't delete your only address")
+    end
+    errors[:destroy].blank?
   end
 
 end
