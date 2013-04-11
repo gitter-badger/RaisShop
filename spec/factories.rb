@@ -18,7 +18,7 @@ FactoryGirl.define do
     full_name "Guest"
     sequence(:email) { |n| "guest#{n}@example.com" }
     addresses { [build(:address)] }
-    password ""
+    guest true
   end
 
   factory :address do

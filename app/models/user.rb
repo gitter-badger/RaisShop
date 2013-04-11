@@ -13,8 +13,6 @@ class User < ActiveRecord::Base
   has_many :reviews, dependent: :nullify
   accepts_nested_attributes_for :addresses
 
-  before_validation :check_if_guest
-
   validates_presence_of :email, unless: :guest?
   validates_presence_of :full_name
   validates :email, uniqueness: true,
@@ -26,13 +24,9 @@ class User < ActiveRecord::Base
     product.reviews.where(user_id: id).count == 0
   end
 
-private
-
-  def check_if_guest
-    if new_record?
-      can_be_guest = password.blank? && !addresses.blank?
-      write_attribute(:guest, can_be_guest)
-    end
-    true
+  def self.new_guest(options={})
+    user = new(options)
+    user.guest = true
+    user
   end
 end
