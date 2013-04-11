@@ -13,7 +13,6 @@ describe User do
   describe "associations" do
     it { should have_many(:orders).through(:addresses) }
     it { should have_many(:reviews).dependent(:nullify) }
-    it { should accept_nested_attributes_for(:addresses) }
     #it { should have_db_index(:address_id) }
   end
 

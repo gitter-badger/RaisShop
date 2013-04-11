@@ -84,38 +84,39 @@ describe OrdersController do
     describe "with valid params" do
 
       before(:each) do
-        @valid_attributes = attributes_for(:order)
-        @valid_attributes[:address_attributes] = attributes_for(:address)
-        @valid_attributes[:address_attributes][:user_attributes] = attributes_for(:user)
+        @params = {}
+        [:order, :address, :user].each do |param|
+          @params[param] = attributes_for(param)
+        end
         session[:cart_id] = cart.id
       end
 
       it "creates a new Order" do
         expect {
-          post :create, {order: @valid_attributes}
+          post :create, @params
         }.to change(Order, :count).by(1)
       end
 
       it "assigns a newly created order as @order" do
-        post :create, {order: @valid_attributes}
+        post :create, @params
         assigns(:order).should be_a(Order)
         assigns(:order).should be_persisted
       end
 
       it "redirects to the created order" do
-        post :create, {order: @valid_attributes}
+        post :create, @params
         response.should redirect_to root_path
       end
 
       it "adds line items from the cart" do
         Order.any_instance.should_receive(:add_line_items_from_cart)
           .with(cart)
-        post :create, {order: @valid_attributes}
+        post :create, @params
       end
 
       it "destroys cart" do
         expect {
-          post :create, {order: @valid_attributes}
+          post :create, @params
         }.to change(Cart, :count).by(-1)
         session[:cart_id].should be_nil
         Cart.find_by_id(cart.id).should be_nil
@@ -147,9 +148,10 @@ describe OrdersController do
   describe "PUT update" do
 
     before(:each) do
-      @valid_attributes = attributes_for(:order)
-      @valid_attributes[:address_attributes] = attributes_for(:address)
-      @valid_attributes[:address_attributes][:user_attributes] = attributes_for(:user)
+      @params = { id: order.id }
+      [:order, :address, :user].each do |param|
+        @params[param] = attributes_for(param)
+      end
     end
 
     context "admin logged in" do
@@ -163,12 +165,12 @@ describe OrdersController do
         end
 
         it "assigns the requested order as @order" do
-          put :update, {id: order.id, order: @valid_attributes}
+          put :update, @params
           assigns(:order).should eq(order)
         end
 
         it "redirects to the order" do
-          put :update, {id: order.id, order: @valid_attributes}
+          put :update, @params
           response.should redirect_to root_path
         end
       end

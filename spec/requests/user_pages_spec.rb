@@ -29,9 +29,9 @@ describe "User pages" do
         let(:new_password) { "asdfqwert2" }
         before do
           fill_in "Email",                 with: new_email
-          find("#user_current_password").set(user.password)
-          find("#user_password").set(new_password)
-          find("#user_password_confirmation").set(new_password)
+          fill_in "Current password",      with: user.password
+          fill_in "Password",              with: new_password
+          fill_in "Password confirmation", with: new_password
           click_button "Save changes"
         end
 

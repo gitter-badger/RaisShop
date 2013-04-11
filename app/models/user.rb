@@ -1,17 +1,14 @@
 class User < ActiveRecord::Base
 
-  #default_scope includes(:addresses)
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
 
   attr_accessible :full_name, :email, :password, :password_confirmation,
-    :remember_me, :addresses_attributes
+    :remember_me
 
   has_many :addresses, dependent: :destroy
   has_many :orders, through: :addresses
   has_many :reviews, dependent: :nullify
-  accepts_nested_attributes_for :addresses
 
   validates_presence_of :email, unless: :guest?
   validates_presence_of :full_name
