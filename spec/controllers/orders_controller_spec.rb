@@ -4,7 +4,7 @@ describe OrdersController do
 
   let(:order) { create(:order_with_user) }
   let(:address) { order.address }
-  let(:user) { address.user }
+  let(:user) { address.customer }
   let(:cart) { create(:cart_with_items) }
   let(:admin) { create(:admin) }
 
@@ -32,7 +32,7 @@ describe OrdersController do
       it "assigns a new address and user" do
         get :new
         assigns(:address).should be_a_new(Address)
-        assigns(:user).should be_a_new(User)
+        assigns(:customer).should be_a_new(Customer)
       end
 
       context "when user taht has no addresses loggen in" do
@@ -63,6 +63,13 @@ describe OrdersController do
         get :new
         flash[:notice].should == "Your cart is empty"
       end
+
+      it "doesn't assign anything" do
+        get :new
+        expect(assigns(:order)).to be_nil
+        expect(assigns(:address)).to be_nil
+        expect(assigns(:user)).to be_nil
+      end
     end
   end
 
@@ -82,41 +89,40 @@ describe OrdersController do
 
   describe "POST create" do
     describe "with valid params" do
+      let(:parameters) { { order: attributes_for(:order_with_user).
+                             merge({address_id: address.id}) } }
 
       before(:each) do
-        @params = {}
-        [:order, :address, :user].each do |param|
-          @params[param] = attributes_for(param)
-        end
+        sign_in user
         session[:cart_id] = cart.id
       end
 
       it "creates a new Order" do
         expect {
-          post :create, @params
+          post :create, parameters
         }.to change(Order, :count).by(1)
       end
 
       it "assigns a newly created order as @order" do
-        post :create, @params
+        post :create, parameters
         assigns(:order).should be_a(Order)
         assigns(:order).should be_persisted
       end
 
       it "redirects to the created order" do
-        post :create, @params
+        post :create, parameters
         response.should redirect_to root_path
       end
 
       it "adds line items from the cart" do
         Order.any_instance.should_receive(:add_line_items_from_cart)
           .with(cart)
-        post :create, @params
+        post :create, parameters
       end
 
       it "destroys cart" do
         expect {
-          post :create, @params
+          post :create, parameters
         }.to change(Cart, :count).by(-1)
         session[:cart_id].should be_nil
         Cart.find_by_id(cart.id).should be_nil

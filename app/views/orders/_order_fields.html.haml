@@ -1,0 +1,5 @@
+= f.input :pay_type, collection: Order::PAYMENT_TYPES,
+  include_blank: true
+= f.input :shipping_type, collection: Order::SHIPPING_TYPES,
+  include_blank: true
+= f.input :comment

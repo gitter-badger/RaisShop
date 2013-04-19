@@ -10,15 +10,14 @@ FactoryGirl.define do
     end
 
     factory :user_with_address do
-      after(:create){ |user| create_list(:address, 1, user: user) }
+      after(:create){ |user| create_list(:address, 1, customer: user) }
     end
   end
 
-  factory :guest, class: User do
+  factory :customer do
     full_name "Guest"
     sequence(:email) { |n| "guest#{n}@example.com" }
     addresses { [build(:address)] }
-    guest true
   end
 
   factory :address do
@@ -30,7 +29,7 @@ FactoryGirl.define do
     phone_number "+380970377658"
 
     factory :address_with_user do
-      user
+      customer_id { create(:user).id }
     end
   end
 

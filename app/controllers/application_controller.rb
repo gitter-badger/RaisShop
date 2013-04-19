@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :recent_history, :current_cart, :mini_profiler
   after_filter  :store_location
-
+  helper_method :guest_user?
 
   #def after_sign_in_path_for(resource)
     #request.env['omniauth.origin'] || stored_location_for(resource) || root_path
@@ -31,6 +31,10 @@ private
 
   def store_location
     session[:previous_url] = request.fullpath unless request.fullpath =~ /\/users/
+  end
+
+  def guest_user?
+    !user_signed_in?
   end
 
   def recent_history

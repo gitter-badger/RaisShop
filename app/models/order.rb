@@ -2,10 +2,12 @@ class Order < ActiveRecord::Base
   PAYMENT_TYPES = ["Check", "Credit card", "Purchase order"]
   SHIPPING_TYPES = ["Local pick up", "First class", "Express"]
 
-  attr_accessible :pay_type, :shipping_type, :comment, :address_id
+  attr_accessible :pay_type, :shipping_type, :comment, :address_id, :address_attributes
 
   belongs_to :address
   has_many :line_items, dependent: :destroy
+
+  accepts_nested_attributes_for :address
 
   validates :address, presence: true
   validates :pay_type, inclusion: PAYMENT_TYPES

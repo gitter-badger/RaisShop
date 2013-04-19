@@ -8,9 +8,9 @@ describe Address do
   it { should be_valid }
 
   describe "associations" do
-    it { should belong_to(:user) }
+    it { should belong_to(:customer) }
     it { should have_many(:orders) }
-    it { should have_db_index(:user_id) }
+    it { should have_db_index(:customer_id) }
   end
 
   describe "validators" do
@@ -19,8 +19,6 @@ describe Address do
         it { should validate_presence_of(attr) }
       end
     end
-
-    it { should allow_mass_assignment_of(:user) }
 
     it { should allow_value('12345').for(:postcode) }
     it { should_not allow_value('1234').for(:postcode) }
@@ -37,7 +35,7 @@ describe Address do
 
   describe "can't be destroyed if it's the only user address" do
     let(:user) { create(:user, addresses: [address]) }
-    before { address.user = user }
+    before { address.customer = user }
 
     its(:destroy) { should be_false }
   end

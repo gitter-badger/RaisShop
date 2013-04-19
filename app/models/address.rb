@@ -1,9 +1,11 @@
 class Address < ActiveRecord::Base
-  attr_accessible :user, :city, :country, :line_1, :line_2,
-                  :phone_number, :postcode, :info
+  attr_accessible :city, :country, :line_1, :line_2, :phone_number,
+                  :postcode, :info, :customer_id, :customer_attributes
 
-  belongs_to :user
+  belongs_to :customer
   has_many   :orders
+
+  accepts_nested_attributes_for :customer
 
   with_options presence: true do |check|
     check.validates :city
@@ -30,7 +32,7 @@ class Address < ActiveRecord::Base
 private
 
   def at_least_one_address
-    if !user.nil? && user.addresses.count <= 1
+    if !customer.nil? && customer.addresses.count <= 1
       errors.add(:destroy, "You can't delete your only address")
     end
     errors[:destroy].blank?

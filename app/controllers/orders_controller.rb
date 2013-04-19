@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_filter :check_authorization, except: [:index, :new, :create]
   before_filter :signed_in_only, only: [:index]
+  helper_method :user_without_addresses?
 
   def index
     @orders = current_user.orders.includes(:address).all
@@ -12,18 +13,10 @@ class OrdersController < ApplicationController
   end
 
   def new
-    if @cart.empty?
-      redirect_to root_url, notice: "Your cart is empty"
-    else
-      @order = Order.new
-      if !user_signed_in?
-        @user    = User.new
-        @address = Address.new
-      end
-      if user_signed_in? && current_user.addresses.count == 0
-        @address = Address.new
-      end
-    end
+    redirect_to root_url, notice: "Your cart is empty" and return if @cart.empty?
+    @order = Order.new
+    @address = @order.build_address if user_without_addresses?
+    @customer = @address.build_customer if guest_user?
   end
 
   def edit
@@ -31,24 +24,11 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @valid = true
-    if params[:user].present?
-      @user = User.new_guest(params[:user])
-      @address = @user.addresses.build(params[:address])
-      @valid = @user.save
-      @order = @address.orders.build(params[:order])
-    elsif params[:address].present?
-      @address = current_user.addresses.build(params[:address])
-      @valid = @address.save
-      @order = @address.orders.build(params[:order])
-    else
-      @order = Order.new(params[:order])
-    end
-
+    @order = Order.new(params[:order])
 
     @order.add_line_items_from_cart(@cart)
 
-    if @order.save && @valid
+    if @order.save
       Cart.destroy(session[:cart_id])
       session[:cart_id] = nil
       redirect_to root_path, notice: 'Your order is accepted and being processed'
@@ -75,5 +55,11 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @order.destroy
     redirect_to orders_url
+  end
+
+private
+
+  def user_without_addresses?
+    guest_user? || current_user.addresses.blank?
   end
 end

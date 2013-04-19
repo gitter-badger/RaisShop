@@ -1,31 +1,32 @@
 %h1 New order
 .span4
-  - unless user_signed_in?
+  - if guest_user?
     If you are a regular customer, please login
     %a.xhr#login_show_toggle toggle login form
-    #user_login
-      = render 'devise/sessions/form'
+    #user_login= render 'devise/sessions/form'
+
   #order_form
     = simple_form_for(@order, validate: true) do |f|
       = f.error_notification
-      = @order.errors.full_messages
-      - if user_signed_in? && current_user.addresses.present?
-        = f.association :address, as: :radio_buttons, label_method: :info_in_html,
-          collection: current_user.addresses
-      - else
-        - if !user_signed_in? || user_signed_in? && current_user.addresses.count > 0
-          %fieldset#user_fields
-            = simple_fields_for :user, validate: true do |user|
-              = user.input :full_name
-              = user.input :email, hint: "(Optional) if you want to track the delivery"
-        = simple_fields_for :address do |builder|
+
+      - if user_without_addresses?
+        = f.simple_fields_for :address do |builder|
+
+          - if guest_user?
+            = builder.simple_fields_for :customer do |user|
+              %fieldset#user_fields
+                = user.input :full_name
+                = user.input :email, hint: "(Optional) if you want to track the delivery"
+          - else
+            = builder.hidden_field :customer_id, value: current_user.id
           = render 'addresses/address_fields', f: builder
-      = f.input :pay_type, collection: Order::PAYMENT_TYPES,
-        include_blank: false
-      = f.input :shipping_type, collection: Order::SHIPPING_TYPES,
-        include_blank: false
-      = f.input :comment
+      - else
+        = f.collection_radio_buttons(:address_id, current_user.addresses,
+          :id, :info_in_html, include_blank: false)
+
+      = render 'order_fields', f: f
       = f.button :submit, "Confirm order", id: 'submit_order'
+
   = link_to 'Back', :back
 .span8
   .cartItems= render @cart.line_items.includes(:product)
