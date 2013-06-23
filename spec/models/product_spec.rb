@@ -16,8 +16,6 @@ describe Product do
         it { should validate_presence_of(attr) }
       end
     end
-
-    it { should validate_uniqueness_of(:title) }
   end
 
   describe "creates human-readable slug" do

@@ -10,7 +10,6 @@ class Product < ActiveRecord::Base
   belongs_to :category
 
   validates_presence_of :title, :description, :image_url, :price, :category
-  validates :title, uniqueness: true
 
   before_destroy :ensure_not_referenced_by_any_line_item
 
