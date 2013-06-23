@@ -660,20 +660,6 @@ CREATE INDEX index_search_suggestions_on_product_id ON search_suggestions USING 
 
 
 --
--- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_users_on_email ON customers USING btree (email);
-
-
---
--- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE UNIQUE INDEX index_users_on_reset_password_token ON customers USING btree (reset_password_token);
-
-
---
 -- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -788,3 +774,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130415141959');
 INSERT INTO schema_migrations (version) VALUES ('20130415145325');
 
 INSERT INTO schema_migrations (version) VALUES ('20130419113005');
+
+INSERT INTO schema_migrations (version) VALUES ('20130623082226');
