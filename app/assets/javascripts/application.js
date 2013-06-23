@@ -11,7 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery-ui
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require bootstrap
 //= require rails.validations
@@ -32,7 +32,7 @@ $(function (){
     select: function(event, ui) {
       window.location.replace('/' + ui.item.id);
     }
-  }).data( "autocomplete" )._renderItem = function( ul, item ) {
+  }).data( "ui-autocomplete" )._renderItem = function( ul, item ) {
     return $( "<li></li>" )
     .data( "item.autocomplete", item )
     .append("<a><img class=\"autocomplete_image\" src=/assets/" + item.image_url + "/>" +

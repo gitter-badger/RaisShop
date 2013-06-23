@@ -5,7 +5,7 @@ class ProductsDecorator < PaginatingDecorator
   end
 
   def per_page_select_options(per_page)
-    default = source.per_page
+    default = object.per_page
     options = h.options_for_select([5, 10, 20, 50, 100], per_page || default)
     h.select_tag "per_page", options
   end

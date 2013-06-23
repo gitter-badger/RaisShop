@@ -3,7 +3,7 @@ guard 'ctags-bundler', :src_path => ["app", "lib", "spec/support"], :stdlib => t
   watch('Gemfile.lock')
 end
 
-guard 'rspec', binstubs: true, parallel: false, bundler: false,
+guard 'rspec', binstubs: true, parallel: false, bundler: false, spring: true,
             all_after_pass: false, all_on_start: false, notification: true  do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }

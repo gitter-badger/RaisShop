@@ -9,6 +9,7 @@ gem 'pg_search'
 gem 'devise'
 gem 'ancestry'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem "haml"
 gem 'haml-rails'
 gem 'bootstrap-sass'
@@ -45,7 +46,7 @@ group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'capybara'
-  gem 'capybara-webkit', git: 'git://github.com/thoughtbot/capybara-webkit.git'
+  gem 'capybara-webkit'
   gem 'fuubar'
   gem 'database_cleaner'
 end
