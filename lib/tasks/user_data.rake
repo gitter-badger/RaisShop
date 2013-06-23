@@ -4,8 +4,6 @@ namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
     puts "resetting db"
-    Rake::Task['db:reset'].invoke
-    Rake::Task['db:test:prepare'].invoke
 
     make_users
     make_categories
@@ -18,33 +16,36 @@ end
 def make_users(users = 10)
   puts "SETTING UP DEFAULT ADMIN LOGIN and #{users} regular users"
   password = "password"
+
   admin = User.create!(
     full_name: "Volodymyr Barna",
     email: "admin@admin.com",
     password: password,
-    password_confirmation: password,
-      addresses_attributes:[{
-        line_1: 'Ruska 10/18',
-        city: 'Ternopil',
-        country: 'Ukraine',
-        phone_number: '+380970377658',
-        postcode: '46000'
-      }])
+    password_confirmation: password
+  )
+  admin.addresses.create(
+    line_1: 'Ruska 10/18',
+    city: 'Ternopil',
+    country: 'Ukraine',
+    phone_number: '+380970377658',
+    postcode: '46000'
+  )
   admin.toggle!(:admin)
 
   users.times do |n|
-    User.create!(
+    user = User.create!(
       full_name: "#{Faker::Name.first_name} #{Faker::Name.last_name}",
       email: "admin#{n}@admin.com",
       password:password,
-      password_confirmation:password,
-      addresses_attributes:[{
-        line_1: "#{Faker::Address.street_address}",
-        city: "#{Faker::Address.city}",
-        country: "#{Faker::Address.country}",
-        phone_number: "#{Faker::PhoneNumber.cell_phone}",
-        postcode: "#{Faker::Address.postcode}"
-      }])
+      password_confirmation: password
+    )
+  user.addresses.create(
+    line_1: "#{Faker::Address.street_address}",
+    city: "#{Faker::Address.city}",
+    country: "#{Faker::Address.country}",
+    phone_number: "#{Faker::PhoneNumber.cell_phone}",
+    postcode: "#{Faker::Address.postcode}"
+  )
   end
 end
 
@@ -76,7 +77,7 @@ def make_reviews
       review = User.all.sample.reviews.build(comment: Faker::Lorem.sentence(10),
                                      rating:  1 + rand(5),
                                      product_id: product.id)
-      review.save!
+      review.save
     end
   end
 end
