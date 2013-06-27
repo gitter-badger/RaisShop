@@ -1,6 +1,9 @@
 RaisShop::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Do not eager load code on boot.
+  config.eager_load = true
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -12,7 +15,7 @@ RaisShop::Application.configure do
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
-  config.assets.compress = true
+  config.assets.js_compressor = :uglifier
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false

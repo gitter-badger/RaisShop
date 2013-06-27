@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
-gem 'rails'
+gem 'rails', '4.0.0'
 
-#gem 'rails4_upgrade', github: 'alindeman/rails4_upgrade'
+gem 'rails4_upgrade', github: 'alindeman/rails4_upgrade'
 
 gem 'unicorn-rails'
 gem 'pg'
 gem 'pg_search'
-gem 'devise'
+gem 'devise', '3.0.0.rc'
 gem 'ancestry'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
@@ -17,14 +17,19 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 #gem 'turbolinks'
 gem 'draper'
-gem 'simple_form'
+gem 'simple_form', '~> 3.0.0.rc'#, github: 'plataformatec/simple_form'
 gem 'country_select'
 gem 'therubyracer'
 gem 'newrelic_rpm'
-gem 'client_side_validations'
-gem 'client_side_validations-simple_form'
+gem 'client_side_validations', github: 'bcardarella/client_side_validations', branch: '4-0-beta'
+gem 'client_side_validations-simple_form', '2.1.0'
 gem 'jquery-star-rating-rails'
 gem 'rack-mini-profiler'
+
+gem 'protected_attributes'
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
 
 group :development, :test do
   gem 'awesome_print'
@@ -77,12 +82,6 @@ group :development do
   gem 'rb-inotify', require: false
   gem 'binding_of_caller'
   gem 'meta_request'
-end
-
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
 end
 
 group :production do
