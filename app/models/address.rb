@@ -13,7 +13,7 @@ class Address < ActiveRecord::Base
     check.validates :line_1
     check.validates :phone_number
     check.validates :postcode, format:{
-                      :with => %r{^\d{5}(-\d{4})?$},
+                      :with => %r{\A\d{5}(-\d{4})?\z},
                       :message => "should be 12345 or 12345-1234"}
   end
 
