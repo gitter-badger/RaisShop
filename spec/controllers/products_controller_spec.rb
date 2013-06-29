@@ -139,7 +139,7 @@ describe ProductsController do
 
         it "updates the requested product" do
           description = { "description" => "Teh best product evar!" }
-          Product.any_instance.should_receive(:update_attributes).with(description)
+          Product.any_instance.should_receive(:update).with(description)
           put :update, { id: product.id, product: description}
         end
 

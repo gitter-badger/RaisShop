@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   helper_method :user_without_addresses?
 
   def index
-    @orders = current_user.orders.includes(:address).all
+    @orders = current_user.orders.includes(:address).load
   end
 
   #TODO consider authorization for show action
@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(params[:order])
+    @order = Order.new(order_params)
 
     @order.add_line_items_from_cart(@cart)
 
@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
 
     respond_to do |format|
-      if @order.update_attributes(params[:order])
+      if @order.update(order_params)
         format.html { redirect_to root_path, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
       else
@@ -61,5 +61,11 @@ private
 
   def user_without_addresses?
     guest_user? || current_user.addresses.blank?
+  end
+
+  def order_params
+    params.require(:order).permit(:pay_type, :shipping_type, :comment, :address_id,
+                                  address_attributes: [:city, :country, :line_1, :line_2, :phone_number,
+                  :postcode, :info, :customer_id, customer_attributes: [:full_name, :email]])
   end
 end

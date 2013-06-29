@@ -17,6 +17,5 @@ describe User do
   describe "validators" do
 
     it { should validate_presence_of(:email) }
-    it { should_not allow_mass_assignment_of(:guest) }
   end
 end

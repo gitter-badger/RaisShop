@@ -1,5 +1,4 @@
 class Review < ActiveRecord::Base
-  attr_accessible :comment, :helpful, :rating, :product_id
 
   belongs_to :user
   belongs_to :product, inverse_of: :reviews

@@ -3,7 +3,7 @@ class User < Customer
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
 
-  attr_accessible :password, :password_confirmation, :remember_me
+  #attr_accessible :password, :password_confirmation, :remember_me
   has_many :reviews, dependent: :nullify
 
   validates_presence_of :email
@@ -17,5 +17,4 @@ class User < Customer
   def guest?
     false
   end
-
 end

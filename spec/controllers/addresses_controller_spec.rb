@@ -109,7 +109,7 @@ describe AddressesController do
 
       it "updates the requested address" do
         city = { "city" => "Moscow" }
-        Address.any_instance.should_receive(:update_attributes).with(city)
+        Address.any_instance.should_receive(:update).with(city)
         put :update, { id: address.id, address: city}
       end
 

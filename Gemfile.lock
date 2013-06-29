@@ -207,8 +207,6 @@ GEM
       activesupport (>= 3.1)
       arel
     polyglot (0.3.3)
-    protected_attributes (1.0.2)
-      activemodel (>= 4.0.0.beta, < 5.0)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -330,6 +328,8 @@ GEM
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
+    turbolinks (1.2.0)
+      coffee-rails
     tzinfo (0.3.37)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
@@ -389,7 +389,6 @@ DEPENDENCIES
   newrelic_rpm
   pg
   pg_search
-  protected_attributes
   pry
   pry-debugger
   pry-rails
@@ -410,6 +409,7 @@ DEPENDENCIES
   simplecov
   spring
   therubyracer
+  turbolinks
   uglifier
   unicorn-rails
   will_paginate

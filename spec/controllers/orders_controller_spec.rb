@@ -166,7 +166,7 @@ describe OrdersController do
 
         it "updates the requested order" do
           payment_type = { "pay_type" => "Credit cart" }
-          Order.any_instance.should_receive(:update_attributes).with(payment_type)
+          Order.any_instance.should_receive(:update).with(payment_type)
           put :update, {id: order.id, order: payment_type}
         end
 

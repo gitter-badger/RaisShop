@@ -30,4 +30,10 @@ class CartsController < ApplicationController
     session[:cart_id] = nil
     redirect_to root_url, notice: "Your cart is empty"
   end
+
+private
+
+  #def cart_params
+    #params.require(:cart).permit()
+  #end
 end

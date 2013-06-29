@@ -1,6 +1,4 @@
 class Address < ActiveRecord::Base
-  attr_accessible :city, :country, :line_1, :line_2, :phone_number,
-                  :postcode, :info, :customer_id, :customer_attributes
 
   belongs_to :customer
   has_many   :orders

@@ -5,7 +5,7 @@ if ENV['coverage']
   Coveralls.wear!('rails')
 end
 require 'rubygems'
-
+#ActiveRecord::Base.logger = Logger.new(STDOUT)
 ENV["RAILS_ENV"] = 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'

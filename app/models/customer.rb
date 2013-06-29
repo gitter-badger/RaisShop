@@ -1,6 +1,6 @@
 class Customer < ActiveRecord::Base
 
-  attr_accessible :full_name, :email
+  #attr_accessible :full_name, :email
 
   has_many :addresses, dependent: :destroy
   has_many :orders, through: :addresses

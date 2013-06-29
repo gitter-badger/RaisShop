@@ -1,12 +1,10 @@
 class Product < ActiveRecord::Base
   include PgSearch
 
-  attr_accessible :title, :description, :image_url, :price, :category_id
-
   has_many :line_items
   has_many :orders, through: :line_items
-  has_many :reviews, inverse_of: :product,
-            dependent: :destroy, order: "reviews.created_at ASC"
+  has_many :reviews, -> { order(created_at: :asc) }, inverse_of: :product,
+            dependent: :destroy
   belongs_to :category
 
   validates_presence_of :title, :description, :image_url, :price, :category
@@ -30,7 +28,7 @@ class Product < ActiveRecord::Base
     if query.present?
       search_by_title(query)
     else
-      scoped
+      all
     end
   end
 

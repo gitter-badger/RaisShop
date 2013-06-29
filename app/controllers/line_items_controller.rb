@@ -16,7 +16,7 @@ class LineItemsController < ApplicationController
   def update
     @line_item = LineItem.find(params[:id])
 
-    if @line_item.update_attributes(params[:line_item])
+    if @line_item.update(line_item_params)
       redirect_to @line_item, notice: 'Line item was successfully updated.'
     else
       render action: "edit"
@@ -28,5 +28,9 @@ class LineItemsController < ApplicationController
     @line_item.destroy
 
     redirect_to line_items_url
+  end
+
+  def line_item_params
+    params.require(:line_item).permit(:cart_id, :product_id, :quantity)
   end
 end
