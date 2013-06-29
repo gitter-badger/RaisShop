@@ -2,7 +2,11 @@ language: ruby
 rvm:
   - "2.0.0"
   - "1.9.3"
+env:
+  - DB=postgresql
 before_script:
+
+  - psql -c "CREATE USER postgres;" -U postgres
   - psql -c 'create database RaishopDB' -U postgres
   - psql -c 'create database RaishopDB_test' -U postgres
 script:

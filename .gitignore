@@ -19,6 +19,5 @@ bin
 tags
 stdlib.tags
 gems.tags
-.grive
 screenshot.png
 public/assets/*
