@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   helper_method :user_without_addresses?
 
   def index
-    @orders = current_user.orders.includes(:address).load
+    @orders = current_user.orders.includes(:address).all
   end
 
   #TODO consider authorization for show action
@@ -29,7 +29,7 @@ class OrdersController < ApplicationController
     @order.add_line_items_from_cart(@cart)
 
     if @order.save
-      Cart.destroy(session[:cart_id])
+      Cart.find(session[:cart_id]).destroy
       session[:cart_id] = nil
       redirect_to root_path, notice: 'Your order is accepted and being processed'
     else
@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
 
     respond_to do |format|
-      if @order.update(order_params)
+      if @order.update_attributes(order_params)
         format.html { redirect_to root_path, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
       else

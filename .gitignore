@@ -21,3 +21,4 @@ stdlib.tags
 gems.tags
 screenshot.png
 public/assets/*
+*.taghl

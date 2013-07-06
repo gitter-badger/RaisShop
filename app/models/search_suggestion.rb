@@ -1,5 +1,5 @@
 class SearchSuggestion < ActiveRecord::Base
-  attr_accessible :popularity, :term
+  #attr_accessible :popularity, :term
 
   belongs_to :product
 

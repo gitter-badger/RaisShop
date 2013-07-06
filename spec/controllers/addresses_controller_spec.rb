@@ -45,7 +45,7 @@ describe AddressesController do
       end
 
       it "sets flash message" do
-        get :edit, {id: address.to_param}
+        get :edit, {id: address.id}
         flash[:notice].should eq("You can access only your own address")
       end
     end
@@ -109,7 +109,7 @@ describe AddressesController do
 
       it "updates the requested address" do
         city = { "city" => "Moscow" }
-        Address.any_instance.should_receive(:update).with(city)
+        Address.any_instance.should_receive(:update_attributes).with(city)
         put :update, { id: address.id, address: city}
       end
 

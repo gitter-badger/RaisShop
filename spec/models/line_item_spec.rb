@@ -8,10 +8,6 @@ describe LineItem do
 
   it { should be_valid }
 
-  describe "validates presence of" do
-    it { should validate_presence_of(:product_id) }
-  end
-
   describe "quantity sets to 1 after creation by default" do
     subject { LineItem.new }
 

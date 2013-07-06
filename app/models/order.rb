@@ -1,6 +1,12 @@
-class Order < ActiveRecord::Base
+class Order
+  include Mongoid::Document
   PAYMENT_TYPES = ["Check", "Credit card", "Purchase order"]
   SHIPPING_TYPES = ["Local pick up", "First class", "Express"]
+
+  field :pay_type, type: String
+  field :shipping_type, type: String
+  field :status, type: String
+  field :comment, type: String
 
   belongs_to :address
   has_many :line_items, dependent: :destroy

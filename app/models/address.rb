@@ -1,4 +1,12 @@
-class Address < ActiveRecord::Base
+class Address
+  include Mongoid::Document
+
+  field :line_1, type: String
+  field :line_2, type: String
+  field :city, type: String
+  field :country, type: String
+  field :postcode, type: String
+  field :phone_number, type: String
 
   belongs_to :customer
   has_many   :orders

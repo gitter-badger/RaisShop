@@ -5,8 +5,6 @@ rvm:
 env:
   - DB=postgresql
 before_script:
-
-  - psql -c "CREATE USER postgres;" -U postgres
   - psql -c 'create database RaishopDB' -U postgres
   - psql -c 'create database RaishopDB_test' -U postgres
 script:

@@ -10,21 +10,13 @@ describe Product do
 
   it { should be_valid }
 
-  describe "validators" do
-    describe "presence of validations" do
-      [:title, :description, :image_url, :price, :category].each do |attr|
-        it { should validate_presence_of(attr) }
-      end
-    end
-  end
-
   describe "creates human-readable slug" do
     before do
       product.title = "Best PC evar 12 edition"
       product.save
     end
 
-    its(:to_param) { should == "#{product.id}-best-pc-evar-12-edition" }
+    its(:to_param) { should =~ /best-pc-evar-12-edition/ }
   end
 
   describe "destroying a product" do

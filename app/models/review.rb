@@ -1,7 +1,12 @@
-class Review < ActiveRecord::Base
+class Review
+  include Mongoid::Document
+  include Mongoid::Timestamps
 
+  field :comment, type: String
+  field :rating, type: Integer
+  field :helpful, type: String
   belongs_to :user
-  belongs_to :product, inverse_of: :reviews
+  belongs_to :product
 
   validates_presence_of :comment, :product_id, :user
 

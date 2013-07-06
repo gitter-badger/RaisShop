@@ -6,10 +6,9 @@ class AddressesController < ApplicationController
   end
 
   def edit
-    @address = current_user.addresses.find_by(id: (params[:id]))
-    if @address.nil?
-      redirect_to edit_user_registration_path, notice: "You can access only your own address"
-    end
+    @address = current_user.addresses.find_by(id: params[:id])
+  rescue Mongoid::Errors::DocumentNotFound
+    redirect_to edit_user_registration_path, notice: "You can access only your own address"
   end
 
   def create
@@ -25,7 +24,7 @@ class AddressesController < ApplicationController
   def update
     @address = current_user.addresses.find(params[:id])
 
-    if @address.update(address_params)
+    if @address.update_attributes(address_params)
       redirect_to edit_user_registration_path, notice: 'Address was successfully updated.'
     else
       render action: "edit"

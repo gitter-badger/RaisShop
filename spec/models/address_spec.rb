@@ -10,7 +10,6 @@ describe Address do
   describe "associations" do
     it { should belong_to(:customer) }
     it { should have_many(:orders) }
-    it { should have_db_index(:customer_id) }
   end
 
   describe "validators" do

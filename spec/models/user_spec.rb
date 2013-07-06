@@ -10,10 +10,6 @@ describe User do
   it { should_not be_admin }
   it { should_not be_guest }
 
-  describe "associations" do
-    it { should have_many(:reviews).dependent(:nullify) }
-  end
-
   describe "validators" do
 
     it { should validate_presence_of(:email) }

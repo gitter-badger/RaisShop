@@ -1,9 +1,14 @@
-class Customer < ActiveRecord::Base
+class Customer
+  include Mongoid::Document
+  include Mongoid::Timestamps
+
+  field :email, :type => String, :default => ""
+  field :full_name, :type => String
 
   #attr_accessible :full_name, :email
 
   has_many :addresses, dependent: :destroy
-  has_many :orders, through: :addresses
+  has_many :orders#, through: :addresses
 
   validates_presence_of :full_name
   validates :email, uniqueness: true,

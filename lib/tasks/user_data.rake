@@ -30,7 +30,8 @@ def make_users(users = 10)
     phone_number: '+380970377658',
     postcode: '46000'
   )
-  admin.toggle!(:admin)
+  admin.admin = true
+  admin.save!
 
   users.times do |n|
     user = User.create!(
@@ -84,7 +85,7 @@ end
 
 def make_pragmatic_books
     puts "Adding 3 Pragmatic books"
-    book_category = Category.find_by_name("Books").id
+    book_category = Category.find_by_name("Books").id #FIX ME doesnt work with mongoid
     Product.create!(title: 'CoffeeScript',
                    description:
                    %{

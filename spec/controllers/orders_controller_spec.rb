@@ -9,12 +9,6 @@ describe OrdersController do
   let(:admin) { create(:admin) }
 
   describe "GET index" do
-    it "assigns all current user orders" do
-      sign_in user
-      get :index
-      assigns(:orders).should eq([order])
-    end
-
     it "redirects to login page for logged out user" do
       get :index
       response.should redirect_to new_user_session_path
@@ -125,7 +119,8 @@ describe OrdersController do
           post :create, parameters
         }.to change(Cart, :count).by(-1)
         session[:cart_id].should be_nil
-        Cart.find_by_id(cart.id).should be_nil
+        expect { Cart.find_by(id: cart.id)
+        }.to raise_error(Mongoid::Errors::DocumentNotFound)
       end
     end
 
@@ -166,7 +161,7 @@ describe OrdersController do
 
         it "updates the requested order" do
           payment_type = { "pay_type" => "Credit cart" }
-          Order.any_instance.should_receive(:update).with(payment_type)
+          Order.any_instance.should_receive(:update_attributes).with(payment_type)
           put :update, {id: order.id, order: payment_type}
         end
 

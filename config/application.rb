@@ -1,11 +1,17 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+#require "active_record/railtie"
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "rails/test_unit/railtie"
+require "sprockets/railtie"
 
 Bundler.require(:default, Rails.env)
 
 module RaisShop
   class Application < Rails::Application
+    Mongoid.logger.level = Logger::DEBUG
+    Moped.logger.level = Logger::DEBUG
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -40,7 +46,7 @@ module RaisShop
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types
-    config.active_record.schema_format = :sql
+    #config.active_record.schema_format = :sql
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
@@ -52,6 +58,8 @@ module RaisShop
     end
 
     config.autoload_paths += %W(#{config.root}/lib)
+
+    config.action_controller_action_on_unpermitted_parameters = :raise
 
     Rack::MiniProfiler.config.position = 'right'
   end

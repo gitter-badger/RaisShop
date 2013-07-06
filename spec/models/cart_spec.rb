@@ -69,7 +69,7 @@ describe Cart do
       cart.add_product(product.id)
       expect {
         cart.add_product(product.id)
-      }.to change{ cart.line_items.first.quantity }.by(1)
+      }.to change{ cart.reload.line_items.first.quantity }.by(1)
     end
   end
 end

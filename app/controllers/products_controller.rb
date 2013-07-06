@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
 
 
   def show
-    @product = Product.includes(reviews: :user).find(params[:id]).decorate
+    @product = Product.find(params[:id]).decorate
     @reviews = @product.reviews
     @review = Review.new
     session[:recent_history][@product.id] = Time.now
@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    if @product.update(product_params)
+    if @product.update_attributes(product_params)
       redirect_to product_path(@product), notice: "Product was successfully updated."
     else
       render action: "edit"

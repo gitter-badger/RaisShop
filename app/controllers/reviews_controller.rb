@@ -2,8 +2,8 @@ class ReviewsController < ApplicationController
   before_filter :signed_in_only
 
   def create
-    params[:review][:product_id] = params[:product_id].to_i
     @review = current_user.reviews.build(review_params)
+    @review.product = Product.find(params[:product_id])
 
     if @review.save
       redirect_to :back, notice: 'Review was successfully created.'
