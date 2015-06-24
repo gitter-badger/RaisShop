@@ -2,3 +2,6 @@
 {<img src="https://gemnasium.com/RobertoUa/RaisShop.png" alt="Dependency Status" />}[https://gemnasium.com/RobertoUa/RaisShop]
 {<img src="https://travis-ci.org/RobertoUa/RaisShop.png" />}[https://travis-ci.org/RobertoUa/RaisShop]
 {<img src="https://coveralls.io/repos/RobertoUa/RaisShop/badge.png?branch=master" alt="Coverage Status" />}[https://coveralls.io/r/RobertoUa/RaisShop]
+
+
+{<img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/RobertoUa/RaisShop">}[https://gitter.im/RobertoUa/RaisShop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge]
